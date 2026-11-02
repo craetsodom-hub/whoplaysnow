@@ -15,7 +15,8 @@
     "run_worker_first": ["/channels"]
   },
   "vars": { "SITE_ORIGIN": "https://whoplaysnow.com" },
-  "observability": { "enabled": true }
-  // Production cutover (see docs/cloudflare.md) adds:
-  // "routes": [{ "pattern": "whoplaysnow.com", "custom_domain": true }]
+  "observability": { "enabled": true },
+  // whoplaysnow.com is attached as a custom domain; declaring it keeps every
+  // automated deploy consistent with the dashboard.
+  "routes": [{ "pattern": "whoplaysnow.com", "custom_domain": true }]
 }

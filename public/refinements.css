@@ -105,3 +105,6 @@ h1.event-matchup{font-size:16px;line-height:1.5}
 .rights-note a{text-decoration:underline}
 @media(max-width:600px){.country-guide{padding:12px 15px 16px}.country-guide dl,.related-fixtures ul,.fixture-list,.link-columns,.rights-list{grid-template-columns:1fr}}
 .rights-list+details{margin-top:12px}
+.sport-guide>p{max-width:800px;line-height:1.8;color:#56624d;margin-bottom:18px}
+.sport-guide .link-columns small{color:#76816c;font-weight:500;margin-left:6px}
+.sport-guide details{margin-top:12px}

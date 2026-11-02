@@ -7,3 +7,4 @@ verification/
 dist/
 .wrangler/
 runtime-live/
+build.log
