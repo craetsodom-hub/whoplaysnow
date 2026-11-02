@@ -1,0 +1,335 @@
+{
+  "reviewedAt": "2026-11-01",
+  "entries": [
+    {
+      "key": "euroleague-basketball",
+      "name": "EuroLeague Basketball",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/85c36a9361f61ab3230a09a6.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4546-euroleague-basketball"
+    },
+    {
+      "key": "eurocup-basketball",
+      "name": "EuroCup Basketball",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/b46c265fddeac0b570bf8c10.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4547-eurocup-basketball"
+    },
+    {
+      "key": "liga-acb",
+      "name": "Liga ACB",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/90aff9efd4d7c5ccc48615cb.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4408-spanish-liga-acb"
+    },
+    {
+      "key": "lnb-betclic-elite",
+      "name": "LNB Betclic Élite",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/4c66a736d323b40dbf142ffc.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4423-french-lnb"
+    },
+    {
+      "key": "motogp",
+      "name": "MotoGP",
+      "sport": "motorsport",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/53a95a84e4ba25cc99ee4f0b.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4407-motogp"
+    },
+    {
+      "key": "fia-world-endurance-championship",
+      "name": "FIA World Endurance Championship",
+      "sport": "motorsport",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/aa0e21c875206758bbe7e177.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4413-wec"
+    },
+    {
+      "key": "atp-tour",
+      "name": "ATP Tour",
+      "sport": "tennis",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/dbb5fdfe40edae392024c810.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4464-atp-world-tour"
+    },
+    {
+      "key": "wta-tour",
+      "name": "WTA Tour",
+      "sport": "tennis",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/daa6c7f5f7c9d36d80f417a6.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4517-wta-tour"
+    },
+    {
+      "key": "davis-cup-finals",
+      "name": "Davis Cup Finals",
+      "sport": "tennis",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/d72b9ce067a9d0218bcb0b0e.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5347-davis-cup"
+    },
+    {
+      "key": "ufc",
+      "name": "UFC",
+      "sport": "combat-sports",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/45d61bfa91fb854f24fb82f9.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4443-ufc"
+    },
+    {
+      "key": "six-nations-championship",
+      "name": "Six Nations Championship",
+      "sport": "rugby",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/405590ba0318345502b899e1.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4714-six-nations-championship"
+    },
+    {
+      "key": "european-rugby-champions-cup",
+      "name": "European Rugby Champions Cup",
+      "sport": "rugby",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/2ba592850854e9f2e1b13515.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4550-european-rugby-champions-cup"
+    },
+    {
+      "key": "epcr-challenge-cup",
+      "name": "EPCR Challenge Cup",
+      "sport": "rugby",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/d3fa305b2d141b2bd2fae07a.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5418-european-rugby-challenge-cup"
+    },
+    {
+      "key": "gallagher-premiership",
+      "name": "Gallagher Premiership",
+      "sport": "rugby",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/c9e0b879f6e6c2c4ee425ff4.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4414-english-prem-rugby"
+    },
+    {
+      "key": "top-14",
+      "name": "Top 14",
+      "sport": "rugby",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/c0aa3be9135874f8d13a6d45.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4430-french-top-14"
+    },
+    {
+      "key": "united-rugby-championship",
+      "name": "United Rugby Championship",
+      "sport": "rugby",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/f36da253791a655210c69764.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4446-united-rugby-championship"
+    },
+    {
+      "key": "big-bash-league",
+      "name": "Big Bash League",
+      "sport": "cricket",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/eabf0f6840a51c0003317bb7.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4461-australian-big-bash-league"
+    },
+    {
+      "key": "indian-premier-league",
+      "name": "Indian Premier League",
+      "sport": "cricket",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/08ee42d47a447349862da92c.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4460-indian-premier-league"
+    },
+    {
+      "key": "champions-hockey-league",
+      "name": "Champions Hockey League",
+      "sport": "ice-hockey",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/395acfcd00e46e00ff8f5c3b.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4960-turkish-cup"
+    },
+    {
+      "key": "copa-del-rey-basketball",
+      "name": "Copa del Rey Basketball",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/d41b778de71115875ce7aa3a.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4832-spanish-copa-del-rey-de-baloncesto"
+    },
+    {
+      "key": "spanish-basketball-supercup",
+      "name": "Spanish Basketball Supercup",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/bd5156e836da260098bd00c2.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4833-spanish-supercopa-de-espa%c3%b1a-de-baloncesto"
+    },
+    {
+      "key": "italian-basketball-cup",
+      "name": "Italian Basketball Cup",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/f3131b22a5b6709c7f20e2ce.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5409-italian-basketball-cup"
+    },
+    {
+      "key": "italian-basketball-supercup",
+      "name": "Italian Basketball Supercup",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/7252e26984fcb4560926baa2.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5408-italian-basketball-supercup"
+    },
+    {
+      "key": "coupe-de-france-de-basket",
+      "name": "Coupe de France de Basket",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/2f0ea34d7c303f38c6ccff22.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5380-coupe-de-france-de-basket"
+    },
+    {
+      "key": "turkish-basketball-cup",
+      "name": "Turkish Basketball Cup",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/6dd517a9c94a01315f568321.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5507-turkish-basketball-cup"
+    },
+    {
+      "key": "fiba-basketball-world-cup",
+      "name": "FIBA Basketball World Cup",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/6e64e26241b1a4b2c1097503.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4549-fiba-basketball-world-cup"
+    },
+    {
+      "key": "fiba-eurobasket",
+      "name": "FIBA EuroBasket",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/517c97da3861773f7b4e0838.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4831-fiba-eurobasket"
+    },
+    {
+      "key": "fiba-womens-world-cup",
+      "name": "FIBA Womens World Cup",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/759af2966266aedd58943ff2.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4891-fiba-womens-world-cup"
+    },
+    {
+      "key": "nba-cup",
+      "name": "NBA Cup",
+      "sport": "basketball",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/153d24e8a4ef2235ca205e48.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5506-nba-cup"
+    },
+    {
+      "key": "icc-t20-world-cup",
+      "name": "ICC T20 World Cup",
+      "sport": "cricket",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/1f899e4bfd6cd236c7f7dc48.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5103-icc-mens-t20-world-cup"
+    },
+    {
+      "key": "icc-womens-t20-world-cup",
+      "name": "ICC Womens T20 World Cup",
+      "sport": "cricket",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/372268f05b5b78611eba34fa.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5104-icc-womens-t20-world-cup"
+    },
+    {
+      "key": "icc-champions-trophy",
+      "name": "ICC Champions Trophy",
+      "sport": "cricket",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/bb8af748c528797089cd9e63.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/5587-icc-champions-trophy"
+    },
+    {
+      "key": "cricket-world-cup",
+      "name": "Cricket World Cup",
+      "sport": "cricket",
+      "country": null,
+      "countryName": "International",
+      "major": false,
+      "logo": "/artwork/46bf6536511ae413f4a0c103.png",
+      "sourceUrl": "https://www.thesportsdb.com/league/4575-cricket-world-cup"
+    }
+  ]
+}

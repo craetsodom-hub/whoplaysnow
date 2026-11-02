@@ -1,0 +1,37 @@
+[
+  {
+    "channel": "ESPN 1",
+    "url": "https://a.espncdn.com/watchespn/images/web/network_logos/channel_logo_nl_espn1_2x.png",
+    "path": "/artwork/c8579d4077459e1c2282ca1f.png",
+    "source": "https://www.espn.nl/watch/speelkalender/_/type/upcoming",
+    "checkedAt": "2026-10-29T20:54:40.916Z"
+  },
+  {
+    "channel": "ESPN 2",
+    "url": "https://a.espncdn.com/watchespn/images/web/network_logos/channel_logo_nl_espn2_2x.png",
+    "path": "/artwork/5a8e76535952802925b1f033.png",
+    "source": "https://www.espn.nl/watch/speelkalender/_/type/upcoming",
+    "checkedAt": "2026-10-29T20:54:40.942Z"
+  },
+  {
+    "channel": "ESPN 3",
+    "url": "https://a.espncdn.com/watchespn/images/web/network_logos/channel_logo_nl_espn3_2x.png",
+    "path": "/artwork/7525725de29fc8d50d867632.png",
+    "source": "https://www.espn.nl/watch/speelkalender/_/type/upcoming",
+    "checkedAt": "2026-10-29T20:54:41.021Z"
+  },
+  {
+    "channel": "ESPN 4",
+    "url": "https://a.espncdn.com/watchespn/images/web/network_logos/channel_logo_nl_espn4_2x.png",
+    "path": "/artwork/a7588f07e56d81ef837ea804.png",
+    "source": "https://www.espn.nl/watch/speelkalender/_/type/upcoming",
+    "checkedAt": "2026-10-29T20:54:41.043Z"
+  },
+  {
+    "channel": "ESPN Extra",
+    "url": "https://a.espncdn.com/watchespn/images/web/network_logos/channel_logo_nl_espn_extra_2x.png",
+    "path": "/artwork/16cdef70f74f6d4b9349998f.png",
+    "source": "https://www.espn.nl/watch/speelkalender/_/type/upcoming",
+    "checkedAt": "2026-10-29T20:54:41.074Z"
+  }
+]

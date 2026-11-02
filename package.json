@@ -1,0 +1,22 @@
+{
+  "name": "whoplaysnow-sports",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx server.ts",
+    "collect": "tsx scripts/run-collection.ts",
+    "test": "tsx --test tests/*.test.ts worker/*.test.ts lib/matches/official.test.mjs lib/matches/publication.test.mjs lib/matches/evidence.test.mjs lib/matches/fixture-integrity.test.mjs lib/matches/routes.test.mjs lib/matches/europe.test.mjs lib/matches/laliga.test.mjs",
+    "build:static": "tsx scripts/build-static.ts",
+    "dev:cloudflare": "wrangler dev",
+    "deploy:cloudflare": "wrangler deploy"
+  },
+  "dependencies": {
+    "express": "5.1.0",
+    "pg": "8.16.3",
+    "tsx": "4.20.6"
+  },
+  "devDependencies": {
+    "wrangler": "^4.156.1"
+  }
+}

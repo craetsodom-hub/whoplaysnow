@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "competitions": [
+    {
+      "id": "championship",
+      "aliases": [
+        "Championship"
+      ],
+      "fallbackPolicy": "rights-metadata-only",
+      "cycles": [
+        {
+          "seasons": [
+            "2026/27"
+          ],
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "lastVerified": "2026-10-29",
+          "sourceUrl": "https://www.efl.com/how-to-watch/broadcast-partners/",
+          "coverage": [
+            {
+              "territory": "GB",
+              "holders": [
+                {
+                  "name": "Sky Sports",
+                  "kind": "network"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "league-one",
+      "aliases": [
+        "League One"
+      ],
+      "fallbackPolicy": "rights-metadata-only",
+      "cycles": [
+        {
+          "seasons": [
+            "2026/27"
+          ],
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "lastVerified": "2026-10-29",
+          "sourceUrl": "https://www.efl.com/how-to-watch/broadcast-partners/",
+          "coverage": [
+            {
+              "territory": "GB",
+              "holders": [
+                {
+                  "name": "Sky Sports",
+                  "kind": "network"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "league-two",
+      "aliases": [
+        "League Two"
+      ],
+      "fallbackPolicy": "rights-metadata-only",
+      "cycles": [
+        {
+          "seasons": [
+            "2026/27"
+          ],
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "lastVerified": "2026-10-29",
+          "sourceUrl": "https://www.efl.com/how-to-watch/broadcast-partners/",
+          "coverage": [
+            {
+              "territory": "GB",
+              "holders": [
+                {
+                  "name": "Sky Sports",
+                  "kind": "network"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "efl-cup",
+      "aliases": [
+        "EFL Cup"
+      ],
+      "fallbackPolicy": "rights-metadata-only",
+      "cycles": [
+        {
+          "seasons": [
+            "2026/27"
+          ],
+          "validFrom": "2026-07-01",
+          "validThrough": "2027-06-30",
+          "lastVerified": "2026-10-29",
+          "sourceUrl": "https://www.efl.com/how-to-watch/broadcast-partners/",
+          "coverage": [
+            {
+              "territory": "GB",
+              "holders": [
+                {
+                  "name": "Sky Sports",
+                  "kind": "network"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "providerSlug": "netflix",
+    "regionCode": "US",
+    "planKey": "netflix-standard",
+    "canonicalName": "Standard",
+    "planType": "subscription",
+    "billingCycle": "monthly",
+    "amountMinor": 1799,
+    "amountDisplay": "$17.99/mo",
+    "currency": "USD",
+    "freshnessStatus": "fresh",
+    "verifiedAt": "2026-03-20T00:00:00.000Z",
+    "expectedRefreshAt": "2026-04-20T00:00:00.000Z",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix US pricing"
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "GB",
+    "planKey": "prime-video-subscription",
+    "canonicalName": "Prime Video Monthly",
+    "planType": "subscription",
+    "billingCycle": "monthly",
+    "amountMinor": 899,
+    "amountDisplay": "£8.99/mo",
+    "currency": "GBP",
+    "freshnessStatus": "fresh",
+    "verifiedAt": "2026-03-20T00:00:00.000Z",
+    "expectedRefreshAt": "2026-04-20T00:00:00.000Z",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video GB pricing"
+  }
+]

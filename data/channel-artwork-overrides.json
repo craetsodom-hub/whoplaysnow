@@ -1,0 +1,765 @@
+{
+  "entries": [
+    {
+      "names": [
+        "3cat"
+      ],
+      "countries": [
+        "ES"
+      ],
+      "logo": "/channel-logos/reviewed/3cat.png",
+      "sourceUrl": "https://www.3cat.cat/3cat/",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "095304f29c2fd019aaf1b8d1308cd729f7344e801239d3a515bb8f218f73840d"
+    },
+    {
+      "names": [
+        "Televisión Canaria N"
+      ],
+      "countries": [
+        "ES"
+      ],
+      "logo": "/channel-logos/reviewed/canaria.png",
+      "sourceUrl": "https://rtvc.es/",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "ef37182d81a64bba95d97bc2cf3acd98fcad13f75bf07720695484c0ee377c06"
+    },
+    {
+      "names": [
+        "MNMT",
+        "MNMT2"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/monumental.webp",
+      "sourceUrl": "https://www.monumentalsportsnetwork.com/",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "241cd830e3952d1c279107a2060a4aca60679eb3976865ac90157b60762bd4cb"
+    },
+    {
+      "names": [
+        "KJZZ-TV"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/kjzz.png",
+      "sourceUrl": "https://kjzz.com/",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "61c9daae8f0cf4bb734b764a21fd3e734bf30de2ff3cbd350749104f530c8aa5"
+    },
+    {
+      "names": [
+        "NBC Sports Network"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/nbc-sports.svg",
+      "sourceUrl": "https://www.nbcsports.com/",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "a0d443965f208ea0132747d4f6d891d9082584e141a8150973840f1e0e0c496c"
+    },
+    {
+      "names": [
+        "MyMi"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/wmlw.png",
+      "sourceUrl": "https://cbs58.com/wmlw",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "a04e9bd75fa34a671f75ee4d5c0a915eb1d6d751afc478fbd38a1ea4d570fcf6"
+    },
+    {
+      "names": [
+        "KSTP"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/kstp.png",
+      "sourceUrl": "https://kstp.com/",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "cbf54119b1819b521359e77e87009c2e676973b8fb0c8875ff85f266ca526158"
+    },
+    {
+      "names": [
+        "Utah 16"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/utah16.png",
+      "sourceUrl": "https://www.thespottv.com/utah-16",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "5ada3027d88520ac25baafab77548e1b0c4dea7a410bbd3b2d87c1a11a2f7075"
+    },
+    {
+      "names": [
+        "BlazerVision"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/utility-identity/clubs/espn-basketball-22-portland-trail-blazers.png",
+      "sourceUrl": "https://www.nba.com/blazers/watch",
+      "note": "Team-owned streaming app represented by the official team mark; wide white wordmark omitted on a light background",
+      "checkedAt": "2026-11-01",
+      "sha256": "4a7e01ed242cbbc403e3953e51b9498495f79a372b97d0fb967ab5f82e661b8e"
+    },
+    {
+      "names": [
+        "KSTC"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/kstc.jpg",
+      "sourceUrl": "https://kstc45.com/",
+      "note": "Broadcaster-owned artwork",
+      "checkedAt": "2026-11-01",
+      "sha256": "0b0b829e14be9abbcab7334af0b07758411438b7bb0958e447c0ebfc24a53891"
+    },
+    {
+      "names": [
+        "MSGSN"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/artwork/6fc899c1b21149573d984ff6.png",
+      "sourceUrl": "https://www.espn.com/",
+      "note": "Existing reviewed network logo, exact broadcaster alias",
+      "checkedAt": "2026-11-01",
+      "sha256": "6fc899c1b21149573d984ff6633a3741731722c689d2d20b5ae378b926f0344b"
+    },
+    {
+      "names": [
+        "MSGB"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/artwork/6fc899c1b21149573d984ff6.png",
+      "sourceUrl": "https://www.espn.com/",
+      "note": "Existing reviewed network logo, exact broadcaster alias",
+      "checkedAt": "2026-11-01",
+      "sha256": "6fc899c1b21149573d984ff6633a3741731722c689d2d20b5ae378b926f0344b"
+    },
+    {
+      "names": [
+        "ALT2/KTVD"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/artwork/149fb2feb832be36e9a9d607.png",
+      "sourceUrl": "https://www.espn.com/",
+      "note": "Existing reviewed network logo, exact broadcaster alias",
+      "checkedAt": "2026-11-01",
+      "sha256": "149fb2feb832be36e9a9d607ba49bdbc6aa124657f2cc6902adac616009917e9"
+    },
+    {
+      "names": [
+        "Tele"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/artwork/ae579f94b2ce261349cdb592.jpg",
+      "sourceUrl": "https://www.espn.com/",
+      "note": "Existing reviewed network logo, exact broadcaster alias",
+      "checkedAt": "2026-11-01",
+      "sha256": "ae579f94b2ce261349cdb5921550492d496c25e4a8747892add6c44a37159726"
+    },
+    {
+      "names": [
+        "Premier Sports 2 IE",
+        "Premier Sports 2 UK"
+      ],
+      "countries": [
+        "IE",
+        "GB"
+      ],
+      "logo": "/utility-identity/services/premier-sports.svg",
+      "sourceUrl": "https://www.premiersports.com/",
+      "note": "Official network branding; numbered channel name retained",
+      "checkedAt": "2026-11-01",
+      "sha256": "43b24efcb21759acde9fb5036e210086990782c1d36aa7c10907327683aa6db6"
+    },
+    {
+      "names": [
+        "Blues App"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/utility-identity/clubs/espn-ice-hockey-19-st-louis-blues.png",
+      "sourceUrl": "https://www.nhl.com/blues/fans/where-to-watch",
+      "note": "Team-operated app represented by its owning team brand",
+      "checkedAt": "2026-11-01",
+      "sha256": "666a997abcdf8e7094d47114aaf84164928c01cd57f872a5f24f95c4696c86c7"
+    },
+    {
+      "names": [
+        "Pelicans.com"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/utility-identity/clubs/espn-basketball-3-new-orleans-pelicans.png",
+      "sourceUrl": "https://www.nba.com/pelicans/broadcasting",
+      "note": "Team-operated app represented by its owning team brand",
+      "checkedAt": "2026-11-01",
+      "sha256": "271da7671cd4f9735e002e65f3d4f6252e15c989f57d352cd185bfa7e51f59ba"
+    },
+    {
+      "names": [
+        "Bucks App"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/utility-identity/clubs/espn-basketball-15-milwaukee-bucks.png",
+      "sourceUrl": "https://www.nba.com/bucks/watch",
+      "note": "Team-operated app represented by its owning team brand",
+      "checkedAt": "2026-11-01",
+      "sha256": "724e946e41f5a7a925b163605e1c3ba15fb9a5c66999afb1e1348702b32d9969"
+    },
+    {
+      "names": [
+        "Thunder App"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/utility-identity/clubs/espn-basketball-25-oklahoma-city-thunder.png",
+      "sourceUrl": "https://www.nba.com/thunder/watch",
+      "note": "Team-operated app represented by its owning team brand",
+      "checkedAt": "2026-11-01",
+      "sha256": "5cc18612b642cce41bf23d530d2df3e441e23879998123190a5ecda8ce0ade32"
+    },
+    {
+      "names": [
+        "Suns Live"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/utility-identity/clubs/espn-basketball-21-phoenix-suns.png",
+      "sourceUrl": "https://www.nba.com/suns/how-to-watch",
+      "note": "Team-operated app represented by its owning team brand",
+      "checkedAt": "2026-11-01",
+      "sha256": "98c37dcc14107c1825888281cdb0a6665fd774771fd36210ba4403d2a223d708"
+    },
+    {
+      "names": [
+        "Spectrum Sports"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/artwork/8540a32b85413cccb6065a09.png",
+      "sourceUrl": "https://spectrumsportsnet.com/",
+      "note": "Official service brand artwork; linear channel number remains in the name",
+      "checkedAt": "2026-11-01",
+      "sha256": "8540a32b85413cccb6065a09c3cf4bbe596a901d67405d46963107fb8c57df15"
+    },
+    {
+      "names": [
+        "KSBI"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/ksbi.png",
+      "sourceUrl": "https://www.news9.com/ksbi",
+      "note": "Official service brand artwork; linear channel number remains in the name",
+      "checkedAt": "2026-11-01",
+      "sha256": "479edfd354d6b08a36a4e12a954e91f61cddd126922b72ed5a170eae97a6897b"
+    },
+    {
+      "names": [
+        "KUNP 16"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/ripcity.png",
+      "sourceUrl": "https://www.nba.com/blazers/watch",
+      "note": "Official service brand artwork; linear channel number remains in the name",
+      "checkedAt": "2026-11-01",
+      "sha256": "f264958045a1a90ab25db74900b2a64637612b2d379202ea1b3fce46a072e26d"
+    },
+    {
+      "names": [
+        "MavsTV",
+        "KFAA-TV"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/utility-identity/clubs/espn-basketball-6-dallas-mavericks.png",
+      "sourceUrl": "https://www.mavs.com/mavstv/",
+      "note": "Mavericks TV broadcast family represented by the owning team brand",
+      "checkedAt": "2026-11-01",
+      "sha256": "42663c22f49075b2773ea9eeb0a961c111933da00ad951500842016913c52db8"
+    },
+    {
+      "names": [
+        "Fubo"
+      ],
+      "countries": [
+        "CA"
+      ],
+      "logo": "/channel-logos/reviewed/fubo.png",
+      "sourceUrl": "https://www.fubo.tv/welcome",
+      "note": "Official service branding",
+      "checkedAt": "2026-11-01",
+      "sha256": "d16de52fefd3bf0a17f29e6d5e2b899663381f59d29c81b33d9ddf7769e1cec3"
+    },
+    {
+      "names": [
+        "BN+"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/blue-note-plus.svg",
+      "sourceUrl": "https://www.nhl.com/blues/news/blue-note-plus-to-serve-as-exclusive-home-for-blues-regional-broadcasts",
+      "note": "Logo region of the official launch artwork, original pixels retained in SVG",
+      "checkedAt": "2026-11-01",
+      "sha256": "ab429a824ba0b7ad58bb9e791f50f40ede671f9c3262f2822b58d607ac40150c"
+    },
+    {
+      "names": [
+        "Jazz+"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/jazzplus.avif",
+      "sourceUrl": "https://www.nba.com/jazz/broadcast",
+      "note": "Official service branding",
+      "checkedAt": "2026-11-01",
+      "sha256": "0dd3fc3cb0a7e3d6c69964a2bd3892826c77406b2659ce053df93ccd26ac41e5"
+    },
+    {
+      "names": [
+        "Arizona's Family 3TV"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/azfamily.png",
+      "sourceUrl": "https://www.azfamily.com/",
+      "note": "Official service branding",
+      "checkedAt": "2026-11-01",
+      "sha256": "9c4a4e71c5d239df878450b8f3d3280a770acb2c3d8b6c1000c82aefc3c21dee"
+    },
+    {
+      "names": [
+        "MINNHL"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/wild.svg",
+      "sourceUrl": "https://www.nhl.com/wild/info/broadcast",
+      "artworkUrl": "https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg",
+      "checkedAt": "2026-11-01",
+      "note": "Team-owned streaming network represented by owning team mark",
+      "sha256": "e559a6e0324df81bcb921a6609a1ffc8a320e415fcd6985a57fde3e7a6e20116"
+    },
+    {
+      "names": [
+        "CBJNHL"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/columbus.svg",
+      "sourceUrl": "https://www.nhl.com/bluejackets/news/blue-jackets-hockey-network",
+      "artworkUrl": "https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg",
+      "checkedAt": "2026-11-01",
+      "note": "Team-owned streaming network represented by owning team mark",
+      "sha256": "02d72fd6c4d01da41596e0516fbc8b9c5082c71dfb33870bfa590d7355b3f128"
+    },
+    {
+      "names": [
+        "CARNHL"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/carolina.svg",
+      "sourceUrl": "https://www.nhl.com/hurricanes/fans/ways-to-watch",
+      "artworkUrl": "https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg",
+      "checkedAt": "2026-11-01",
+      "note": "Team-owned streaming network represented by owning team mark",
+      "sha256": "71b345ec3856db76f86d7bf9170334d18fcc9816642cd65ba65a90493b3ed4dc"
+    },
+    {
+      "names": [
+        "KHN"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/kraken.svg",
+      "sourceUrl": "https://www.nhl.com/kraken/fans/kraken-hockey-network",
+      "artworkUrl": "https://assets.nhle.com/logos/nhl/svg/SEA_dark.svg",
+      "checkedAt": "2026-11-01",
+      "note": "Team-owned streaming network represented by owning team mark",
+      "sha256": "e12f89fbab164009d1b832f0048c28a23d6389d0b19bd044cc9b96c5964bc4c2"
+    },
+    {
+      "names": [
+        "Mammoth+"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/mammoth.svg",
+      "sourceUrl": "https://www.nhl.com/utah/fans/broadcast",
+      "artworkUrl": "https://assets.nhle.com/logos/nhl/svg/UTA_dark.svg",
+      "checkedAt": "2026-11-01",
+      "note": "Team-owned streaming network represented by owning team mark",
+      "sha256": "c3435090b06ed74d93c7ac9f8fe53c862eeb5cb8976a3125d06a84e2202bf527"
+    },
+    {
+      "names": [
+        "TNT Sports 3"
+      ],
+      "countries": [
+        "GB"
+      ],
+      "logo": "/channel-logos/reviewed/tnt-sports-3.png",
+      "sourceUrl": "https://iptv-org.github.io/api/logos.json",
+      "artworkUrl": "https://raw.githubusercontent.com/tv-logo/tv-logos/main/countries/united-kingdom/tnt-sports-3-uk.png",
+      "checkedAt": "2026-11-01",
+      "note": "Reviewed broadcaster artwork",
+      "sha256": "d0e823c1b45abc1e1d92d5d7feb1fa3aec265b5ca784376a9e3691ea6571865d"
+    },
+    {
+      "names": [
+        "DSN"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/detroit-sportsnet.png",
+      "sourceUrl": "https://www.mlb.com/live-stream-games/subscribe/detroitsportsnet",
+      "artworkUrl": "https://img.mlbstatic.com/mlb-photos/image/upload/e_trim/q_auto/f_png/w_279/v1770253204/mlbtv/paywalls/logos/web/RDW-DET.png",
+      "checkedAt": "2026-11-01",
+      "note": "Reviewed broadcaster artwork",
+      "sha256": "5f870a234c65471a3f660944e046aeaa8dba51aaec05f8fc979429c19f669fdd"
+    },
+    {
+      "names": [
+        "ABTV"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/abtv.png",
+      "sourceUrl": "https://tsdr.uspto.gov/img/99708996/large",
+      "checkedAt": "2026-11-01",
+      "sha256": "43b158635bfcc73fdc9f1c5ae7a64d6476893b02a202bbc43d281144a3b23e80"
+    },
+    {
+      "names": [
+        "Sport +"
+      ],
+      "countries": [
+        "FR"
+      ],
+      "logo": "/channel-logos/reviewed/sportplus.png",
+      "sourceUrl": "https://www.canalplusgroup.com/fr/press/press-320",
+      "checkedAt": "2026-11-01",
+      "sha256": "18aebbef5f566322e91586a2ffe12074e7bb2c92c1c1354d81e8088fe95f9e66"
+    },
+    {
+      "names": [
+        "KCOP"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/kcop.svg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:KCOP_Fox_LA_Plus_(2026).svg",
+      "checkedAt": "2026-11-01",
+      "sha256": "1540e9ca963486f8bf6c7f51c8a3e0d97ec151d1e0da5caa14f9ac10d4fd27cd"
+    },
+    {
+      "names": [
+        "KDFI"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/kdfi.svg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:KDFI_logo_2026.svg",
+      "checkedAt": "2026-11-01",
+      "sha256": "047be501c4a8efb214a0814286c5bdfb2fbc2affe863c994437491d395423445"
+    },
+    {
+      "names": [
+        "KTVD-TV (My20)"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/ktvd.svg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:KTVD_20_(2017).svg",
+      "sha256": "0ef8e09186ad94877b3fa8ea51378066e4c4775b7b2acf1623fb56a6807318af",
+      "checkedAt": "2026-11-01"
+    },
+    {
+      "names": [
+        "TSN 4"
+      ],
+      "countries": [
+        "CA"
+      ],
+      "logo": "/channel-logos/reviewed/tsn4.png",
+      "sourceUrl": "https://iptv-org.github.io/api/logos.json",
+      "artworkUrl": "https://i.imgur.com/qJyAWU8.png",
+      "checkedAt": "2026-11-01",
+      "sha256": "13821029bfc09e452ac3f6f3f776fd71e063a9136d9cdf8e94575ca07ec691dd"
+    },
+    {
+      "names": [
+        "TSN 3"
+      ],
+      "countries": [
+        "CA"
+      ],
+      "logo": "/channel-logos/reviewed/tsn3.png",
+      "sourceUrl": "https://iptv-org.github.io/api/logos.json",
+      "artworkUrl": "https://i.imgur.com/AYza8KO.png",
+      "checkedAt": "2026-11-01",
+      "sha256": "3e12a7cd517fbeba97a1e935c10d7ec30731411051f13f168a80f79a4c50a894"
+    },
+    {
+      "names": [
+        "TV 2 Sport 1"
+      ],
+      "countries": [
+        "DK"
+      ],
+      "logo": "/channel-logos/reviewed/tv2sport.png",
+      "sourceUrl": "https://iptv-org.github.io/api/logos.json",
+      "artworkUrl": "https://i.imgur.com/76Zzs5R.png",
+      "checkedAt": "2026-11-01",
+      "sha256": "cfb6f1ee578bec3aabc8d9e806216539da51e4e852110912575ae14e8cf644b0"
+    },
+    {
+      "names": [
+        "Sky Sport NBA"
+      ],
+      "countries": [
+        "IT"
+      ],
+      "logo": "/utility-identity/services/sky.png",
+      "sourceUrl": "https://sport.sky.it/nba",
+      "checkedAt": "2026-11-01",
+      "note": "Network family logo; source channel number remains in title",
+      "sha256": "4f524575809f47cf009c757a743a114b37870944b8d927fb8ef38f300c69e807"
+    },
+    {
+      "names": [
+        "Paramount+ US"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/artwork/5256cb77703c66b11662ea71.png",
+      "sourceUrl": "https://www.paramountplus.com/",
+      "checkedAt": "2026-11-01",
+      "note": "Network family logo; source channel number remains in title",
+      "sha256": "5256cb77703c66b11662ea7110ee5d08092cd74eb1d1e0d6f4d641df058958ba"
+    },
+    {
+      "names": [
+        "DAZN 1 Germany"
+      ],
+      "countries": [
+        "DE"
+      ],
+      "logo": "/artwork/aa7e47493bf3cedbc2bc561f.png",
+      "sourceUrl": "https://www.dazn.com/de-DE/",
+      "checkedAt": "2026-11-01",
+      "note": "Network family logo; source channel number remains in title",
+      "sha256": "aa7e47493bf3cedbc2bc561f79c2be5ab77f6941e4aacabeab08247c166d9cf2"
+    },
+    {
+      "names": [
+        "SportsNet East"
+      ],
+      "countries": [
+        "CA"
+      ],
+      "logo": "/channel-logos/reviewed/sportsnet.svg",
+      "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Logo_Sportsnet_2011.svg",
+      "checkedAt": "2026-11-01",
+      "sha256": "6f2ba2b9155c088640521d29cd1cab59b975eb5d49d5b04608bb7a0df0ff8e38"
+    },
+    {
+      "names": [
+        "V Sport 1 NO"
+      ],
+      "countries": [
+        "NO"
+      ],
+      "logo": "/channel-logos/reviewed/vsport1.png",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:V_Sport_1_Logo_01.png",
+      "checkedAt": "2026-11-01"
+    },
+    {
+      "names": [
+        "Canal+ France"
+      ],
+      "countries": [
+        "FR"
+      ],
+      "logo": "/artwork/bcf02776ef705ee939777fd9.png",
+      "sourceUrl": "https://www.canalplus.com/",
+      "note": "Exact French Canal+ network alias; reuses the existing catalogued network artwork. Does not imply a Canal+ Sport allocation.",
+      "checkedAt": "2026-11-01",
+      "sha256": "bcf02776ef705ee939777fd91cebd8de956c1baba84c9dfad84f4dd466c19b82"
+    },
+    {
+      "names": [
+        "Arizona's Family CBS5",
+        "KPHO",
+        "KPHE"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/azfamily.png",
+      "sourceUrl": "https://www.azfamily.com/page/about-us/",
+      "note": "Official ownership page associates CBS 5 / KPHO and Arizona’s Family Sports / KPHE with Arizona’s Family. Uses the existing family brand; does not merge channel identities or allocate a match.",
+      "checkedAt": "2026-11-01",
+      "sha256": "9c4a4e71c5d239df878450b8f3d3280a770acb2c3d8b6c1000c82aefc3c21dee"
+    },
+    {
+      "names": [
+        "KDFW 4"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/channel-logos/reviewed/fox4-dallas.svg",
+      "sourceUrl": "https://www.fox4news.com/about-us",
+      "artworkUrl": "https://static.foxtv.com/static/orion/img/core/s/logos/fts-dallas-a.svg",
+      "note": "Official FOX 4 Dallas station mark; owner page explicitly identifies KDFW.",
+      "checkedAt": "2026-11-01",
+      "sha256": "26487fc9159f14ad1bb92bc11989ec11f1a91d00058f93e704f58818769515b2"
+    },
+    {
+      "names": [
+        "Fox 11 Plus"
+      ],
+      "countries": [
+        "US"
+      ],
+      "logo": "/artwork/7348e418fff265cec2bb882b.png",
+      "sourceUrl": "https://www.foxla.com/fox-11-plus",
+      "note": "Uses the existing parent FOX network mark for this local station while the exact subchannel artwork is not catalogued. Does not merge it with the FOX network channel or establish nationwide availability.",
+      "checkedAt": "2026-11-01",
+      "sha256": "7348e418fff265cec2bb882bf15c8b17946f2e49cefd85bc096a9dace102c5d5"
+    }
+  ],
+  "normalized": {
+    "/artwork/0446670b18821b4f0a76408b.png": "/channel-logos/normalized/497236a03b9fea0caa1ce359.svg",
+    "/artwork/0e061c5ddd06ce0bd2f34fc1.png": "/channel-logos/normalized/d127ca845752960a22c5d65b.svg",
+    "/artwork/0f70e8ae40283283bfcd4182.png": "/channel-logos/normalized/e1bf7011702482fa2c6a421a.svg",
+    "/artwork/117c8d0ba9ef26aded03272a.png": "/channel-logos/normalized/1fa0e75f0c138f28a7d374c3.svg",
+    "/artwork/1485544d52b737b0abc8f8a3.png": "/channel-logos/normalized/647563d4d55ea0e103a73b2c.svg",
+    "/artwork/14ff91b595f5e16a802b4037.png": "/channel-logos/normalized/88df99965b818af28006b661.svg",
+    "/artwork/15c5730590070591a552aeda.png": "/channel-logos/normalized/37741fbd08c3df5bdf282d90.svg",
+    "/artwork/19b956f98554a3cca42fe4ff.png": "/channel-logos/normalized/63c98e0dd81a38265244fa38.svg",
+    "/artwork/1ec61c8e35823733b9bf53e1.png": "/channel-logos/normalized/f1fbb6534d46ec1de730bf76.svg",
+    "/artwork/24566e1e1500d530b7a1c5c8.png": "/channel-logos/normalized/59421c80e75e78a92e72c263.svg",
+    "/artwork/2930c13d9a5f568e2eaaa459.png": "/channel-logos/normalized/eba1e8a166ef9fe9bdbb2fc8.svg",
+    "/artwork/29deb2be8f0ca93238bb1125.png": "/channel-logos/normalized/53e288e0e09118c77d795d8c.svg",
+    "/artwork/3030ad81ffd788383b5e0420.png": "/channel-logos/normalized/0a943c4e9c6d57f42b5a69c6.svg",
+    "/artwork/31efce3829d0eb0003845f33.png": "/channel-logos/normalized/f715b614f7ef85ffc8a866ac.svg",
+    "/artwork/34bcbcf8621c986a1ce96c8f.png": "/channel-logos/normalized/d9f3a4c4f735513c67ab8a22.svg",
+    "/artwork/372e55d3845e621c64ef31e8.png": "/channel-logos/normalized/0f36d206b1e81035963a7586.svg",
+    "/artwork/3f09b39d6dadd8e02eab8951.png": "/channel-logos/normalized/1db6ff9a5bce93287f7da3a2.svg",
+    "/artwork/4e9dc1866f5e20c34b4ccaa2.png": "/channel-logos/normalized/cfdfc14b430da4836323a0cf.svg",
+    "/artwork/4fc30c9cd1d8f40cf8ad67a2.png": "/channel-logos/normalized/6b6a7a5a0323b059c3cd7d0e.svg",
+    "/artwork/533bc94305c46236dab75d0f.png": "/channel-logos/normalized/04fabece10fef38cdece7431.svg",
+    "/artwork/576f7f3f33c2b7f386aaad87.png": "/channel-logos/normalized/0e8f46275762184df0b59f96.svg",
+    "/artwork/5a8e76535952802925b1f033.png": "/channel-logos/normalized/bd6a27e67388143cefdfcd4a.svg",
+    "/artwork/5c3550f02476558b8eb50ff8.png": "/channel-logos/normalized/07262f93b199d65f5ef68ccc.svg",
+    "/artwork/640099eeeceecbf70f1cb280.png": "/channel-logos/normalized/952e00ef89ed4c9313105829.svg",
+    "/artwork/681b4e3dee2a77d74919549d.png": "/channel-logos/normalized/4a9d63f09ee8c417d35eaabb.svg",
+    "/artwork/702adbddfa47c3ae9227f7c2.png": "/channel-logos/normalized/923a453a59ac87c5e39dff27.svg",
+    "/artwork/7525725de29fc8d50d867632.png": "/channel-logos/normalized/57415a598eba4fc7b013477e.svg",
+    "/artwork/768c41f12c8cea65e1b6d05c.png": "/channel-logos/normalized/6d8f9fe085abbe34fa052c1c.svg",
+    "/artwork/792124ce6ab9192bf74dac0d.png": "/channel-logos/normalized/dbceb42ddda4505d60ea5402.svg",
+    "/artwork/7d20e6dbf5d8313a7f987f77.png": "/channel-logos/normalized/0082c65a74fe188ee626c1e7.svg",
+    "/artwork/7f9d1539774b06fc1cfd8e82.png": "/channel-logos/normalized/bed6d2c47c20a7b37ad83e70.svg",
+    "/artwork/84a7f15935e9a95e6e6d6325.png": "/channel-logos/normalized/7ea898e5567dd965f45aa78f.svg",
+    "/artwork/858c45b31dc82ad1faf73aea.png": "/channel-logos/normalized/279b6e570fdd7e4c82f24ed0.svg",
+    "/artwork/8bc0ffa1048ec3f5306b5f52.png": "/channel-logos/normalized/4c57c54922c20e9fa47f82de.svg",
+    "/artwork/8eb22487af18b0e8183e5b5b.png": "/channel-logos/normalized/e0c54d9e3deabdb995fe5c80.svg",
+    "/artwork/919fa05a531eb7bd4b0c7adc.png": "/channel-logos/normalized/c62dd0f74b00fe8a1beb10a2.svg",
+    "/artwork/a07ad6aef6effe408db78425.png": "/channel-logos/normalized/f15fbc692b9529dff5d6d828.svg",
+    "/artwork/ac2d235e5cd08acae90548a7.png": "/channel-logos/normalized/b44d7fad017357033c132147.svg",
+    "/artwork/b346341dfbcd080c91a0195e.png": "/channel-logos/normalized/ee5b22a6c0bef8568899afd3.svg",
+    "/artwork/b5b3e15f88bfa4312f51aaac.png": "/channel-logos/normalized/759bac18f5f58fdc7b44dce0.svg",
+    "/artwork/b74de1a1f4eed5b5571abaa8.png": "/channel-logos/normalized/4b37cf2be7d87d3b726e7265.svg",
+    "/artwork/bea147a6dd6297f9ab57d37f.png": "/channel-logos/normalized/d63b8661e49984289b0d2070.svg",
+    "/artwork/c29d5c0dfbd9e96c0b5a7211.png": "/channel-logos/normalized/ce310d76733b5119bf6cc430.svg",
+    "/artwork/cc0b1909a6c57351fc9c4ba8.png": "/channel-logos/normalized/e35f2863364772452b0fe7b2.svg",
+    "/artwork/cf255ab98532ecc3944e50e8.png": "/channel-logos/normalized/a091089cf7f79ecb8d971797.svg",
+    "/artwork/db5ae27456fa8f3ef9711b21.png": "/channel-logos/normalized/f57d3b9fa69f82ad4a35e35d.svg",
+    "/artwork/dc5f778a3024657bf4d786c6.png": "/channel-logos/normalized/47f046b5e42ee1a31c3d50c5.svg",
+    "/artwork/e021d9d1fc166af778012d3f.png": "/channel-logos/normalized/c9853dc0c76700bf0bd71d89.svg",
+    "/artwork/e9aaaea7f0c041921d37d29c.png": "/channel-logos/normalized/47688d99be7ec487e6478e09.svg",
+    "/artwork/ec8d2103e06506360218138a.png": "/channel-logos/normalized/6e4a2de013b4b654895a540e.svg",
+    "/artwork/ee0462c9f3349eef6d14fea7.png": "/channel-logos/normalized/1b7bf2018aa34f39401b37fb.svg",
+    "/artwork/ee1ca462792b6ec97af11e5a.png": "/channel-logos/normalized/8073b0bd0e6a2d1a656abf6c.svg",
+    "/artwork/f262fb5d106d1ccb338b27b9.png": "/channel-logos/normalized/765b6d1b8122f0f4b49a45b1.svg",
+    "/artwork/f4f506d3bd0273c37d2f7888.png": "/channel-logos/normalized/834c2f6fda5c22b2b5889157.svg",
+    "/artwork/f58fd18c26191ed14a78caa0.png": "/channel-logos/normalized/3b29802e93ad92ae03608fe9.svg",
+    "/artwork/f9e6236023093300b2daaf13.png": "/channel-logos/normalized/797b645fd686e77451398a30.svg",
+    "/channel-logos/reviewed/3cat.png": "/channel-logos/normalized/716bad2b415b967fb4c12b5f.svg",
+    "/channel-logos/reviewed/blazervision.png": "/channel-logos/normalized/cc4406b4200d6b97a4c68741.svg",
+    "/channel-logos/reviewed/jazzplus.avif": "/channel-logos/normalized/5a120d8a312a3a36531ba643.svg",
+    "/channel-logos/reviewed/kjzz.png": "/channel-logos/normalized/7ece802bcbb19a5b67fe2397.svg",
+    "/channel-logos/reviewed/ksbi.png": "/channel-logos/normalized/41b120b37797e2a5c5e17528.svg",
+    "/channel-logos/reviewed/kstp.png": "/channel-logos/normalized/6b64ac18e5ba237a5dc991b2.svg",
+    "/utility-identity/clubs/espn-basketball-15-milwaukee-bucks.png": "/channel-logos/normalized/2a5e7ccd77d62e71c9c518e9.svg",
+    "/utility-identity/clubs/espn-basketball-21-phoenix-suns.png": "/channel-logos/normalized/8f97c28696369c48eccfae05.svg",
+    "/utility-identity/clubs/espn-basketball-25-oklahoma-city-thunder.png": "/channel-logos/normalized/1c7d9c0892113e39e4c4a972.svg",
+    "/utility-identity/clubs/espn-basketball-3-new-orleans-pelicans.png": "/channel-logos/normalized/a505658a324d1de07814281e.svg",
+    "/utility-identity/clubs/espn-basketball-6-dallas-mavericks.png": "/channel-logos/normalized/72c2f59fcad49b05f09db3b6.svg",
+    "/utility-identity/clubs/espn-ice-hockey-19-st-louis-blues.png": "/channel-logos/normalized/282d24a882f6c0d115ddfc4f.svg",
+    "/utility-identity/services/sky.png": "/channel-logos/normalized/2230972afa87dd389b7c9d40.svg",
+    "/artwork/149fb2feb832be36e9a9d607.png": "/channel-logos/normalized/9217e20484dc95b3b8ed86cd.svg",
+    "/artwork/3948ae3ec87c62fc11a09ad6.png": "/channel-logos/normalized/7bad8c53202e8b2780611cb8.svg",
+    "/artwork/a53f1eb5b0e95758072420e5.png": "/channel-logos/normalized/327071e02fa49f1374e02704.svg",
+    "/artwork/b38e0e153b53951df1661a80.png": "/channel-logos/normalized/7b1d3126acac0ce6c69c7e76.svg",
+    "/channel-logos/reviewed/abtv.png": "/channel-logos/normalized/91ac39dd0f13170071e2d42d.svg",
+    "/channel-logos/reviewed/sportplus.png": "/channel-logos/normalized/876cccf0907f9db3a4017fd7.svg",
+    "/channel-logos/reviewed/tnt-sports-3.png": "/channel-logos/normalized/1f9fb5e66086a3f34668d48a.svg",
+    "/utility-identity/clubs/espn-basketball-22-portland-trail-blazers.png": "/channel-logos/normalized/8085e4db13104ebb508ed724.svg"
+  }
+}

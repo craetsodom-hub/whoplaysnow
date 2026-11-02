@@ -1,0 +1,830 @@
+{
+  "generatedAt": "2026-03-23T14:27:45.186Z",
+  "basis": "prisma/seeds/pricing/plans.seed.ts subscription+monthly templates",
+  "pairCount": 84,
+  "providerCount": 15,
+  "byProvider": [
+    {
+      "providerSlug": "amc-plus",
+      "regionCount": 3,
+      "regions": [
+        "AU",
+        "CA",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCount": 8,
+      "regions": [
+        "AU",
+        "CA",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "IT",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "britbox",
+      "regionCount": 3,
+      "regions": [
+        "AU",
+        "CA",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCount": 9,
+      "regions": [
+        "AU",
+        "CA",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "IT",
+        "MA",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCount": 9,
+      "regions": [
+        "AU",
+        "CA",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "IT",
+        "MA",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "discovery-plus",
+      "regionCount": 2,
+      "regions": [
+        "GB",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCount": 8,
+      "regions": [
+        "AU",
+        "CA",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "IT",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "hulu",
+      "regionCount": 1,
+      "regions": [
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "max",
+      "regionCount": 6,
+      "regions": [
+        "AU",
+        "DE",
+        "ES",
+        "FR",
+        "IT",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "mgm-plus",
+      "regionCount": 1,
+      "regions": [
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCount": 9,
+      "regions": [
+        "AU",
+        "CA",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "IT",
+        "MA",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCount": 9,
+      "regions": [
+        "AU",
+        "CA",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "IT",
+        "MA",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "paramount-plus",
+      "regionCount": 7,
+      "regions": [
+        "AU",
+        "CA",
+        "DE",
+        "FR",
+        "GB",
+        "IT",
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "peacock",
+      "regionCount": 1,
+      "regions": [
+        "US"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCount": 8,
+      "regions": [
+        "AU",
+        "CA",
+        "DE",
+        "ES",
+        "FR",
+        "GB",
+        "IT",
+        "US"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "providerSlug": "amc-plus",
+      "regionCode": "AU",
+      "planKeys": [
+        "amc-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "amc-plus",
+      "regionCode": "CA",
+      "planKeys": [
+        "amc-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "amc-plus",
+      "regionCode": "US",
+      "planKeys": [
+        "amc-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCode": "AU",
+      "planKeys": [
+        "apple-tv-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCode": "CA",
+      "planKeys": [
+        "apple-tv-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCode": "DE",
+      "planKeys": [
+        "apple-tv-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCode": "ES",
+      "planKeys": [
+        "apple-tv-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCode": "FR",
+      "planKeys": [
+        "apple-tv-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCode": "GB",
+      "planKeys": [
+        "apple-tv-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCode": "IT",
+      "planKeys": [
+        "apple-tv-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "apple-tv-plus",
+      "regionCode": "US",
+      "planKeys": [
+        "apple-tv-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "britbox",
+      "regionCode": "AU",
+      "planKeys": [
+        "britbox-monthly"
+      ]
+    },
+    {
+      "providerSlug": "britbox",
+      "regionCode": "CA",
+      "planKeys": [
+        "britbox-monthly"
+      ]
+    },
+    {
+      "providerSlug": "britbox",
+      "regionCode": "US",
+      "planKeys": [
+        "britbox-monthly"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "AU",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "CA",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "DE",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "ES",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "FR",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "GB",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "IT",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "MA",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "crunchyroll",
+      "regionCode": "US",
+      "planKeys": [
+        "crunchyroll-fan",
+        "crunchyroll-mega-fan"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "AU",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "CA",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "DE",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "ES",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "FR",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "GB",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "IT",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "MA",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "curiosity-stream",
+      "regionCode": "US",
+      "planKeys": [
+        "curiosity-stream-monthly"
+      ]
+    },
+    {
+      "providerSlug": "discovery-plus",
+      "regionCode": "GB",
+      "planKeys": [
+        "discovery-plus-with-ads",
+        "discovery-plus-ad-free"
+      ]
+    },
+    {
+      "providerSlug": "discovery-plus",
+      "regionCode": "US",
+      "planKeys": [
+        "discovery-plus-with-ads",
+        "discovery-plus-ad-free"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCode": "AU",
+      "planKeys": [
+        "disney-plus-standard",
+        "disney-plus-premium"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCode": "CA",
+      "planKeys": [
+        "disney-plus-standard",
+        "disney-plus-premium"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCode": "DE",
+      "planKeys": [
+        "disney-plus-standard",
+        "disney-plus-premium"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCode": "ES",
+      "planKeys": [
+        "disney-plus-standard",
+        "disney-plus-premium"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCode": "FR",
+      "planKeys": [
+        "disney-plus-standard",
+        "disney-plus-premium"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCode": "GB",
+      "planKeys": [
+        "disney-plus-standard",
+        "disney-plus-premium"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCode": "IT",
+      "planKeys": [
+        "disney-plus-standard",
+        "disney-plus-premium"
+      ]
+    },
+    {
+      "providerSlug": "disney-plus",
+      "regionCode": "US",
+      "planKeys": [
+        "disney-plus-standard",
+        "disney-plus-premium"
+      ]
+    },
+    {
+      "providerSlug": "hulu",
+      "regionCode": "US",
+      "planKeys": [
+        "hulu-with-ads",
+        "hulu-no-ads"
+      ]
+    },
+    {
+      "providerSlug": "max",
+      "regionCode": "AU",
+      "planKeys": [
+        "max-basic-with-ads",
+        "max-standard",
+        "max-premium"
+      ]
+    },
+    {
+      "providerSlug": "max",
+      "regionCode": "DE",
+      "planKeys": [
+        "max-basic-with-ads",
+        "max-standard",
+        "max-premium"
+      ]
+    },
+    {
+      "providerSlug": "max",
+      "regionCode": "ES",
+      "planKeys": [
+        "max-basic-with-ads",
+        "max-standard",
+        "max-premium"
+      ]
+    },
+    {
+      "providerSlug": "max",
+      "regionCode": "FR",
+      "planKeys": [
+        "max-basic-with-ads",
+        "max-standard",
+        "max-premium"
+      ]
+    },
+    {
+      "providerSlug": "max",
+      "regionCode": "IT",
+      "planKeys": [
+        "max-basic-with-ads",
+        "max-standard",
+        "max-premium"
+      ]
+    },
+    {
+      "providerSlug": "max",
+      "regionCode": "US",
+      "planKeys": [
+        "max-basic-with-ads",
+        "max-standard",
+        "max-premium"
+      ]
+    },
+    {
+      "providerSlug": "mgm-plus",
+      "regionCode": "US",
+      "planKeys": [
+        "mgm-plus-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "AU",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "CA",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "DE",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "ES",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "FR",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "GB",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "IT",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "MA",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "mubi",
+      "regionCode": "US",
+      "planKeys": [
+        "mubi-monthly"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "AU",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "CA",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "DE",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "ES",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "FR",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "GB",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "IT",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "MA",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "netflix",
+      "regionCode": "US",
+      "planKeys": [
+        "netflix-standard-with-ads",
+        "netflix-standard",
+        "netflix-premium"
+      ]
+    },
+    {
+      "providerSlug": "paramount-plus",
+      "regionCode": "AU",
+      "planKeys": [
+        "paramount-essential",
+        "paramount-premium"
+      ]
+    },
+    {
+      "providerSlug": "paramount-plus",
+      "regionCode": "CA",
+      "planKeys": [
+        "paramount-essential",
+        "paramount-premium"
+      ]
+    },
+    {
+      "providerSlug": "paramount-plus",
+      "regionCode": "DE",
+      "planKeys": [
+        "paramount-essential",
+        "paramount-premium"
+      ]
+    },
+    {
+      "providerSlug": "paramount-plus",
+      "regionCode": "FR",
+      "planKeys": [
+        "paramount-essential",
+        "paramount-premium"
+      ]
+    },
+    {
+      "providerSlug": "paramount-plus",
+      "regionCode": "GB",
+      "planKeys": [
+        "paramount-essential",
+        "paramount-premium"
+      ]
+    },
+    {
+      "providerSlug": "paramount-plus",
+      "regionCode": "IT",
+      "planKeys": [
+        "paramount-essential",
+        "paramount-premium"
+      ]
+    },
+    {
+      "providerSlug": "paramount-plus",
+      "regionCode": "US",
+      "planKeys": [
+        "paramount-essential",
+        "paramount-premium"
+      ]
+    },
+    {
+      "providerSlug": "peacock",
+      "regionCode": "US",
+      "planKeys": [
+        "peacock-premium",
+        "peacock-premium-plus"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCode": "AU",
+      "planKeys": [
+        "prime-video-subscription"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCode": "CA",
+      "planKeys": [
+        "prime-video-subscription"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCode": "DE",
+      "planKeys": [
+        "prime-video-subscription"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCode": "ES",
+      "planKeys": [
+        "prime-video-subscription"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCode": "FR",
+      "planKeys": [
+        "prime-video-subscription"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCode": "GB",
+      "planKeys": [
+        "prime-video-subscription"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCode": "IT",
+      "planKeys": [
+        "prime-video-subscription"
+      ]
+    },
+    {
+      "providerSlug": "prime-video",
+      "regionCode": "US",
+      "planKeys": [
+        "prime-video-subscription"
+      ]
+    }
+  ]
+}

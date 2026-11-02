@@ -1,0 +1,49 @@
+[
+  {
+    "country": "US",
+    "name": "CNBC",
+    "url": "https://static-redesign.cnbcfm.com/dist/d6085c9e81f4d7365c8d.svg",
+    "source": "https://www.cnbc.com/",
+    "path": "/artwork/1d60070588ebed46329ddd09.png"
+  },
+  {
+    "country": "US",
+    "name": "ClipperVision",
+    "url": "https://clippersweb.blob.core.windows.net/watch/clippervision-icon-dark.svg",
+    "source": "https://www.nba.com/clippers/watch",
+    "path": "/artwork/fec05e667a9c9d4973880d71.png"
+  },
+  {
+    "country": "US",
+    "name": "KTLA",
+    "url": "https://clippersweb.blob.core.windows.net/watch/logos/broadcast/ktla-5.webp",
+    "source": "https://www.nba.com/clippers/watch",
+    "path": "/artwork/13627a47745cc25ce805e014.png"
+  },
+  {
+    "country": "US",
+    "name": "Amazon Prime Video US",
+    "url": "https://clippersweb.blob.core.windows.net/watch/logos/broadcast/prime.svg",
+    "source": "https://www.nba.com/clippers/watch",
+    "path": "/artwork/077968d0b2dd6035f7d3a264.png"
+  },
+  {
+    "country": "PL",
+    "name": "TVP Sport",
+    "url": "https://s.tvp.pl/files/sport.tvp.pl/gfx/app-logo-20.png",
+    "source": "https://sport.tvp.pl/",
+    "path": "/artwork/b33ab5a0cc17dd678abc3444.png"
+  },
+  {
+    "country": "BE",
+    "name": "DAZN Belgium",
+    "sharedBrand": "DAZN",
+    "path": "/artwork/07bdb77cf2c657563ebdd346.png"
+  },
+  {
+    "country": "BE",
+    "name": "DAZN Pro League 1",
+    "sharedBrand": "DAZN",
+    "path": "/artwork/07bdb77cf2c657563ebdd346.png"
+  }
+]

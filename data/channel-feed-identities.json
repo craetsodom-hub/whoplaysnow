@@ -1,0 +1,103 @@
+{
+  "rules": [
+    {
+      "names": [
+        "beIN SPORTS 1",
+        "beIN SPORTS 2",
+        "beIN SPORTS 3",
+        "beIN SPORTS 4",
+        "beIN SPORTS 5",
+        "beIN SPORTS 6",
+        "beIN SPORTS 7"
+      ],
+      "countries": [
+        "AE",
+        "BH",
+        "DZ",
+        "EG",
+        "IQ",
+        "JO",
+        "KW",
+        "LB",
+        "LY",
+        "MA",
+        "OM",
+        "PS",
+        "QA",
+        "SA",
+        "SY",
+        "TN",
+        "YE"
+      ],
+      "label": "AR",
+      "sourceUrl": "https://prodnew.etisalat.ae/en/c/home/packages/elife-unlimited-premium-1g-channels-list.html",
+      "checkedAt": "2026-10-31T23:40:38.763949+00:00",
+      "reviewUntil": "2026-12-01T00:00:00Z",
+      "note": "Provider table identifies the Arabic regional feed. Feed label is not a promise of a single commentary track for every programme."
+    },
+    {
+      "names": [
+        "beIN SPORTS 8",
+        "beIN SPORTS 9"
+      ],
+      "countries": [
+        "AE",
+        "BH",
+        "DZ",
+        "EG",
+        "IQ",
+        "JO",
+        "KW",
+        "LB",
+        "LY",
+        "MA",
+        "OM",
+        "PS",
+        "QA",
+        "SA",
+        "SY",
+        "TN",
+        "YE"
+      ],
+      "label": "AR",
+      "sourceUrl": "https://www.beinsports.com/en-mena/tennis/wimbledon/articles-video/bein-media-group-extends-exclusive-wimbledon-broadcast-rights-across-mena-until-2030-2026-06-17",
+      "additionalSources": [
+        "https://prodnew.etisalat.ae/en/c/home/packages/elife-unlimited-premium-1g-channels-list.html",
+        "https://www.beinsports.com/en-mena/motorsports/moto-gp/articles/bein-sports-to-broadcast-qatar-motogp-this-weekend-2023-11-15"
+      ],
+      "checkedAt": "2026-10-31T23:40:38.763949+00:00",
+      "reviewUntil": "2026-12-01T00:00:00Z",
+      "note": "Arabic regional edition; individual events may additionally provide English commentary. Numbered channels remain distinct from EN and FR feeds."
+    },
+    {
+      "names": [
+        "beIN SPORTS XTRA 1",
+        "beIN SPORTS XTRA 2"
+      ],
+      "countries": [
+        "AE",
+        "BH",
+        "DZ",
+        "EG",
+        "IQ",
+        "JO",
+        "KW",
+        "LB",
+        "LY",
+        "MA",
+        "OM",
+        "PS",
+        "QA",
+        "SA",
+        "SY",
+        "TN",
+        "YE"
+      ],
+      "label": "AR/EN",
+      "sourceUrl": "https://prodnew.etisalat.ae/en/c/home/packages/elife-unlimited-premium-1g-channels-list.html",
+      "checkedAt": "2026-10-31T23:40:38.763949+00:00",
+      "reviewUntil": "2026-12-01T00:00:00Z",
+      "note": "Provider lists Arabic + English for these two specific XTRA feeds. No language inferred for other XTRA channels."
+    }
+  ]
+}

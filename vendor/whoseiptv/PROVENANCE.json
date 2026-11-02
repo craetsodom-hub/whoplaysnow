@@ -1,0 +1,38 @@
+{
+  "repository": "https://github.com/craetsodom-hub/whoseiptv",
+  "commit": "36e37219ddcbf4bd5d92ae1049dd1f02c660de9e",
+  "files": [
+    "config/channel-audio-evidence.json",
+    "config/official-event-broadcasters.json",
+    "config/participant-identities.json",
+    "scripts/broadcast/adapters/bein-mena.mjs",
+    "scripts/broadcast/adapters/bundesliga.mjs",
+    "scripts/broadcast/adapters/common.mjs",
+    "scripts/broadcast/adapters/index.mjs",
+    "scripts/broadcast/adapters/laliga.mjs",
+    "scripts/broadcast/adapters/movistar-plus.mjs",
+    "scripts/broadcast/adapters/premier-league.mjs",
+    "scripts/broadcast/adapters/sky-sports.mjs",
+    "scripts/broadcast/channel-identity.mjs",
+    "scripts/broadcast/discovery.mjs",
+    "scripts/broadcast/identity.mjs",
+    "scripts/broadcast/languages.mjs",
+    "scripts/broadcast/normalize.mjs",
+    "scripts/broadcast/resolver.mjs",
+    "scripts/broadcast/rights-catalog.mjs",
+    "scripts/broadcast/sky-fixtures.mjs",
+    "scripts/broadcast/source-priority.mjs",
+    "scripts/broadcast/territory-regions.mjs",
+    "scripts/official-rights.mjs",
+    "scripts/territories.mjs"
+  ],
+  "localPatches": [
+    {
+      "date": "2026-11-01",
+      "files": [
+        "scripts/broadcast/adapters/bein-mena.mjs"
+      ],
+      "reason": "Recognize first-party English Premier League, French Ligue 1 and German Bundesliga programme titles while preserving category, season, provider, live marker and programme-window validation. Accept observed v/vs team separators. Recover oversized Premier League programme slots only through matching Remarks/Synopsis, explicit GMT kickoff, MECCA offset, exact team names, competition, season and independent fixture identity."
+    }
+  ]
+}

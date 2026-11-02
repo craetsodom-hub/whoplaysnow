@@ -1,0 +1,11 @@
+import {readFile,writeFile} from 'node:fs/promises';
+import {auditFutureSchedule} from '../lib/future-quality';
+import {reconcileEvents} from '../lib/snapshot';
+import {decorateEvent} from '../lib/artwork';
+import {addGlobalServices} from '../lib/global-services';
+const args=process.argv.slice(2),option=(key:string,fallback:string)=>args.includes(key)?args[args.indexOf(key)+1]:fallback;
+const snapshot=JSON.parse(await readFile(option('--snapshot',(process.env.DATA_DIR||'runtime')+'/schedule.json'),'utf8'));
+const report=auditFutureSchedule({...snapshot,events:reconcileEvents(snapshot.events)},Date.now(),e=>addGlobalServices(decorateEvent(e)));
+await writeFile(option('--output',(process.env.DATA_DIR||'runtime')+'/schedule-quality.json'),JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify({checkedAt:report.checkedAt,upcomingEvents:report.upcomingEvents,staleFixtures:report.staleFixtures,windows:report.windows,issueCounts:report.issueCounts},null,2));
+if(args.includes('--strict')&&(report.issues.length||report.staleFixtures||report.windows.some(w=>w.withoutAnyListing)))process.exitCode=1;

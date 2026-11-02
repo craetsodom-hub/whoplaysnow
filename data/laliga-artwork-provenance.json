@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Movistar LALIGA",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "69",
+    "url": "https://assets.laliga.com/assets/2025/07/22/small/b30076eca9b622cf930eaa01ef6910d1.png",
+    "path": "/artwork/372e55d3845e621c64ef31e8.png",
+    "checkedAt": "2026-10-29T10:29:46.506Z"
+  },
+  {
+    "name": "DAZN",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "67",
+    "url": "https://assets.laliga.com/assets/2022/06/30/small/6a4bdb9c79c7f82e20bdb4014f5e9fde.png",
+    "path": "/artwork/07bdb77cf2c657563ebdd346.png",
+    "checkedAt": "2026-10-29T10:29:46.659Z"
+  },
+  {
+    "name": "Movistar Plus+",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "70",
+    "url": "https://assets.laliga.com/assets/2023/07/26/small/e4e14d9bb877f01c3919c7d653ce9443.png",
+    "path": "/artwork/46a744f0ab53f6cdb1d27c81.png",
+    "checkedAt": "2026-10-29T10:29:46.702Z"
+  },
+  {
+    "name": "Orange Fútbol 1",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "75",
+    "url": "https://assets.laliga.com/assets/2026/04/09/small/5cc2f175c04975c54139f7166301aff7.png",
+    "path": "/artwork/5474f232b23ffab89382b73a.png",
+    "checkedAt": "2026-10-29T10:29:46.740Z"
+  },
+  {
+    "name": "DAZN EN ABIERTO",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "80",
+    "url": "https://assets.laliga.com/assets/2025/08/12/small/df7ac602abf3119cc14d2d30c125787d.png",
+    "path": "/artwork/244e10c74699b6075b380bdd.png",
+    "checkedAt": "2026-10-29T10:29:46.830Z"
+  },
+  {
+    "name": "LALIGA TV HYPERMOTION",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "68",
+    "url": "https://assets.laliga.com/assets/2023/07/04/small/d0c0191e6268a2d6c5fde4756d1202ea.png",
+    "path": "/artwork/29deb2be8f0ca93238bb1125.png",
+    "checkedAt": "2026-10-29T10:29:46.882Z"
+  },
+  {
+    "name": "Orange Fútbol 2",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "76",
+    "url": "https://assets.laliga.com/assets/2026/04/09/small/b73c98cd8273e77126e21dba224d65f0.png",
+    "path": "/artwork/b28f3e283eb015f1a66d35e9.png",
+    "checkedAt": "2026-10-29T10:29:46.974Z"
+  },
+  {
+    "name": "CRTVG",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "73",
+    "url": "https://assets.laliga.com/assets/2024/08/28/small/97d9641cc26a365537f66b4764cb1fb5.png",
+    "path": "/artwork/0f7f2f02edd2c7bafae1ff5a.png",
+    "checkedAt": "2026-10-29T10:29:47.040Z"
+  },
+  {
+    "name": "Replay",
+    "country": "ES",
+    "source": "https://www.laliga.com/iframes/external-consumer-broadcast",
+    "sourceChannelId": "38",
+    "url": "https://assets.laliga.com/assets/2026/09/16/small/cf2f9db664e220f864789db422d830e5.png",
+    "path": "/artwork/1fc528efab468252142e4e80.png",
+    "checkedAt": "2026-10-29T10:29:47.129Z"
+  }
+]

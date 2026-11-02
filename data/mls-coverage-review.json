@@ -1,0 +1,90 @@
+{
+  "reviewedAt": "2026-10-29",
+  "records": [
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "ES",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/es/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/es/offer/mls",
+      "viewingUrl": "https://tv.apple.com/es/offer/mls",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "FR",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/fr/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/fr/offer/mls",
+      "viewingUrl": "https://tv.apple.com/fr/offer/mls",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "DE",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/de/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/de/offer/mls",
+      "viewingUrl": "https://tv.apple.com/de/offer/mls",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "MA",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/ma/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/ma/offer/mls",
+      "viewingUrl": "https://tv.apple.com/ma/offer/mls",
+      "lastVerified": "2026-10-29"
+    }
+  ],
+  "evidence": "Localized Apple TV MLS pages explicitly describe every match; captured HTML in verification/apple-mls-*.html"
+}

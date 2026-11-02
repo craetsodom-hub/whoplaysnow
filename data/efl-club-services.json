@@ -1,0 +1,265 @@
+{
+  "checkedAt": "2026-10-29T21:27:17.226Z",
+  "reviewUntil": "2027-01-27T00:00:00.000Z",
+  "validFrom": "2026-07-01",
+  "validThrough": "2027-06-30",
+  "sourceUrl": "https://efl.streamamg.com/support/solutions/articles/80001139183-what-games-can-i-watch-live-",
+  "policyUrl": "https://www.efl.com/how-to-watch/ifollow-and-streaming/",
+  "directoryUrl": "https://multi-club-matches.webapi.gc.eflservices.co.uk/v2/teams?competitionID=10,11,12&seasonID=2026",
+  "excludedTerritories": [
+    "GB",
+    "IE",
+    "IM",
+    "JE",
+    "GG"
+  ],
+  "territoryEvidenceUrl": "https://efl.streamamg.com/support/solutions/articles/80001133887-what-countries-are-classified-as-uk-under-the-broadcast-agreement-",
+  "reviewNote": "EFL 2026/27 policy expressly allows all League One and League Two league games for overseas supporters, including international TV selections. Club pages confirm the current brand and overseas video offer. Directory links that returned errors, unrelated content, missing service names or no overseas offer were not published.",
+  "clubs": [
+    {
+      "club": "Barnsley",
+      "aliases": [
+        "Barnsley"
+      ],
+      "name": "iFollow Barnsley",
+      "viewingUrl": "https://www.barnsleyfc.co.uk/videos/subscriptions",
+      "logoPath": "/artwork/f9e6236023093300b2daaf13.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t37.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Blackpool",
+      "aliases": [
+        "Blackpool"
+      ],
+      "name": "TANGERINE TV",
+      "viewingUrl": "https://www.blackpoolfc.co.uk/videos",
+      "logoPath": "/artwork/1a527f617dba5dffa5b486a8.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t92.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Bradford City",
+      "aliases": [
+        "Bradford City",
+        "Bradford"
+      ],
+      "name": "BANTAMSTV",
+      "viewingUrl": "https://www.bradfordcityafc.com/ifollow",
+      "logoPath": "/artwork/c29d5c0dfbd9e96c0b5a7211.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t55.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Burton Albion",
+      "aliases": [
+        "Burton Albion",
+        "Burton"
+      ],
+      "name": "iFollow Brewers",
+      "viewingUrl": "https://www.burtonalbionfc.co.uk/videos/subscriptions",
+      "logoPath": "/artwork/269ffb5072c6210311254fa5.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t587.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Doncaster Rovers",
+      "aliases": [
+        "Doncaster Rovers",
+        "Doncaster"
+      ],
+      "name": "Rovers+",
+      "viewingUrl": "https://www.doncasterroversfc.co.uk/ifollow",
+      "logoPath": "/artwork/3030ad81ffd788383b5e0420.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t290.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Huddersfield Town",
+      "aliases": [
+        "Huddersfield Town",
+        "Huddersfield"
+      ],
+      "name": "HTTV",
+      "viewingUrl": "https://www.htafc.com/ifollow/",
+      "logoPath": "/artwork/2930c13d9a5f568e2eaaa459.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t38.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Leyton Orient",
+      "aliases": [
+        "Leyton Orient",
+        "L Orient"
+      ],
+      "name": "Orient TV",
+      "viewingUrl": "https://www.leytonorient.com/orient-tv/",
+      "logoPath": "/artwork/0f70e8ae40283283bfcd4182.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t85.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Mansfield Town",
+      "aliases": [
+        "Mansfield Town"
+      ],
+      "name": "iFollow Stags",
+      "viewingUrl": "https://www.mansfieldtown.net/videos/subscriptions",
+      "logoPath": "/artwork/15c5730590070591a552aeda.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t77.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Notts County",
+      "aliases": [
+        "Notts County",
+        "Notts C"
+      ],
+      "name": "PiesPlayer",
+      "viewingUrl": "https://www.nottscountyfc.co.uk/ifollow",
+      "logoPath": "/artwork/8bc0ffa1048ec3f5306b5f52.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t104.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Reading",
+      "aliases": [
+        "Reading"
+      ],
+      "name": "Royals TV",
+      "viewingUrl": "https://www.readingfc.co.uk/videos",
+      "logoPath": "/artwork/922854566cffc6a74f74697a.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t108.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Sheffield Wednesday",
+      "aliases": [
+        "Sheffield Wednesday",
+        "Sheffield Wed"
+      ],
+      "name": "SWFC TV",
+      "viewingUrl": "https://www.swfc.co.uk/videos/subscriptions",
+      "logoPath": "/artwork/ee1ca462792b6ec97af11e5a.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t19.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Stevenage",
+      "aliases": [
+        "Stevenage"
+      ],
+      "name": "Stevenage TV",
+      "viewingUrl": "https://www.stevenagefc.com/videos/subscriptions",
+      "logoPath": "/artwork/14ff91b595f5e16a802b4037.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t288.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Wigan Athletic",
+      "aliases": [
+        "Wigan Athletic",
+        "Wigan"
+      ],
+      "name": "Latics TV",
+      "viewingUrl": "https://wiganathletic.com/laticstv/",
+      "logoPath": "/artwork/b38e0e153b53951df1661a80.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t111.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Wycombe Wanderers",
+      "aliases": [
+        "Wycombe Wanderers",
+        "Wycombe"
+      ],
+      "name": "WanderersTV",
+      "viewingUrl": "https://www.wwfc.com/videos",
+      "logoPath": "/artwork/a07ad6aef6effe408db78425.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t112.png",
+      "competition": "League One"
+    },
+    {
+      "club": "Crewe Alexandra",
+      "aliases": [
+        "Crewe Alexandra",
+        "Crewe"
+      ],
+      "name": "CAFC TV",
+      "viewingUrl": "https://www.crewealex.net/videos/subscriptions",
+      "logoPath": "/artwork/84a7f15935e9a95e6e6d6325.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t51.png",
+      "competition": "League Two"
+    },
+    {
+      "club": "Northampton Town",
+      "aliases": [
+        "Northampton Town",
+        "Northampton"
+      ],
+      "name": "NTFC TV",
+      "viewingUrl": "https://www.ntfc.co.uk/videos/subscriptions",
+      "logoPath": "/artwork/681b4e3dee2a77d74919549d.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t75.png",
+      "competition": "League Two"
+    },
+    {
+      "club": "Oldham Athletic",
+      "aliases": [
+        "Oldham Athletic",
+        "Oldham"
+      ],
+      "name": "Latics Player",
+      "viewingUrl": "https://www.oldhamathletic.co.uk/videos",
+      "logoPath": "/artwork/ec8d2103e06506360218138a.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t105.png",
+      "competition": "League Two"
+    },
+    {
+      "club": "Rotherham United",
+      "aliases": [
+        "Rotherham United",
+        "Rotherham"
+      ],
+      "name": "Rotherham TV",
+      "viewingUrl": "https://www.themillers.co.uk/videos/subscriptions",
+      "logoPath": "/artwork/0e061c5ddd06ce0bd2f34fc1.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t72.png",
+      "competition": "League Two"
+    },
+    {
+      "club": "Salford City",
+      "aliases": [
+        "Salford City"
+      ],
+      "name": "SCFC TV",
+      "viewingUrl": "https://www.salfordcityfc.co.uk/videos",
+      "logoPath": "/artwork/4f443e113471f6fa7ed66675.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t3448.png",
+      "competition": "League Two"
+    },
+    {
+      "club": "Tranmere Rovers",
+      "aliases": [
+        "Tranmere Rovers",
+        "Tranmere"
+      ],
+      "name": "Rovers TV",
+      "viewingUrl": "https://www.tranmererovers.co.uk/ifollow",
+      "logoPath": "/artwork/f262fb5d106d1ccb338b27b9.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t44.png",
+      "competition": "League Two"
+    },
+    {
+      "club": "Walsall",
+      "aliases": [
+        "Walsall"
+      ],
+      "name": "Saddlers +",
+      "viewingUrl": "https://www.saddlers.co.uk/ifollow",
+      "logoPath": "/artwork/34bcbcf8621c986a1ce96c8f.png",
+      "logoSource": "https://crests.gc.eflservices.co.uk/t42.png",
+      "competition": "League Two"
+    }
+  ]
+}

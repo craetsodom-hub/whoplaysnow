@@ -1,0 +1,9 @@
+node_modules/
+runtime/
+.env
+*.tgz
+
+verification/
+dist/
+.wrangler/
+runtime-live/

@@ -1,0 +1,44 @@
+{
+  "tsdb-2550121": {
+    "title": "Bulls vs Ulster",
+    "startsAt": "2026-10-24T11:45:00.000Z",
+    "competition": "United Rugby Championship",
+    "sourceUrl": "https://www.thesportsdb.com/event/2550121"
+  },
+  "tsdb-2550122": {
+    "title": "Benetton vs Glasgow",
+    "startsAt": "2026-10-24T14:00:00.000Z",
+    "competition": "United Rugby Championship",
+    "sourceUrl": "https://www.thesportsdb.com/event/2550122"
+  },
+  "tsdb-2553400": {
+    "title": "Bristol Bears vs Exeter Chiefs",
+    "startsAt": "2026-10-24T16:30:00.000Z",
+    "competition": "English Prem Rugby",
+    "sourceUrl": "https://www.thesportsdb.com/event/2553400"
+  },
+  "tsdb-2553401": {
+    "title": "Harlequins vs Saracens",
+    "startsAt": "2026-10-25T15:00:00.000Z",
+    "competition": "English Prem Rugby",
+    "sourceUrl": "https://www.thesportsdb.com/event/2553401"
+  },
+  "tsdb-2550409": {
+    "title": "Stade Rochelais vs Union Bordeaux Bègles",
+    "startsAt": "2026-10-25T20:05:00.000Z",
+    "competition": "French Top 14",
+    "sourceUrl": "https://www.thesportsdb.com/event/2550409"
+  },
+  "tsdb-2550127": {
+    "title": "Glasgow vs Lions",
+    "startsAt": "2026-10-30T19:45:00.000Z",
+    "competition": "United Rugby Championship",
+    "sourceUrl": "https://www.thesportsdb.com/event/2550127"
+  },
+  "tsdb-2550129": {
+    "title": "Bulls vs Scarlets",
+    "startsAt": "2026-10-31T15:00:00.000Z",
+    "competition": "United Rugby Championship",
+    "sourceUrl": "https://www.thesportsdb.com/event/2550129"
+  }
+}

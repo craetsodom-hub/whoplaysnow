@@ -1,0 +1,569 @@
+[
+  {
+    "providerSlug": "amc-plus",
+    "regionCode": "AU",
+    "planKey": "amc-plus-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.amcplus.com/",
+    "sourceLabel": "AMC+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "amc-plus",
+    "regionCode": "CA",
+    "planKey": "amc-plus-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.amcplus.com/",
+    "sourceLabel": "AMC+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "britbox",
+    "regionCode": "AU",
+    "planKey": "britbox-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.britbox.com/us/",
+    "sourceLabel": "BritBox official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "britbox",
+    "regionCode": "CA",
+    "planKey": "britbox-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.britbox.com/us/",
+    "sourceLabel": "BritBox official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "crunchyroll",
+    "regionCode": "AU",
+    "planKey": "crunchyroll-fan",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.crunchyroll.com/premium",
+    "sourceLabel": "Crunchyroll official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "crunchyroll",
+    "regionCode": "CA",
+    "planKey": "crunchyroll-fan",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.crunchyroll.com/premium",
+    "sourceLabel": "Crunchyroll official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "crunchyroll",
+    "regionCode": "DE",
+    "planKey": "crunchyroll-fan",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.crunchyroll.com/premium",
+    "sourceLabel": "Crunchyroll official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "crunchyroll",
+    "regionCode": "ES",
+    "planKey": "crunchyroll-fan",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.crunchyroll.com/premium",
+    "sourceLabel": "Crunchyroll official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "crunchyroll",
+    "regionCode": "FR",
+    "planKey": "crunchyroll-fan",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.crunchyroll.com/premium",
+    "sourceLabel": "Crunchyroll official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "crunchyroll",
+    "regionCode": "GB",
+    "planKey": "crunchyroll-fan",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.crunchyroll.com/premium",
+    "sourceLabel": "Crunchyroll official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "crunchyroll",
+    "regionCode": "IT",
+    "planKey": "crunchyroll-fan",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.crunchyroll.com/premium",
+    "sourceLabel": "Crunchyroll official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "crunchyroll",
+    "regionCode": "MA",
+    "planKey": "crunchyroll-fan",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.crunchyroll.com/premium",
+    "sourceLabel": "Crunchyroll official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "curiosity-stream",
+    "regionCode": "AU",
+    "planKey": "curiosity-stream-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://curiositystream.com/",
+    "sourceLabel": "Curiosity Stream official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "curiosity-stream",
+    "regionCode": "CA",
+    "planKey": "curiosity-stream-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://curiositystream.com/",
+    "sourceLabel": "Curiosity Stream official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "curiosity-stream",
+    "regionCode": "DE",
+    "planKey": "curiosity-stream-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://curiositystream.com/",
+    "sourceLabel": "Curiosity Stream official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "curiosity-stream",
+    "regionCode": "ES",
+    "planKey": "curiosity-stream-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://curiositystream.com/",
+    "sourceLabel": "Curiosity Stream official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "curiosity-stream",
+    "regionCode": "FR",
+    "planKey": "curiosity-stream-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://curiositystream.com/",
+    "sourceLabel": "Curiosity Stream official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "curiosity-stream",
+    "regionCode": "GB",
+    "planKey": "curiosity-stream-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://curiositystream.com/",
+    "sourceLabel": "Curiosity Stream official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "curiosity-stream",
+    "regionCode": "IT",
+    "planKey": "curiosity-stream-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://curiositystream.com/",
+    "sourceLabel": "Curiosity Stream official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "curiosity-stream",
+    "regionCode": "MA",
+    "planKey": "curiosity-stream-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://curiositystream.com/",
+    "sourceLabel": "Curiosity Stream official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "discovery-plus",
+    "regionCode": "GB",
+    "planKey": "discovery-plus-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.discoveryplus.com/",
+    "sourceLabel": "discovery+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "disney-plus",
+    "regionCode": "AU",
+    "planKey": "disney-plus-standard",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.disneyplus.com/",
+    "sourceLabel": "Disney+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "disney-plus",
+    "regionCode": "CA",
+    "planKey": "disney-plus-standard",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.disneyplus.com/",
+    "sourceLabel": "Disney+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "disney-plus",
+    "regionCode": "DE",
+    "planKey": "disney-plus-standard",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.disneyplus.com/",
+    "sourceLabel": "Disney+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "disney-plus",
+    "regionCode": "ES",
+    "planKey": "disney-plus-standard",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.disneyplus.com/",
+    "sourceLabel": "Disney+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "disney-plus",
+    "regionCode": "FR",
+    "planKey": "disney-plus-standard",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.disneyplus.com/",
+    "sourceLabel": "Disney+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "disney-plus",
+    "regionCode": "GB",
+    "planKey": "disney-plus-standard",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.disneyplus.com/",
+    "sourceLabel": "Disney+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "disney-plus",
+    "regionCode": "IT",
+    "planKey": "disney-plus-standard",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.disneyplus.com/",
+    "sourceLabel": "Disney+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "max",
+    "regionCode": "AU",
+    "planKey": "max-basic-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.max.com/",
+    "sourceLabel": "HBO Max official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "max",
+    "regionCode": "DE",
+    "planKey": "max-basic-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.max.com/",
+    "sourceLabel": "HBO Max official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "max",
+    "regionCode": "ES",
+    "planKey": "max-basic-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.max.com/",
+    "sourceLabel": "HBO Max official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "max",
+    "regionCode": "FR",
+    "planKey": "max-basic-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.max.com/",
+    "sourceLabel": "HBO Max official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "max",
+    "regionCode": "IT",
+    "planKey": "max-basic-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.max.com/",
+    "sourceLabel": "HBO Max official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "mubi",
+    "regionCode": "AU",
+    "planKey": "mubi-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://mubi.com/en/us",
+    "sourceLabel": "MUBI official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "mubi",
+    "regionCode": "CA",
+    "planKey": "mubi-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://mubi.com/en/us",
+    "sourceLabel": "MUBI official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "mubi",
+    "regionCode": "DE",
+    "planKey": "mubi-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://mubi.com/en/us",
+    "sourceLabel": "MUBI official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "mubi",
+    "regionCode": "ES",
+    "planKey": "mubi-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://mubi.com/en/us",
+    "sourceLabel": "MUBI official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "mubi",
+    "regionCode": "FR",
+    "planKey": "mubi-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://mubi.com/en/us",
+    "sourceLabel": "MUBI official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "mubi",
+    "regionCode": "GB",
+    "planKey": "mubi-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://mubi.com/en/us",
+    "sourceLabel": "MUBI official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "mubi",
+    "regionCode": "IT",
+    "planKey": "mubi-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://mubi.com/en/us",
+    "sourceLabel": "MUBI official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "mubi",
+    "regionCode": "MA",
+    "planKey": "mubi-monthly",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://mubi.com/en/us",
+    "sourceLabel": "MUBI official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "netflix",
+    "regionCode": "AU",
+    "planKey": "netflix-standard-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix official plans and pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "netflix",
+    "regionCode": "CA",
+    "planKey": "netflix-standard-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix official plans and pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "netflix",
+    "regionCode": "DE",
+    "planKey": "netflix-standard-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix official plans and pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "netflix",
+    "regionCode": "ES",
+    "planKey": "netflix-standard-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix official plans and pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "netflix",
+    "regionCode": "FR",
+    "planKey": "netflix-standard-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix official plans and pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "netflix",
+    "regionCode": "GB",
+    "planKey": "netflix-standard-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix official plans and pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "netflix",
+    "regionCode": "IT",
+    "planKey": "netflix-standard-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix official plans and pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "netflix",
+    "regionCode": "MA",
+    "planKey": "netflix-standard-with-ads",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://help.netflix.com/en/node/24926",
+    "sourceLabel": "Netflix official plans and pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "paramount-plus",
+    "regionCode": "AU",
+    "planKey": "paramount-essential",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.paramountplus.com/",
+    "sourceLabel": "Paramount+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "paramount-plus",
+    "regionCode": "CA",
+    "planKey": "paramount-essential",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.paramountplus.com/",
+    "sourceLabel": "Paramount+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "paramount-plus",
+    "regionCode": "DE",
+    "planKey": "paramount-essential",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.paramountplus.com/",
+    "sourceLabel": "Paramount+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "paramount-plus",
+    "regionCode": "FR",
+    "planKey": "paramount-essential",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.paramountplus.com/",
+    "sourceLabel": "Paramount+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "paramount-plus",
+    "regionCode": "GB",
+    "planKey": "paramount-essential",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.paramountplus.com/",
+    "sourceLabel": "Paramount+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "paramount-plus",
+    "regionCode": "IT",
+    "planKey": "paramount-essential",
+    "reason": "Region-specific official starter monthly subscription price not conclusively verifiable from public official page in this run.",
+    "sourceUrl": "https://www.paramountplus.com/",
+    "sourceLabel": "Paramount+ official pricing page",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "AU",
+    "planKey": "prime-video-subscription",
+    "reason": "Official region-specific Prime Video monthly starter price not directly confirmed from region official page in this run.",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video official site",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "CA",
+    "planKey": "prime-video-subscription",
+    "reason": "Official region-specific Prime Video monthly starter price not directly confirmed from region official page in this run.",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video official site",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "DE",
+    "planKey": "prime-video-subscription",
+    "reason": "Official region-specific Prime Video monthly starter price not directly confirmed from region official page in this run.",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video official site",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "ES",
+    "planKey": "prime-video-subscription",
+    "reason": "Official region-specific Prime Video monthly starter price not directly confirmed from region official page in this run.",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video official site",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "FR",
+    "planKey": "prime-video-subscription",
+    "reason": "Official region-specific Prime Video monthly starter price not directly confirmed from region official page in this run.",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video official site",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "GB",
+    "planKey": "prime-video-subscription",
+    "reason": "Official region-specific Prime Video monthly starter price not directly confirmed from region official page in this run.",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video official site",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "IT",
+    "planKey": "prime-video-subscription",
+    "reason": "Official region-specific Prime Video monthly starter price not directly confirmed from region official page in this run.",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video official site",
+    "manualReviewRequired": true
+  },
+  {
+    "providerSlug": "prime-video",
+    "regionCode": "US",
+    "planKey": "prime-video-subscription",
+    "reason": "Official recurring standalone Prime Video monthly price could not be extracted from publicly accessible official US pages during automated collection.",
+    "sourceUrl": "https://www.primevideo.com/",
+    "sourceLabel": "Prime Video official site",
+    "manualReviewRequired": true
+  }
+]

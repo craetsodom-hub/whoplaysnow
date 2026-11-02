@@ -1,0 +1,34 @@
+{
+  "targetPairCount": 84,
+  "verifiedPairCount": 21,
+  "unresolvedPairCount": 63,
+  "verifiedProviders": [
+    "amc-plus",
+    "apple-tv-plus",
+    "britbox",
+    "crunchyroll",
+    "curiosity-stream",
+    "discovery-plus",
+    "disney-plus",
+    "hulu",
+    "max",
+    "mgm-plus",
+    "mubi",
+    "netflix",
+    "paramount-plus",
+    "peacock"
+  ],
+  "unresolvedProviders": [
+    "amc-plus",
+    "britbox",
+    "crunchyroll",
+    "curiosity-stream",
+    "discovery-plus",
+    "disney-plus",
+    "max",
+    "mubi",
+    "netflix",
+    "paramount-plus",
+    "prime-video"
+  ]
+}

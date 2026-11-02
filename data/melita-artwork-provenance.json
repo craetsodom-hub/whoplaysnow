@@ -1,0 +1,66 @@
+[
+  {
+    "name": "TSN 1",
+    "country": "MT",
+    "source": "https://www.melita.com/sportschedule/",
+    "url": "https://www.melita.com/wp-content/plugins/melita-tv-pages/img/sports/tsn-logos/TSN1-live.png",
+    "path": "/artwork/533bc94305c46236dab75d0f.png",
+    "checkedAt": "2026-10-29T15:54:10.996Z"
+  },
+  {
+    "name": "TSN 2",
+    "country": "MT",
+    "source": "https://www.melita.com/sportschedule/",
+    "url": "https://www.melita.com/wp-content/plugins/melita-tv-pages/img/sports/tsn-logos/TSN2-live.png",
+    "path": "/artwork/f58fd18c26191ed14a78caa0.png",
+    "checkedAt": "2026-10-29T15:54:11.168Z"
+  },
+  {
+    "name": "TSN 3",
+    "country": "MT",
+    "source": "https://www.melita.com/sportschedule/",
+    "url": "https://www.melita.com/wp-content/plugins/melita-tv-pages/img/sports/tsn-logos/TSN3-live.png",
+    "path": "/artwork/7f9d1539774b06fc1cfd8e82.png",
+    "checkedAt": "2026-10-29T15:54:11.229Z"
+  },
+  {
+    "name": "TSN 4",
+    "country": "MT",
+    "source": "https://www.melita.com/sportschedule/",
+    "url": "https://www.melita.com/wp-content/plugins/melita-tv-pages/img/sports/tsn-logos/TSN4-live.png",
+    "path": "/artwork/33c9e308be9379a95045ef49.png",
+    "checkedAt": "2026-10-29T15:54:11.288Z"
+  },
+  {
+    "name": "TSN 5",
+    "country": "MT",
+    "source": "https://www.melita.com/sportschedule/",
+    "url": "https://www.melita.com/wp-content/plugins/melita-tv-pages/img/sports/tsn-logos/TSN5-live.png",
+    "path": "/artwork/4fc30c9cd1d8f40cf8ad67a2.png",
+    "checkedAt": "2026-10-29T15:54:11.347Z"
+  },
+  {
+    "name": "TSN 6",
+    "country": "MT",
+    "source": "https://www.melita.com/sportschedule/",
+    "url": "https://www.melita.com/wp-content/plugins/melita-tv-pages/img/sports/tsn-logos/TSN6-live.png",
+    "path": "/artwork/0303e7ae302d66955ed41a49.png",
+    "checkedAt": "2026-10-29T15:54:11.409Z"
+  },
+  {
+    "name": "TSN 7",
+    "country": "MT",
+    "source": "https://www.melita.com/sportschedule/",
+    "url": "https://www.melita.com/wp-content/plugins/melita-tv-pages/img/sports/tsn-logos/TSN7-live.png",
+    "path": "/artwork/dd6fa09c62dff3cd3fab3264.png",
+    "checkedAt": "2026-10-29T15:54:11.468Z"
+  },
+  {
+    "name": "TSN 8",
+    "country": "MT",
+    "source": "https://www.melita.com/sportschedule/",
+    "url": "https://www.melita.com/wp-content/plugins/melita-tv-pages/img/sports/tsn-logos/TSN8-live.png",
+    "path": "/artwork/768c41f12c8cea65e1b6d05c.png",
+    "checkedAt": "2026-10-29T15:54:11.525Z"
+  }
+]

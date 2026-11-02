@@ -1,0 +1,28 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {applyESPNNL,espnNLState,enrichESPNNL} from '../lib/matches/espn-nl';const now=Date.parse('2026-10-29T18:00Z');const e={id:'nba1',sport:'basketball',competition:'NBA',title:'Portland Trail Blazers vs Memphis Grizzlies',startsAt:'2026-10-30T02:00Z',homeTeam:{name:'Portland Trail Blazers',aliases:['Trail Blazers']},awayTeam:{name:'Memphis Grizzlies',aliases:['Grizzlies']},broadcasts:[]};const row={nme:'NBA: Trail Blazers vs Grizzlies',tp:'upcoming',stme:e.startsAt,bcsts:[{code:'NL_ESPN1',tp:'linear',abbr:'nl_espn1'}],nwimg:[{alt:'nl_espn1',image:'https://a.espncdn.com/watchespn/images/web/network_logos/channel_logo_nl_espn1_2x.png'}]};const state=(r:any)=>({page:{content:{watch:{arngs:[{sctgys:[{nme:'NBA',arngs:[r]}]}]}}}});
+test('ESPN Netherlands uses exact numbered channel, country code and fixture identity',()=>{const b=applyESPNNL([e],state(row),now,now)[0].broadcasts[0];assert.equal(b.channel,'ESPN 1');assert.equal(b.territory,'NL');assert.equal(b.official,true);assert.ok(b.logoUrl);for(const change of [{nme:'NBA: Lakers vs Grizzlies'},{nme:'NBA: Trail Blazers vs Grizzlies (highlights)'},{stme:'2026-10-30T08:00Z'},{tp:'replay'},{bcsts:[{code:'US_ESPN1',tp:'linear'}]}])assert.equal(applyESPNNL([e],state({...row,...change}),now,now)[0].broadcasts.length,0);assert.equal(applyESPNNL([e,{...e,id:'ambiguous'}],state(row),now,now)[0].broadcasts.length,0);});
+test('ESPN Netherlands parses JSON without executing script and does not renew failed cached evidence',async()=>{const s=state(row);assert.deepEqual(espnNLState("<script>window['__CONFIG__']={};window['__espnfitt__']="+JSON.stringify(s)+';</script>'),s);assert.throws(()=>espnNLState('<script>bad()</script>'));const old={checkedAt:now,state:s};const out=await enrichESPNNL([e],old,(async()=>{throw Error('offline')}) as any,now+4*3600000);assert.equal(out.events[0].broadcasts[0].checkedAt,new Date(now).toISOString());assert.equal((await enrichESPNNL([e],old,(async()=>{throw Error('offline')}) as any,now+13*3600000)).events[0].broadcasts.length,0);});
+
+import {reconcileEvents} from '../lib/snapshot';
+test('official ESPN matching receives reconciled provider duplicates',()=>{const duplicates=[e,{...e,id:'tsdb-123',homeTeam:{name:'Portland Trail Blazers'},awayTeam:{name:'Memphis Grizzlies'}}];const unique=reconcileEvents(duplicates);assert.equal(unique.length,1);assert.equal(applyESPNNL(unique,state(row),now,now)[0].broadcasts[0].channel,'ESPN 1');});
+
+import {espnNLDays,espnNLDayURL} from '../lib/matches/espn-nl';
+test('ESPN collection follows seven Amsterdam dates with bounded concurrency and distinct source URLs',async()=>{
+ let active=0,maxActive=0;const requested:string[]=[];
+ const fetcher=(async(url:string)=>{requested.push(url);active++;maxActive=Math.max(maxActive,active);await new Promise(r=>setTimeout(r,3));active--;return new Response("<script>window['__espnfitt__']="+JSON.stringify(state(row))+';</script>');}) as any;
+ const out=await enrichESPNNL([e],{},fetcher,now);assert.equal(requested.length,7);assert.equal(new Set(requested).size,7);assert.ok(maxActive<=3);assert.deepEqual(Object.keys(out.cache.days).sort(),espnNLDays(now));assert.ok(out.events[0].broadcasts.every((b:any)=>/startDate\/[0-9]{8}$/.test(b.sourceUrl)));assert.equal(out.source.ok,true);
+ assert.deepEqual(espnNLDays(Date.parse('2026-10-24T23:30Z')).slice(0,3),['2026-10-25','2026-10-26','2026-10-27']);assert.throws(()=>espnNLDayURL('2026-02-30'));assert.throws(()=>espnNLDayURL('../other'));
+ assert.equal(applyESPNNL([e],state(row),now,now,'https://example.com/startDate/20261030')[0].broadcasts.length,0);
+});
+test('a failed dated ESPN page preserves its own clock while another page refreshes',async()=>{
+ const days=espnNLDays(now);const old=now-4*3600000;const prior={days:{[days[0]]:{checkedAt:old,state:state(row)}}};
+ const out=await enrichESPNNL([e],prior,(async(url:string)=>{if(url===espnNLDayURL(days[0]))throw Error('unavailable');return new Response("<script>window['__espnfitt__']="+JSON.stringify(state({...row,nme:'NBA Today'}))+';</script>');}) as any,now);
+ assert.equal(out.source.ok,false);assert.equal(out.cache.days[days[0]].checkedAt,old);assert.equal(out.cache.days[days[1]].checkedAt,now);assert.equal(out.events[0].broadcasts[0].checkedAt,new Date(old).toISOString());
+});
+
+import {mergeESPNNLListings} from '../lib/matches/espn-nl';import {preparePublication} from '../lib/matches/publication';
+test('ESPN enrichment preserves the archived fixture identity and cannot rewrite unmatched normalized records',()=>{
+ const original={...e,competition:'English League Championship',observedAt:'2026-10-29T12:00Z',fixtureSource:{checkedAt:'2026-10-29T12:00Z'},broadcasts:[{channel:'Existing',territory:'GB',sourceUrl:'https://www.skysports.com'}]};
+ const normalized={...original,competition:'Championship',homeTeam:{...e.homeTeam,aliases:['New alias']},broadcasts:[...original.broadcasts,{channel:'ESPN 1',territory:'NL',sourceType:'direct-broadcaster',sourceUrl:espnNLDayURL('2026-10-30')}]};
+ const merged=mergeESPNNLListings(original,normalized);assert.equal(merged.competition,original.competition);assert.deepEqual(merged.homeTeam,original.homeTeam);assert.equal(merged.fixtureSource.checkedAt,original.fixtureSource.checkedAt);assert.equal(merged.broadcasts.length,2);assert.doesNotThrow(()=>preparePublication(merged,preparePublication(original as any,undefined,now),now));
+ assert.equal(mergeESPNNLListings(original,{...normalized,broadcasts:original.broadcasts}),original);assert.equal(mergeESPNNLListings(original,{...normalized,startsAt:'2026-10-30T03:00Z'}),original);
+});

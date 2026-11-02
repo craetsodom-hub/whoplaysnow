@@ -1,0 +1,1414 @@
+{
+  "sourceRepository": "craetsodom-hub/whoseiptv",
+  "sourceFile": "config/official-event-broadcasters.json",
+  "sourceSha256": "d248d16e40f47ea4488e15b5e762ae86b0dac026037b93fd6f697a7898eba870",
+  "allEventDestinations": [
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AT",
+      "name": "DAZN",
+      "aliases": [
+        "DAZN"
+      ],
+      "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+      "allMatchesEvidenceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+      "viewingUrl": "https://www.dazn.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "beIN SPORTS CONNECT",
+      "aliases": [
+        "beIN SPORTS CONNECT"
+      ],
+      "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+      "allMatchesEvidenceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+      "viewingUrl": "https://connect-au.beinsports.com/",
+      "languages": [
+        "en",
+        "es"
+      ],
+      "languageEvidence": {
+        "scope": "feed-audio",
+        "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+        "verifiedAt": "2026-10-18T11:00:00Z"
+      },
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "beIN SPORTS CONNECT on Fetch TV",
+      "aliases": [
+        "beIN SPORTS CONNECT on Fetch TV"
+      ],
+      "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+      "allMatchesEvidenceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "beIN SPORTS CONNECT on Prime Video",
+      "aliases": [
+        "beIN SPORTS CONNECT on Prime Video"
+      ],
+      "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+      "allMatchesEvidenceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "BE",
+      "name": "DAZN",
+      "aliases": [
+        "DAZN"
+      ],
+      "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+      "allMatchesEvidenceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+      "viewingUrl": "https://www.dazn.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "CH",
+      "name": "DAZN",
+      "aliases": [
+        "DAZN"
+      ],
+      "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+      "allMatchesEvidenceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+      "viewingUrl": "https://www.dazn.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "DE",
+      "name": "DAZN",
+      "aliases": [
+        "DAZN"
+      ],
+      "sourceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+      "allMatchesEvidenceUrl": "https://dazngroup.com/press-room/dazn-verlangert-mit-laliga-fur-die-saisons-2026-bis-2031-in-deutschland-osterreich-und-belgien-sowie-nun-auch-wieder-in-der-schweiz/",
+      "viewingUrl": "https://www.dazn.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "DK",
+      "name": "Disney+",
+      "aliases": [
+        "Disney+"
+      ],
+      "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+      "allMatchesEvidenceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+      "viewingUrl": "https://www.disneyplus.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "FI",
+      "name": "Disney+",
+      "aliases": [
+        "Disney+"
+      ],
+      "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+      "allMatchesEvidenceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+      "viewingUrl": "https://www.disneyplus.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "FR",
+      "name": "DAZN",
+      "aliases": [
+        "DAZN"
+      ],
+      "sourceUrl": "https://www.laliga.com/en-GB/news/disney-and-dazn-become-the-new-home-of-laliga-ea-sports-in-france",
+      "allMatchesEvidenceUrl": "https://www.laliga.com/en-GB/news/disney-and-dazn-become-the-new-home-of-laliga-ea-sports-in-france",
+      "viewingUrl": "https://www.dazn.com/fr-FR/home",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "FR",
+      "name": "Disney+",
+      "aliases": [
+        "Disney+"
+      ],
+      "sourceUrl": "https://newsroom.disney.fr/actualites/disney-devoile-son-equipe-de-commentateurs-pour-laliga-ea-sports-2026-2027-5ea21-dc71f.html",
+      "allMatchesEvidenceUrl": "https://newsroom.disney.fr/actualites/disney-devoile-son-equipe-de-commentateurs-pour-laliga-ea-sports-2026-2027-5ea21-dc71f.html",
+      "viewingUrl": "https://www.disneyplus.com/",
+      "languages": [
+        "fr"
+      ],
+      "languageEvidence": {
+        "scope": "feed-audio",
+        "sourceUrl": "https://newsroom.disney.fr/actualites/disney-devoile-son-equipe-de-commentateurs-pour-laliga-ea-sports-2026-2027-5ea21-dc71f.html",
+        "verifiedAt": "2026-10-18T11:00:00Z"
+      },
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "IS",
+      "name": "Disney+",
+      "aliases": [
+        "Disney+"
+      ],
+      "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+      "allMatchesEvidenceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+      "viewingUrl": "https://www.disneyplus.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "IT",
+      "name": "DAZN",
+      "aliases": [
+        "DAZN"
+      ],
+      "sourceUrl": "https://dazngroup.com/press-room/dazn-extends-exclusive-laliga-live-broadcast-rights-in-italy-and-portugal/",
+      "allMatchesEvidenceUrl": "https://dazngroup.com/press-room/dazn-extends-exclusive-laliga-live-broadcast-rights-in-italy-and-portugal/",
+      "viewingUrl": "https://www.dazn.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "NZ",
+      "name": "beIN SPORTS CONNECT",
+      "aliases": [
+        "beIN SPORTS CONNECT"
+      ],
+      "sourceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+      "allMatchesEvidenceUrl": "https://www.beinsports.com/en-au/football/laliga/articles-video/how-to-watch-laliga-live-in-australia-2026-08-10",
+      "viewingUrl": "https://connect-nz.beinsports.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "PT",
+      "name": "DAZN",
+      "aliases": [
+        "DAZN"
+      ],
+      "sourceUrl": "https://dazngroup.com/press-room/dazn-extends-exclusive-laliga-live-broadcast-rights-in-italy-and-portugal/",
+      "allMatchesEvidenceUrl": "https://dazngroup.com/press-room/dazn-extends-exclusive-laliga-live-broadcast-rights-in-italy-and-portugal/",
+      "viewingUrl": "https://www.dazn.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "SE",
+      "name": "Disney+",
+      "aliases": [
+        "Disney+"
+      ],
+      "sourceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+      "allMatchesEvidenceUrl": "https://www.laliga.com/en-US/news/laliga-strengthens-nordic-broadcasting-strategy-with-disney-and-tv2",
+      "viewingUrl": "https://www.disneyplus.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "laliga",
+      "competitionAliases": [
+        "LaLiga",
+        "La Liga",
+        "Spanish La Liga",
+        "LALIGA EA SPORTS"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "US",
+      "name": "ESPN+",
+      "aliases": [
+        "ESPN+"
+      ],
+      "sourceUrl": "https://www.laliga.com/en-CA/news/laliga-returns-to-espn-on-august-15-for-the-2026-27-season-after-leading-all-leagues-with-24-players-represented-in-the-world-cup-final",
+      "allMatchesEvidenceUrl": "https://www.laliga.com/en-CA/news/laliga-returns-to-espn-on-august-15-for-the-2026-27-season-after-leading-all-leagues-with-24-players-represented-in-the-world-cup-final",
+      "viewingUrl": "https://plus.espn.com/",
+      "languages": [
+        "en",
+        "es"
+      ],
+      "languageEvidence": {
+        "scope": "feed-audio",
+        "sourceUrl": "https://www.laliga.com/en-CA/news/laliga-returns-to-espn-on-august-15-for-the-2026-27-season-after-leading-all-leagues-with-24-players-represented-in-the-world-cup-final",
+        "verifiedAt": "2026-10-18T11:00:00Z"
+      },
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "ligue-1",
+      "competitionAliases": [
+        "Ligue 1",
+        "French Ligue 1"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "FR",
+      "name": "Ligue 1+",
+      "aliases": [
+        "Ligue 1 Plus",
+        "Ligue1+",
+        "FR Ligue 1+"
+      ],
+      "sourceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+      "allMatchesEvidenceUrl": "https://ligue1.com/en/articles/l1_article_3515-ligue-1-broadcasters",
+      "lastVerified": "2026-08-23"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "AU",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/au/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/au/offer/mls",
+      "viewingUrl": "https://tv.apple.com/au/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "BE",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/be/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/be/offer/mls",
+      "viewingUrl": "https://tv.apple.com/be/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "CA",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/ca/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/ca/offer/mls",
+      "viewingUrl": "https://tv.apple.com/ca/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "CZ",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/cz/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/cz/offer/mls",
+      "viewingUrl": "https://tv.apple.com/cz/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "DK",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/dk/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/dk/offer/mls",
+      "viewingUrl": "https://tv.apple.com/dk/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "FI",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/fi/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/fi/offer/mls",
+      "viewingUrl": "https://tv.apple.com/fi/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "GB",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/gb/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/gb/offer/mls",
+      "viewingUrl": "https://tv.apple.com/gb/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "GH",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/gh/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/gh/offer/mls",
+      "viewingUrl": "https://tv.apple.com/gh/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "GR",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/gr/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/gr/offer/mls",
+      "viewingUrl": "https://tv.apple.com/gr/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "IE",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/ie/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/ie/offer/mls",
+      "viewingUrl": "https://tv.apple.com/ie/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "IN",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/in/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/in/offer/mls",
+      "viewingUrl": "https://tv.apple.com/in/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "NO",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/no/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/no/offer/mls",
+      "viewingUrl": "https://tv.apple.com/no/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "NZ",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/nz/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/nz/offer/mls",
+      "viewingUrl": "https://tv.apple.com/nz/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "PL",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/pl/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/pl/offer/mls",
+      "viewingUrl": "https://tv.apple.com/pl/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "RO",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/ro/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/ro/offer/mls",
+      "viewingUrl": "https://tv.apple.com/ro/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "US",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/us/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/us/offer/mls",
+      "viewingUrl": "https://tv.apple.com/us/offer/mls",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "premier-league",
+      "competitionAliases": [
+        "Premier League",
+        "English Premier League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "Stan Sport",
+      "aliases": [
+        "Stan Sport"
+      ],
+      "sourceUrl": "https://www.stan.com.au/watch/sport/football/premier-league",
+      "allMatchesEvidenceUrl": "https://www.stan.com.au/watch/sport/football/premier-league",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "premier-league",
+      "competitionAliases": [
+        "Premier League",
+        "English Premier League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "CA",
+      "name": "Fubo",
+      "aliases": [
+        "Fubo"
+      ],
+      "sourceUrl": "https://www.fubo.tv/news/canada/how-to-watch-premier-league-canada/",
+      "allMatchesEvidenceUrl": "https://www.fubo.tv/news/canada/how-to-watch-premier-league-canada/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "premier-league",
+      "competitionAliases": [
+        "Premier League",
+        "English Premier League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "SG",
+      "name": "Premier League+",
+      "aliases": [
+        "Premier League+"
+      ],
+      "sourceUrl": "https://www.premierleague.com/en/news/4687725/premier-league-launches-video-streaming-service-in-singapore",
+      "allMatchesEvidenceUrl": "https://www.premierleague.com/en/news/4687725/premier-league-launches-video-streaming-service-in-singapore",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "premier-league",
+      "competitionAliases": [
+        "Premier League",
+        "English Premier League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "SG",
+      "name": "StarHub TV+ Premier+",
+      "aliases": [
+        "StarHub TV+ Premier+"
+      ],
+      "sourceUrl": "https://www.starhub.com/personal/bundles/premier-league.html",
+      "allMatchesEvidenceUrl": "https://www.starhub.com/personal/bundles/premier-league.html",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "serie-a",
+      "competitionAliases": [
+        "Serie A",
+        "Italian Serie A",
+        "Serie A Enilive"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "beIN SPORTS CONNECT",
+      "aliases": [
+        "beIN SPORTS CONNECT"
+      ],
+      "sourceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+      "allMatchesEvidenceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+      "viewingUrl": "https://connect-au.beinsports.com/",
+      "languages": [
+        "en",
+        "it"
+      ],
+      "languageEvidence": {
+        "scope": "feed-audio",
+        "sourceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+        "verifiedAt": "2026-10-18T11:00:00Z"
+      },
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "serie-a",
+      "competitionAliases": [
+        "Serie A",
+        "Italian Serie A",
+        "Serie A Enilive"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "beIN SPORTS CONNECT on Fetch TV",
+      "aliases": [
+        "beIN SPORTS CONNECT on Fetch TV"
+      ],
+      "sourceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+      "allMatchesEvidenceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "serie-a",
+      "competitionAliases": [
+        "Serie A",
+        "Italian Serie A",
+        "Serie A Enilive"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "beIN SPORTS CONNECT on Prime Video",
+      "aliases": [
+        "beIN SPORTS CONNECT on Prime Video"
+      ],
+      "sourceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+      "allMatchesEvidenceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "serie-a",
+      "competitionAliases": [
+        "Serie A",
+        "Italian Serie A",
+        "Serie A Enilive"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "NZ",
+      "name": "beIN SPORTS CONNECT",
+      "aliases": [
+        "beIN SPORTS CONNECT"
+      ],
+      "sourceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+      "allMatchesEvidenceUrl": "https://www.beinsports.com/en-au/football/serie-a/articles-video/how-to-watch-serie-a-in-australia-2026-08-21",
+      "viewingUrl": "https://connect-nz.beinsports.com/",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "serie-a",
+      "competitionAliases": [
+        "Serie A",
+        "Italian Serie A",
+        "Serie A Enilive"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "US",
+      "name": "Paramount+",
+      "aliases": [
+        "Paramount Plus",
+        "US Paramount+"
+      ],
+      "sourceUrl": "https://www.paramountpressexpress.com/paramount-plus/shows/soccer/releases/?view=112947-cbs-sports-and-lega-serie-a-extend-us-media-rights-partnership-through-20262027-season-with-all-matches-to-continue-to-be-streamed-on-paramount",
+      "allMatchesEvidenceUrl": "https://www.paramountpressexpress.com/paramount-plus/shows/soccer/releases/?view=112947-cbs-sports-and-lega-serie-a-extend-us-media-rights-partnership-through-20262027-season-with-all-matches-to-continue-to-be-streamed-on-paramount",
+      "viewingUrl": "https://www.paramountplus.com/shows/serie-a/episodes/",
+      "lastVerified": "2026-10-17"
+    },
+    {
+      "competitionId": "uefa-champions-league",
+      "competitionAliases": [
+        "UEFA Champions League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "Stan Sport",
+      "aliases": [],
+      "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+      "allMatchesEvidenceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "uefa-champions-league",
+      "competitionAliases": [
+        "UEFA Champions League"
+      ],
+      "seasons": [
+        "2024/25",
+        "2025/26",
+        "2026/27"
+      ],
+      "validFrom": "2024-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "US",
+      "name": "Paramount+",
+      "aliases": [
+        "Paramount Plus",
+        "US Paramount+"
+      ],
+      "sourceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
+      "allMatchesEvidenceUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
+      "viewingUrl": "https://www.paramountplus.com/shows/uefa-champions-league/",
+      "lastVerified": "2026-10-17"
+    },
+    {
+      "competitionId": "uefa-conference-league",
+      "competitionAliases": [
+        "UEFA Conference League",
+        "UEFA Europa Conference League",
+        "Conference League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "Stan Sport",
+      "aliases": [],
+      "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+      "allMatchesEvidenceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "uefa-conference-league",
+      "competitionAliases": [
+        "UEFA Conference League",
+        "UEFA Europa Conference League",
+        "Conference League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "US",
+      "name": "Paramount+",
+      "aliases": [
+        "Paramount Plus",
+        "US Paramount+"
+      ],
+      "sourceUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/",
+      "allMatchesEvidenceUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/",
+      "viewingUrl": "https://www.paramountplus.com/shows/uefa-europa-conference-league/",
+      "lastVerified": "2026-10-17"
+    },
+    {
+      "competitionId": "uefa-europa-league",
+      "competitionAliases": [
+        "UEFA Europa League",
+        "Europa League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "Stan Sport",
+      "aliases": [],
+      "sourceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+      "allMatchesEvidenceUrl": "https://www.stan.com.au/watch/sport/football/uefa-champions-league",
+      "lastVerified": "2026-10-18"
+    },
+    {
+      "competitionId": "uefa-europa-league",
+      "competitionAliases": [
+        "UEFA Europa League",
+        "Europa League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "US",
+      "name": "Paramount+",
+      "aliases": [
+        "Paramount Plus",
+        "US Paramount+"
+      ],
+      "sourceUrl": "https://www.paramountplus.com/shows/uefa-europa-league/",
+      "allMatchesEvidenceUrl": "https://www.paramountplus.com/shows/uefa-europa-league/",
+      "viewingUrl": "https://www.paramountplus.com/shows/uefa-europa-league/",
+      "lastVerified": "2026-10-17"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "ES",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/es/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/es/offer/mls",
+      "viewingUrl": "https://tv.apple.com/es/offer/mls",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "FR",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/fr/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/fr/offer/mls",
+      "viewingUrl": "https://tv.apple.com/fr/offer/mls",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "DE",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/de/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/de/offer/mls",
+      "viewingUrl": "https://tv.apple.com/de/offer/mls",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "mls",
+      "competitionAliases": [
+        "Major League Soccer",
+        "MLS"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-02-01",
+      "validThrough": "2026-12-31",
+      "territory": "MA",
+      "name": "Apple TV",
+      "aliases": [
+        "Apple TV+"
+      ],
+      "sourceUrl": "https://tv.apple.com/ma/offer/mls",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/ma/offer/mls",
+      "viewingUrl": "https://tv.apple.com/ma/offer/mls",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "j-league",
+      "competitionAliases": [
+        "J.League",
+        "J1 League",
+        "Japanese J1 League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-08-01",
+      "validThrough": "2027-06-30",
+      "territory": "JP",
+      "name": "DAZN",
+      "aliases": [],
+      "sourceUrl": "https://dazngroup.com/press-room/0731-3/",
+      "allMatchesEvidenceUrl": "https://dazngroup.com/press-room/0731-3/",
+      "viewingUrl": "https://www.dazn.com/",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "eliteserien",
+      "competitionAliases": [
+        "Eliteserien"
+      ],
+      "territory": "NO",
+      "name": "TV 2 Play Premium Fotball",
+      "sourceUrl": "https://www.allente.no/sport/fotball/eliteserien/",
+      "viewingUrl": "https://play.tv2.no/",
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-01-01",
+      "validThrough": "2026-12-31",
+      "aliases": [],
+      "allMatchesEvidenceUrl": "https://www.allente.no/sport/fotball/eliteserien/",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "allsvenskan",
+      "competitionAliases": [
+        "Allsvenskan"
+      ],
+      "territory": "SE",
+      "name": "TV4 Play Sport Fotboll",
+      "sourceUrl": "https://www.telia.se/artiklar/sport/spelschemat-for-allsvenskan-2026",
+      "viewingUrl": "https://www.tv4play.se/",
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-01-01",
+      "validThrough": "2026-12-31",
+      "aliases": [],
+      "allMatchesEvidenceUrl": "https://www.telia.se/artiklar/sport/spelschemat-for-allsvenskan-2026",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "argentine-liga-profesional",
+      "competitionAliases": [
+        "Argentine Liga Profesional",
+        "Argentinian Primera Division",
+        "Liga Profesional"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-01-01",
+      "validThrough": "2026-12-31",
+      "territories": [
+        "CA",
+        "PR",
+        "US",
+        "MX",
+        "CO",
+        "UY"
+      ],
+      "name": "AFA Play on Fanatiz",
+      "aliases": [],
+      "sourceUrl": "https://fanatiz.com/blog/contents-available-in-your-country",
+      "allMatchesEvidenceUrl": "https://fanatiz.com/blog/contents-available-in-your-country",
+      "viewingUrl": "https://www.fanatiz.com/",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "eredivisie",
+      "competitionAliases": [
+        "Eredivisie",
+        "Dutch Eredivisie"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-07-01",
+      "validThrough": "2027-06-30",
+      "territory": "NL",
+      "name": "ESPN Watch",
+      "aliases": [],
+      "sourceUrl": "https://www.kpn.com/entertainment/espn",
+      "allMatchesEvidenceUrl": "https://www.kpn.com/entertainment/espn",
+      "viewingUrl": "https://www.espn.nl/watch/",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "saudi-pro-league",
+      "competitionAliases": [
+        "Saudi Pro League",
+        "Saudi Professional League",
+        "Roshn Saudi League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-08-01",
+      "validThrough": "2027-06-30",
+      "territories": [
+        "SA",
+        "BH",
+        "KW",
+        "QA",
+        "AE",
+        "OM",
+        "YE",
+        "IQ",
+        "JO",
+        "SY",
+        "LB",
+        "PS",
+        "EG",
+        "SD",
+        "LY",
+        "TN",
+        "DZ",
+        "MA",
+        "MR",
+        "DJ"
+      ],
+      "name": "Thmanyah App",
+      "aliases": [],
+      "sourceUrl": "https://ask.thmanyah.com/en/what-are-the-thamanyah-satellite-channels",
+      "allMatchesEvidenceUrl": "https://ask.thmanyah.com/en/what-are-the-thamanyah-satellite-channels",
+      "viewingUrl": "https://thmanyah.com/",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "competitionId": "a-league-men",
+      "competitionAliases": [
+        "A-League Men",
+        "Australian A-League"
+      ],
+      "seasons": [
+        "2026/27"
+      ],
+      "validFrom": "2026-10-01",
+      "validThrough": "2027-06-30",
+      "territory": "AU",
+      "name": "Paramount+",
+      "aliases": [],
+      "sourceUrl": "https://www.paramountanz.com.au/news/paramount-remains-the-home-of-australian-football/",
+      "allMatchesEvidenceUrl": "https://www.paramountanz.com.au/news/paramount-remains-the-home-of-australian-football/",
+      "lastVerified": "2026-10-29"
+    },
+    {
+      "sport": "formula1",
+      "competitionId": "formula-1",
+      "competitionAliases": [
+        "Formula 1",
+        "F1"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-01-01",
+      "validThrough": "2026-12-31",
+      "territory": "GB",
+      "aliases": [],
+      "lastVerified": "2026-10-29",
+      "name": "Sky Sports F1",
+      "territories": [
+        "GB",
+        "IE"
+      ],
+      "destinationPrecision": "channel",
+      "sourceUrl": "https://www.skysports.com/f1/news/13540672/sky-sports-to-remain-home-of-formula-1-until-2034-after-five-year-extension-to-exclusive-uk-and-ireland-deal",
+      "viewingUrl": "https://www.sky.com/tv/sports/f1",
+      "allMatchesEvidenceUrl": "https://www.skysports.com/f1/news/13540672/sky-sports-to-remain-home-of-formula-1-until-2034-after-five-year-extension-to-exclusive-uk-and-ireland-deal"
+    },
+    {
+      "sport": "formula1",
+      "competitionId": "formula-1",
+      "competitionAliases": [
+        "Formula 1",
+        "F1"
+      ],
+      "seasons": [
+        "2026"
+      ],
+      "validFrom": "2026-01-01",
+      "validThrough": "2026-12-31",
+      "territory": "US",
+      "aliases": [],
+      "lastVerified": "2026-10-29",
+      "name": "Apple TV",
+      "territories": [
+        "US"
+      ],
+      "destinationPrecision": "service",
+      "sourceUrl": "https://tv.apple.com/us/info/watch-f1",
+      "viewingUrl": "https://tv.apple.com/us/info/watch-f1",
+      "allMatchesEvidenceUrl": "https://tv.apple.com/us/info/watch-f1"
+    }
+  ],
+  "channelAudioSourceFile": "config/channel-audio-evidence.json",
+  "channelAudioSourceSha256": "e54ae363dffcf6edc6e78a342f4a60173778b3226295ce612c72be914058df2c",
+  "channelAudioEvidence": [
+    {
+      "id": "bein-mena-english-feeds",
+      "channelNames": [
+        "beIN SPORTS EN 1",
+        "beIN SPORTS EN 2"
+      ],
+      "region": "MENA",
+      "scheduleHost": "www.beinsports.com",
+      "languages": [
+        "en"
+      ],
+      "scope": "feed-audio",
+      "sourceUrl": "https://www.bein.com/en/ufaq/which-bein-sports-channels-that-include-foreign-languages-commentary/",
+      "verifiedAt": "2026-10-18T16:40:00Z",
+      "reviewValidUntil": "2027-01-16T16:40:00Z"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "country": "US",
+    "name": "NBA TV",
+    "identity": "NBATV.us",
+    "source": "https://upload.wikimedia.org/wikipedia/en/d/d2/NBA_TV.svg",
+    "path": "/artwork/ca7454f5155852285a385677.png"
+  },
+  {
+    "country": "US",
+    "name": "CBS",
+    "identity": "CBS.us",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/e/ee/CBS_logo_%282020%29.svg",
+    "path": "/artwork/a41b7d1356e93bce67e8278d.png"
+  },
+  {
+    "country": "US",
+    "name": "TNT",
+    "identity": "TNT.us",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/2/24/TNT_Logo_2016.svg",
+    "path": "/artwork/919fa05a531eb7bd4b0c7adc.png"
+  },
+  {
+    "country": "US",
+    "name": "truTV",
+    "identity": "truTV.us",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/3/36/TruTV_2014.svg",
+    "path": "/artwork/3261d07897b06cce0e12a5eb.png"
+  },
+  {
+    "country": "US",
+    "name": "YES",
+    "identity": "YesNetwork.us",
+    "source": "https://upload.wikimedia.org/wikipedia/commons/b/be/YES_Network_logo.svg",
+    "path": "/artwork/1ce5eaa1d27fbf3324c07fb9.png"
+  },
+  {
+    "country": "GB",
+    "name": "S4C",
+    "identity": "S4C.uk",
+    "source": "https://i.imgur.com/vrcbnBv.png",
+    "path": "/artwork/534df72058562b76b7e0dc8b.png"
+  },
+  {
+    "country": "US",
+    "name": "GCSEN",
+    "identity": "GulfCoastSportsEntertainmentNetwork.us",
+    "source": "https://upload.wikimedia.org/wikipedia/en/7/70/GCSEN_Logo.png",
+    "path": "/artwork/33d745a634f6b7628e6dc7b1.png"
+  }
+]

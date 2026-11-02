@@ -1,0 +1,21 @@
+{
+  // Free-plan deployment: pre-rendered pages as static assets (free, unlimited
+  // requests) plus a small Worker for request-dependent routes.
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "whoplaysnow",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "dist/site",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "none",
+    // The channel directory depends on the visitor's country.
+    "run_worker_first": ["/channels"]
+  },
+  "vars": { "SITE_ORIGIN": "https://whoplaysnow.com" },
+  "observability": { "enabled": true }
+  // Production cutover (see docs/cloudflare.md) adds:
+  // "routes": [{ "pattern": "whoplaysnow.com", "custom_domain": true }]
+}

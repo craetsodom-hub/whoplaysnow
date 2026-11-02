@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-29T16:04:42.977Z",
+  "reviewUntil": "2027-01-27T00:00:00.000Z",
+  "sourceUrl": "https://support.watch.nba.com/hc/en-us/articles/115002481154-League-Pass-Blackout-Guide",
+  "availabilityUrl": "https://support.watch.nba.com/hc/en-us/articles/115000586473-Global-NBA-League-Pass-Availability",
+  "viewingUrl": "https://www.nba.com/league-pass-purchase",
+  "excludedTerritories": [
+    "US",
+    "CA",
+    "BY",
+    "CN",
+    "CU",
+    "IR",
+    "KP",
+    "RU",
+    "SY",
+    "UA",
+    "AS",
+    "GU",
+    "MP",
+    "PR",
+    "UM",
+    "VI"
+  ],
+  "exclusionNote": "US and Canada require event-specific blackout checks. Ukraine needs subnational availability, which the country selector cannot represent. US territories remain excluded pending explicit territory review.",
+  "logoSource": "https://cdn.nba.com/manage/2024/09/NBA_League_Pass_horiz_onDkBkgd.png",
+  "logoPath": "/artwork/b29bbbc1f4752d81040796f7.png"
+}
