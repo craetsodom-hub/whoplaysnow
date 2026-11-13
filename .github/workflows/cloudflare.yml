@@ -48,7 +48,13 @@ jobs:
           npx wrangler kv key put runtime-state --path state.b64 --namespace-id "$STATE_NAMESPACE_ID" --remote
       - run: npm test
       - run: npm run build:static
-      - run: npx wrangler deploy
+      # Audits the build about to ship, served by the same Express app the static
+      # pages were rendered from. Cloudflare blocks GitHub runner IPs, so the
+      # live site cannot be crawled from here. Reported, never blocks a deploy.
       - name: Crawl audit
         continue-on-error: true
-        run: npx tsx scripts/seo-audit.ts --origin "$SITE_ORIGIN" --sample 10
+        run: |
+          PORT=3100 npx tsx server.ts > server.log 2>&1 &
+          for i in $(seq 1 60); do curl -fs http://127.0.0.1:3100/healthz > /dev/null && break; sleep 2; done
+          npx tsx scripts/seo-audit.ts --origin "$SITE_ORIGIN" --via http://127.0.0.1:3100 --sample 10
+      - run: npx wrangler deploy

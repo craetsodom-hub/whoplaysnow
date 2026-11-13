@@ -6,11 +6,15 @@ import {writeFile} from 'node:fs/promises';
 
 const option=(name:string,fallback:string)=>{const i=process.argv.indexOf(name);return i>0?process.argv[i+1]:fallback;};
 const origin=option('--origin','https://whoplaysnow.com').replace(/\/$/,''),sample=Number(option('--sample','20')),output=option('--output','');
+// --via fetches from another server (the freshly built app in CI) while URLs,
+// canonicals and sitemap entries are still checked against --origin. Cloudflare
+// blocks GitHub runner IPs, so CI cannot audit production directly.
+const via=option('--via','').replace(/\/$/,'');
 // An honest agent: Cloudflare rejects a Googlebot claim from non-Google IPs
 // with 403, which made every CI audit fail before it checked anything.
 const agent='WHOPLAYSNOW-seo-audit/1.0 (+https://whoplaysnow.com/about)';
 const failures:string[]=[],warnings:string[]=[];
-const fetchText=async(path:string,redirect:RequestRedirect='manual')=>{const r=await fetch(path.startsWith('http')?path:origin+path,{redirect,headers:{'User-Agent':agent},signal:AbortSignal.timeout(30000)});return {status:r.status,headers:r.headers,text:await r.text()};};
+const fetchText=async(path:string,redirect:RequestRedirect='manual')=>{const url=path.startsWith('http')?path:origin+path;const r=await fetch(via&&url.startsWith(origin)?via+url.slice(origin.length):url,{redirect,headers:{'User-Agent':agent},signal:AbortSignal.timeout(30000)});return {status:r.status,headers:r.headers,text:await r.text()};};
 const locs=(xml:string)=>[...xml.matchAll(/<loc>([^<]+)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?/g)].map(m=>({loc:m[1].replace(/&amp;/g,'&'),lastmod:m[2]}));
 async function pool<T,R>(items:T[],size:number,run:(item:T)=>Promise<R>){const out:R[]=[];let i=0;await Promise.all(Array.from({length:size},async()=>{while(i<items.length){const item=items[i++];out.push(await run(item));}}));return out;}
 

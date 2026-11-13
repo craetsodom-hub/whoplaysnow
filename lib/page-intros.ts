@@ -35,3 +35,23 @@ export function competitionIntro(name:string,events:any[],rights:any[],noun='fix
  return '<p class="directory-intro">'+esc(lead+broadcasters)+' Kick-off times below are in UK time; each match page shows your local time and the channels in your country.</p>';
 }
 
+
+// Event pages: one factual paragraph answering the questions people search
+// for ("what time is X vs Y", "what channel is X vs Y on"), built only from the
+// fixture record. listings: countryListings() rows, venue country first.
+const clock=(zone:string)=>new Intl.DateTimeFormat('en-GB',{timeZone:zone,hour:'2-digit',minute:'2-digit',hourCycle:'h23'});
+const longFormat=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',weekday:'long',day:'numeric',month:'long',year:'numeric'});
+const longDate={format:(d:Date)=>longFormat.format(d).replace(',','')};
+export function eventIntro(e:any,listings:{name:string;label:string;channels:string[]}[]){
+ const start=new Date(e.startsAt);if(!Number.isFinite(start.getTime()))return '';
+ const teams=e.homeTeam?.name&&e.awayTeam?.name,matchup=teams?e.homeTeam.name+' vs '+e.awayTeam.name:e.title;
+ const term=['football','rugby','american-football'].includes(sportKey(e.sport))?'Kick-off':'Start time';
+ const where=e.venue?.name?' at '+[e.venue.name,e.venue.city].filter(Boolean).join(', '):'';
+ if(/cancel/i.test(e.phase||''))return matchup+' ('+e.competition+'), scheduled for '+longDate.format(start)+where+', has been cancelled.';
+ if(/postpon/i.test(e.phase||''))return matchup+' ('+e.competition+') has been postponed from '+longDate.format(start)+'. The new date and TV channels will appear here once they are published.';
+ if(/confirm/i.test(e.phase||''))return matchup+' ('+e.competition+') is expected around '+longDate.format(start)+where+'. The exact date and time are still to be confirmed, so TV listings will follow once the schedule is verified.';
+ const lead=(teams?e.homeTeam.name+' play '+e.awayTeam.name:matchup+' takes place')+' '+(/friendl/i.test(e.competition)?'in a friendly':'in the '+e.competition)+' on '+longDate.format(start)+where+'. '+term+' is '+clock('Europe/London').format(start)+' UK time ('+clock('Europe/Paris').format(start)+' CET, '+clock('America/New_York').format(start)+' US Eastern).';
+ if(!listings.length)return lead+' No TV channel has been confirmed yet; this page updates as broadcasters publish their schedules.';
+ const [first,...rest]=listings,shown=(e.broadcastMode==='recorded'?'was listed on ':'is shown on ');
+ return lead+' In '+(first.label==='UK'||first.label==='US'?'the '+first.label:first.label)+' it '+shown+list(first.channels.slice(0,3))+(first.channels.length>3?' and '+(first.channels.length-3)+' more':'')+'.'+(rest.length?' Broadcasters in '+plural(rest.length,'other country','other countries')+' are listed below.':'');
+}

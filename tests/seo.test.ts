@@ -10,6 +10,7 @@ import {eventIndexing,eventRobots,eventDescription,eventTitle,eventStructuredDat
 import {updateSeoState,markSubmitted} from '../lib/seo-state';
 import {buildSitemaps,sitemapIndex,urlset} from '../lib/sitemaps';
 import {rightsByCountry} from '../lib/directory-pages';
+import {eventIntro} from '../lib/page-intros';
 import {assignEventPaths} from '../public/event-routes.js';
 
 const now=Date.parse('2026-11-02T12:00:00Z'),DAY=86400000;
@@ -75,6 +76,15 @@ test('event markup fills performer, organizer, endDate and attendance mode only 
  assert.equal(other.endDate,undefined);assert.equal(other.organizer,undefined);assert.equal(other.eventAttendanceMode,undefined);
  const provisional:any=eventStructuredData(fixture({phase:'Schedule to be confirmed'}),'https://whoplaysnow.com','/x/y')['@graph'][0];
  assert.equal(provisional.endDate,undefined);
+});
+
+test('event intro answers when and where to watch from the fixture data only',()=>{
+ const e=fixture({startsAt:'2026-11-21T12:30:00Z',venue:{name:'Etihad Stadium',city:'Manchester',country:'GB'},homeTeam:{name:'Manchester City'},awayTeam:{name:'Fulham'},competition:'Premier League'});
+ const text=eventIntro(e,[{code:'GB',name:'United Kingdom',label:'UK',channels:['TNT Sports 1','discovery+']},{code:'US',name:'United States',label:'US',channels:['Peacock']}] as any);
+ assert.equal(text,'Manchester City play Fulham in the Premier League on Saturday 21 November 2026 at Etihad Stadium, Manchester. Kick-off is 12:30 UK time (13:30 CET, 07:30 US Eastern). In the UK it is shown on TNT Sports 1 and discovery+. Broadcasters in 1 other country are listed below.');
+ assert.match(eventIntro(e,[]),/No TV channel has been confirmed yet/);
+ assert.match(eventIntro(fixture({phase:'Schedule to be confirmed'}),[]),/still to be confirmed/);
+ assert.doesNotMatch(eventIntro(fixture({phase:'Schedule to be confirmed'}),[]),/Kick-off is/);
 });
 
 test('structured data links each verified listing to the event as a BroadcastEvent',()=>{
