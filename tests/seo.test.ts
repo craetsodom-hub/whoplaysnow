@@ -61,6 +61,22 @@ test('titles and descriptions name the fixture, date and real channels by countr
  assert.equal(countryListings(fixture({broadcasts:[broadcast('beIN SPORTS 1','FR',{feedLabel:'FR'}),broadcast('Paramount+','US')]}))[1].channels[0],'beIN SPORTS 1 FR');
 });
 
+test('event markup fills performer, organizer, endDate and attendance mode only from real data',()=>{
+ const g:any=eventStructuredData(fixture(),'https://whoplaysnow.com','/uefa-champions-league/barcelona-vs-aston-villa')['@graph'][0];
+ assert.deepEqual(g.performer.map((t:any)=>t.name),['Barcelona','Aston Villa']);
+ assert.deepEqual(g.organizer,{'@type':'SportsOrganization',name:'UEFA Champions League',url:'https://whoplaysnow.com/competitions/uefa-champions-league'});
+ assert.equal(g.endDate,new Date(Date.parse(fixture().startsAt)+115*60000).toISOString());
+ assert.equal(g.eventAttendanceMode,'https://schema.org/OfflineEventAttendanceMode');
+ assert.equal(g.offers,undefined);
+ const nfl:any=eventStructuredData(fixture({sport:'american football',competition:'NFL'}),'https://whoplaysnow.com','/x/y')['@graph'][0];
+ assert.equal(Date.parse(nfl.endDate)-Date.parse(nfl.startDate),195*60000);
+ // No honest estimate or no real organizer: leave the field out.
+ const other:any=eventStructuredData(fixture({sport:'tennis',competition:'International Friendly',venue:undefined}),'https://whoplaysnow.com','/x/y')['@graph'][0];
+ assert.equal(other.endDate,undefined);assert.equal(other.organizer,undefined);assert.equal(other.eventAttendanceMode,undefined);
+ const provisional:any=eventStructuredData(fixture({phase:'Schedule to be confirmed'}),'https://whoplaysnow.com','/x/y')['@graph'][0];
+ assert.equal(provisional.endDate,undefined);
+});
+
 test('structured data links each verified listing to the event as a BroadcastEvent',()=>{
  const data:any=eventStructuredData(fixture(),'https://whoplaysnow.com',fixture().canonicalPath);
  const [event,...broadcasts]=data['@graph'];

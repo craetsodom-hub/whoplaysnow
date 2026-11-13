@@ -1,5 +1,5 @@
 import countries from './matches/country-labels.json' with {type:'json'};
-import {channelAudio,compareBroadcasters,competitionRank,competitionPriority,sportKey} from '../public/core.js';
+import {channelAudio,compareBroadcasters,competitionPath,competitionRank,competitionPriority,sportKey} from '../public/core.js';
 import {teamPath} from './teams';
 
 const DAY=86400000;
@@ -52,6 +52,13 @@ export function eventDescription(e:any){
  return lead+' '+(e.broadcastMode==='recorded'?'Shown on ':'Watch on ')+parts.join(', ')+'.';
 }
 
+// Typical duration including breaks, used only for endDate. Sports whose
+// length varies too much to estimate honestly (tennis, cricket, motorsport,
+// combat) get no endDate rather than a guess.
+const matchMinutes:Record<string,number>={football:115,basketball:150,'american-football':195,'ice-hockey':150,baseball:180,rugby:110};
+// A label such as "International Friendly" names no organizing body.
+const genericCompetition=/friendl|not supplied|exhibition/i;
+
 // schema.org models "where to watch" directly: each verified listing is a
 // BroadcastEvent of the SportsEvent, published on a service in one country.
 export function eventStructuredData(e:any,origin:string,path:string){
@@ -62,7 +69,11 @@ export function eventStructuredData(e:any,origin:string,path:string){
  // A provisional date must not become a precise search-engine kickoff claim.
  if(!/confirm/i.test(e.phase||''))event.startDate=e.startsAt;
  if(e.homeTeam&&e.awayTeam){event.homeTeam=team(e.homeTeam);event.awayTeam=team(e.awayTeam);event.competitor=[event.homeTeam,event.awayTeam];}
+ if(e.homeTeam&&e.awayTeam)event.performer=[event.homeTeam,event.awayTeam];
+ if(event.startDate){const minutes=matchMinutes[sportKey(e.sport)];if(minutes&&Number.isFinite(Date.parse(e.startsAt)))event.endDate=new Date(Date.parse(e.startsAt)+minutes*60000).toISOString();}
+ if(e.competition&&!genericCompetition.test(e.competition))event.organizer={'@type':'SportsOrganization',name:e.competition,url:origin+competitionPath(e.competition)};
  if(e.venue?.name)event.location={'@type':'Place',name:e.venue.name,...(e.venue.city?{address:{'@type':'PostalAddress',addressLocality:e.venue.city,...(e.venue.country?{addressCountry:e.venue.country}:{})}}:{})};
+ if(event.location)event.eventAttendanceMode='https://schema.org/OfflineEventAttendanceMode';
  const images=[...new Set([e.homeTeam?.badgeUrl,e.awayTeam?.badgeUrl,e.competitionLogo].map(abs).filter(Boolean))];
  if(images.length)event.image=images;
  const seen=new Set<string>(),broadcasts:any[]=[];
