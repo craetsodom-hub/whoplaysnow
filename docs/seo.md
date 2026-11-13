@@ -31,6 +31,10 @@ Fixed in code:
 | IndexNow never announced pages that were unchanged since they were first seen, nor URLs that stopped being pages. | Seo state stores the fingerprint IndexNow accepted; every indexable version is sent once (first run after this change backfills), plus merged/retired paths. |
 | The post-deploy crawl audit sent a Googlebot user agent from GitHub runners; Cloudflare answered 403 and the audit failed every run without checking anything. | Honest audit user agent. |
 
+## Country watch pages
+
+`/competitions/{competition}/{country}` ("Where to watch Premier League in the United States") exist only when the country has published season rights for the competition or channels in at least 3 upcoming match listings (`lib/watch-pages.ts`). Each lists the rights holders, every upcoming fixture with that country's channels and kick-off times in its time zone. They are linked from the competition's rights list and from each event's "TV channels by country", and listed in `sitemap-watch.xml` (271 pages on 13 Nov 2026).
+
 ## Event lifecycle (automatic)
 
 `lib/event-seo.ts` → `eventIndexing()` decides each state on every request and every collection:
