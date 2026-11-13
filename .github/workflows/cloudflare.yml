@@ -33,19 +33,41 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
+      # Workers KV caps one value at 25 MiB and the state outgrew it (26.3 MB on
+      # 13 Nov 2026), so it is stored as numbered parts plus a part count written
+      # last. The single legacy key is still read if no parts exist yet.
       - name: Restore collector state
         run: |
           mkdir -p runtime
-          if npx wrangler kv key get runtime-state --namespace-id "$STATE_NAMESPACE_ID" --remote > state.b64 && [ -s state.b64 ]; then
-            base64 -d state.b64 | tar -xz -C runtime
+          kv() { npx wrangler kv key get "$1" --namespace-id "$STATE_NAMESPACE_ID" --remote; }
+          parts=$(kv runtime-state-parts 2>/dev/null || true)
+          if [[ "$parts" =~ ^[0-9]+$ ]] && [ "$parts" -gt 0 ]; then
+            : > state.tgz
+            for i in $(seq 0 $((parts-1))); do kv "runtime-state-$i" > part.b64; base64 -d part.b64 >> state.tgz; done
+            tar -xz -C runtime -f state.tgz
+            echo "Restored collector state from $parts parts ($(stat -c %s state.tgz) bytes)"
+          elif kv runtime-state > state.b64 && [ -s state.b64 ] && base64 -d state.b64 > state.tgz 2>/dev/null; then
+            tar -xz -C runtime -f state.tgz
+            echo "Restored collector state from the legacy single key"
           else
             echo "::warning::No saved collector state; starting fresh"
           fi
       - run: npm run collect
       - name: Save collector state
         run: |
-          tar -cz -C runtime . | base64 -w0 > state.b64
-          npx wrangler kv key put runtime-state --path state.b64 --namespace-id "$STATE_NAMESPACE_ID" --remote
+          du -b runtime/* | sort -n | tail -5
+          tar -cz -C runtime . > state.tgz
+          rm -f state.part.*
+          split -b 15000000 -d -a 2 state.tgz state.part.
+          n=0
+          for f in state.part.??; do
+            base64 -w0 "$f" > "$f.b64"
+            npx wrangler kv key put "runtime-state-$n" --path "$f.b64" --namespace-id "$STATE_NAMESPACE_ID" --remote
+            n=$((n+1))
+          done
+          printf '%s' "$n" > parts.txt
+          npx wrangler kv key put runtime-state-parts --path parts.txt --namespace-id "$STATE_NAMESPACE_ID" --remote
+          echo "Saved collector state as $n parts ($(stat -c %s state.tgz) bytes)"
       - run: npm test
       - run: npm run build:static
       # Audits the build about to ship, served by the same Express app the static
