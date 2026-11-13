@@ -56,7 +56,8 @@ jobs:
       - name: Save collector state
         run: |
           du -b runtime/* | sort -n | tail -5
-          tar -cz -C runtime . > state.tgz
+          # *.previous are per-run rollback copies; the next run recreates them.
+          tar -cz --exclude='./*.previous' --exclude='./collection.lock' -C runtime . > state.tgz
           rm -f state.part.*
           split -b 15000000 -d -a 2 state.tgz state.part.
           n=0
