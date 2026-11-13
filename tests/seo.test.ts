@@ -146,12 +146,14 @@ async function withServer(files:Record<string,any>,run:(base:string)=>Promise<vo
  const child=spawn(process.execPath,['--import','tsx','server.ts'],{env:{...process.env,DATA_DIR:dir,PORT:String(port),SITE_ORIGIN:'https://whoplaysnow.com'},stdio:'ignore'});
  try{
   const base='http://127.0.0.1:'+port;
-  for(let i=0;i<100;i++){try{if((await fetch(base+'/healthz')).ok)break;}catch{}await new Promise(r=>setTimeout(r,150));}
+  // CI runners compile server.ts under load from parallel test files: allow a minute.
+  let ready=false;for(let i=0;i<400&&!ready;i++){try{ready=(await fetch(base+'/healthz')).ok;}catch{}if(!ready)await new Promise(r=>setTimeout(r,150));}
+  if(!ready)throw Error('test server did not start within 60s');
   await run(base);
  }finally{child.kill();await rm(dir,{recursive:true,force:true});}
 }
 
-test('server: legacy 410s, expired fixture redirects, robots, sitemaps and event metadata',{timeout:60000},async()=>{
+test('server: legacy 410s, expired fixture redirects, robots, sitemaps and event metadata',{timeout:120000},async()=>{
  const t=Date.now(),at=(offset:number)=>new Date(t+offset).toISOString();
  const live=(id:string,startsAt:string,over:any={})=>({...fixture({id,startsAt,fixtureSource:{name:'ESPN',url:'https://www.espn.com/',checkedAt:at(-3600000)},broadcasts:[broadcast('Paramount+','US',{checkedAt:at(-3600000),validUntil:at(3*DAY)}),broadcast('M+ Liga de Campeones 2','ES',{checkedAt:at(-3600000),validUntil:at(3*DAY)})],...over}),canonicalPath:undefined});
  const next=live('espn-9',at(30*DAY)),soon=live('espn-8',at(2*DAY),{homeTeam:{name:'Barcelona'},awayTeam:{name:'Inter'},title:'Barcelona vs Inter'});
@@ -190,7 +192,7 @@ test('server: legacy 410s, expired fixture redirects, robots, sitemaps and event
  });
 });
 
-test('server: competition watch pages per country exist only with a real answer and are linked and listed',{timeout:60000},async()=>{
+test('server: competition watch pages per country exist only with a real answer and are linked and listed',{timeout:120000},async()=>{
  const t=Date.now(),at=(offset:number)=>new Date(t+offset).toISOString();
  const live=(id:string,offset:number,home:string,away:string,extra:any[]=[])=>({...fixture({id,startsAt:at(offset),title:home+' vs '+away,homeTeam:{name:home},awayTeam:{name:away},fixtureSource:{name:'ESPN',url:'https://www.espn.com/',checkedAt:at(-3600000)},broadcasts:[broadcast('M+ Liga de Campeones 2','ES',{checkedAt:at(-3600000),validUntil:at(9*DAY)}),...extra]}),canonicalPath:undefined});
  const us=[broadcast('Paramount+','US',{checkedAt:at(-3600000),validUntil:at(9*DAY)})];
