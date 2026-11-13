@@ -7,7 +7,7 @@ import {join} from 'node:path';
 import {isLegacyPath} from '../lib/legacy';
 import {teamPath,teamDirectory} from '../lib/teams';
 import {eventIndexing,eventRobots,eventDescription,eventTitle,eventStructuredData,countryListings} from '../lib/event-seo';
-import {updateSeoState} from '../lib/seo-state';
+import {updateSeoState,markSubmitted} from '../lib/seo-state';
 import {buildSitemaps,sitemapIndex,urlset} from '../lib/sitemaps';
 import {rightsByCountry} from '../lib/directory-pages';
 import {assignEventPaths} from '../public/event-routes.js';
@@ -81,6 +81,18 @@ test('sitemap lastmod changes only when visible content changes',()=>{
  assert.equal(newChannel.changed.length,1);assert.equal(newChannel.state.entries['espn-1'].changedAt,'2026-11-02T14:00:00Z');
  const moved=updateSeoState(newChannel.state,[fixture({startsAt:iso(2*DAY),broadcasts:[...fixture().broadcasts,broadcast('DAZN','CA')]})],now+3*3600000);
  assert.equal(moved.changed.length,1);assert.equal(moved.state.entries['espn-1'].firstSeen,first.state.entries['espn-1'].firstSeen);
+});
+
+test('IndexNow announces every page version once, including unchanged new pages and retired URLs',()=>{
+ const first=updateSeoState(null,[fixture()],now);
+ const second=updateSeoState(first.state,[fixture(),fixture({id:'espn-2',canonicalPath:'/premier-league/b-vs-c'})],now+3600000);
+ assert.deepEqual(second.pending.map((e:any)=>e.id),['espn-1','espn-2']);
+ markSubmitted(second.state,['espn-1','espn-2']);
+ const third=updateSeoState(second.state,[fixture()],now+7200000);
+ assert.equal(third.pending.length,0);
+ assert.deepEqual(third.removed,['/premier-league/b-vs-c']);
+ const fourth=updateSeoState(third.state,[fixture({broadcasts:[...fixture().broadcasts,broadcast('DAZN','CA')]})],now+3*3600000);
+ assert.deepEqual(fourth.pending.map((e:any)=>e.id),['espn-1']);assert.equal(fourth.removed.length,0);
 });
 
 test('sitemaps split by page type and kickoff month with trustworthy lastmod',()=>{

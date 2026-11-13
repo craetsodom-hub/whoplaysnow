@@ -6,7 +6,9 @@ import {writeFile} from 'node:fs/promises';
 
 const option=(name:string,fallback:string)=>{const i=process.argv.indexOf(name);return i>0?process.argv[i+1]:fallback;};
 const origin=option('--origin','https://whoplaysnow.com').replace(/\/$/,''),sample=Number(option('--sample','20')),output=option('--output','');
-const agent='Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html) WHOPLAYSNOW-seo-audit';
+// An honest agent: Cloudflare rejects a Googlebot claim from non-Google IPs
+// with 403, which made every CI audit fail before it checked anything.
+const agent='WHOPLAYSNOW-seo-audit/1.0 (+https://whoplaysnow.com/about)';
 const failures:string[]=[],warnings:string[]=[];
 const fetchText=async(path:string,redirect:RequestRedirect='manual')=>{const r=await fetch(path.startsWith('http')?path:origin+path,{redirect,headers:{'User-Agent':agent},signal:AbortSignal.timeout(30000)});return {status:r.status,headers:r.headers,text:await r.text()};};
 const locs=(xml:string)=>[...xml.matchAll(/<loc>([^<]+)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?/g)].map(m=>({loc:m[1].replace(/&amp;/g,'&'),lastmod:m[2]}));

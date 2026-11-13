@@ -8,6 +8,14 @@ const safePath=path=>typeof path==='string'&&/^\/[a-z0-9]+(?:-[a-z0-9]+)*\/[a-z0
 // a numeric suffix for same-day repetitions. Provider IDs stay out of URLs.
 export function assignEventPaths(events,prior={}){
  const entries=prior.version===1?structuredClone(prior.entries||{}):{};
+ // A duplicate merged into another fixture hands its published paths to the
+ // survivor as aliases: they 301 to the surviving page instead of competing.
+ for(const e of events)for(const merged of e.mergedIds||[]){
+  const gone=entries[merged];if(!gone||merged===e.id)continue;delete entries[merged];
+  const own=entries[e.id],moved=[gone.path,...gone.aliases||[]];
+  if(own)own.aliases=[...new Set([...own.aliases||[],...moved])].filter(p=>p!==own.path);
+  else entries[e.id]={...gone,aliases:[...gone.aliases||[]]};
+ }
  const occupied=new Map();
  for(const [id,entry] of Object.entries(entries))for(const path of [entry.path,...entry.aliases||[]]){
   if(!safePath(path))throw Error('Invalid persisted event path');

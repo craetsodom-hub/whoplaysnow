@@ -49,6 +49,7 @@ export type Match = {
   publicPathAliases?: string[]
   canonicalSlug?: string
   id: string
+  mergedIds?: string[]
   title: string
   sport: string
   competition: string

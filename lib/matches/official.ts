@@ -91,15 +91,27 @@ export function mergeOfficialMatches(imported: Match[], official: Match[]): Matc
     return shorter.length > 0 && shorter.every(token => longer.has(token)) && (shorter.length >= 2 || (shorter[0].length >= 4 && !weakSingle.has(shorter[0])))
   }
   const sameCompetition = (a: string, b: string) => { const one = nameKey(a), two = nameKey(b); return one === two || (one.length >= 5 && two.length >= 5 && (one.endsWith(two) || two.endsWith(one) || one.startsWith(two) || two.startsWith(one))) }
+  // Some providers (TheSportsDB) omit participant objects. Their title still
+  // names the sides ("Home vs Away"), so matching falls back to it; without
+  // this the same fixture is published twice under two URLs.
+  const sides = (e: Match): [Participant | null, Participant | null] => {
+    if (e.homeTeam && e.awayTeam) return [e.homeTeam, e.awayTeam]
+    const vs = e.title.split(/\s+(?:vs\.?|v)\s+/i), at = e.title.split(/\s+at\s+/i)
+    const named = (name?: string) => name?.trim() ? { name: name.trim(), sourceId: null } as Participant : null
+    if (vs.length === 2) return [e.homeTeam ?? named(vs[0]), e.awayTeam ?? named(vs[1])]
+    if (at.length === 2) return [e.homeTeam ?? named(at[1]), e.awayTeam ?? named(at[0])]
+    return [e.homeTeam, e.awayTeam]
+  }
   for (const event of official) {
     const sameTeam = (a: Participant | null, b: Participant | null) => a && b && [a.name, ...(a.aliases ?? [])].some(one => [b.name, ...(b.aliases ?? [])].some(two => sameName(one, two)))
-    
+    const [eventHome, eventAway] = sides(event)
     const matches = (prior: Match) => {
+      const [priorHome, priorAway] = sides(prior)
       const previousCompetition = prior.competitionKey ? matchCompetition(prior.competitionKey) : undefined
       const currentCompetition = event.competitionKey ? matchCompetition(event.competitionKey) : undefined
       if (previousCompetition && currentCompetition && previousCompetition.key !== currentCompetition.key) return false
-      if (prior.id === event.id) return prior.sport === event.sport && sameCompetition(prior.competition, event.competition) && Boolean(sameTeam(prior.homeTeam, event.homeTeam) && sameTeam(prior.awayTeam, event.awayTeam))
-      if (prior.sport !== event.sport || !sameCompetition(prior.competition, event.competition) || !sameTeam(prior.homeTeam, event.homeTeam) || !sameTeam(prior.awayTeam, event.awayTeam)) return false
+      if (prior.id === event.id) return prior.sport === event.sport && sameCompetition(prior.competition, event.competition) && Boolean(sameTeam(priorHome, eventHome) && sameTeam(priorAway, eventAway))
+      if (prior.sport !== event.sport || !sameCompetition(prior.competition, event.competition) || !sameTeam(priorHome, eventHome) || !sameTeam(priorAway, eventAway)) return false
       const drift = Math.abs(Date.parse(prior.startsAt) - Date.parse(event.startsAt))
       return drift <= 15 * 60_000
     }
@@ -121,7 +133,10 @@ export function mergeOfficialMatches(imported: Match[], official: Match[]): Matc
     const rights = [...new Map([...(event.broadcastRights ?? []), ...duplicates.flatMap(item => item.broadcastRights ?? [])].map(right => [`${right.territory}:${right.sourceUrl}`, right])).values()]
     const sourceIds = Object.assign({}, ...duplicates.map(matchSourceIds), matchSourceIds(event))
     const venue = event.venue ?? (prior?.startsAt === event.startsAt ? prior.venue : undefined)
-    add({ ...event, ...(venue ? { venue } : {}), id: prior?.id ?? event.id, sourceIds, broadcasterEvidence: event.broadcasterEvidence ?? prior?.broadcasterEvidence, broadcastRights: rights, competitionKey: event.competitionKey ?? prior?.competitionKey, competitionCountry: event.competitionCountry ?? prior?.competitionCountry, competitionLogo: event.competitionLogo ?? prior?.competitionLogo, fixtureSource: event.fixtureSource ?? prior?.fixtureSource, homeTeam: mergedParticipant(event.homeTeam, prior?.homeTeam ?? null), awayTeam: mergedParticipant(event.awayTeam, prior?.awayTeam ?? null), broadcasts: [...new Map(broadcasts.map(b => [`${b.territory}:${b.channel}:${b.sourceUrl}:${b.evidenceLevel ?? ''}`, b])).values()] })
+    // Identities absorbed by this merge keep their published URLs as redirects.
+    const id = prior?.id ?? event.id
+    const mergedIds = [...new Set([...duplicates.flatMap(item => [item.id, ...(item.mergedIds ?? [])]), event.id, ...(event.mergedIds ?? [])])].filter(value => value !== id)
+    add({ ...event, ...(venue ? { venue } : {}), id, ...(mergedIds.length ? { mergedIds } : {}), sourceIds, broadcasterEvidence: event.broadcasterEvidence ?? prior?.broadcasterEvidence, broadcastRights: rights, competitionKey: event.competitionKey ?? prior?.competitionKey, competitionCountry: event.competitionCountry ?? prior?.competitionCountry, competitionLogo: event.competitionLogo ?? prior?.competitionLogo, fixtureSource: event.fixtureSource ?? prior?.fixtureSource, homeTeam: mergedParticipant(event.homeTeam, prior?.homeTeam ?? null), awayTeam: mergedParticipant(event.awayTeam, prior?.awayTeam ?? null), broadcasts: [...new Map(broadcasts.map(b => [`${b.territory}:${b.channel}:${b.sourceUrl}:${b.evidenceLevel ?? ''}`, b])).values()] })
   }
   return [...result.values()].sort((a, b) => a.startsAt.localeCompare(b.startsAt))
 }

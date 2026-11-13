@@ -4,8 +4,14 @@
 # Setup: docs/cloudflare.md.
 name: Collect and deploy to Cloudflare
 on:
+  # GitHub delays and drops scheduled runs under load: the former 3-hourly
+  # schedule fired about three times a day, so new fixtures, kickoff changes
+  # and channel listings reached the site and sitemaps up to 13 hours late.
+  # Two slots an hour keep publication close to the sources; the concurrency
+  # group below runs them one at a time. Public repository: no minute quota.
   schedule:
-    - cron: '17 */3 * * *'
+    - cron: '17 * * * *'
+    - cron: '47 * * * *'
   workflow_dispatch:
 concurrency:
   group: cloudflare-deploy

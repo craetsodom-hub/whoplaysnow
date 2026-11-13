@@ -18,6 +18,19 @@ How WHOPLAYSNOW gets fixtures discovered, indexed and ranked, and how to tell wh
 | Structured data was a bare `SportsEvent`. | No machine-readable answer to "where to watch". | A `SportsEvent` graph with teams (linked to team pages), venue and images, plus one `BroadcastEvent` → `BroadcastService` (with `areaServed` country) for each verified listing. Also `Organization`/`WebSite` on the home page and breadcrumbs everywhere. |
 | IndexNow was implemented but never called, and its key file returned 404. | Bing and Yandex discovery was slow. | The key is served at `/{key}.txt`. The collector submits changed upcoming fixtures after each run; the first run only seeds state. |
 
+## Audit of 13 November 2026
+
+Search Console (domain property `whoplaysnow.com`, 16 months, no filters, data to 10 Nov): 0 clicks, 32 impressions, 1 indexed page (the home page). Page indexing (updated 9 Nov): 19,929 "Crawled – currently not indexed", almost all legacy `/movie/` and `/actor/` URLs; 538 server errors from the old host (before 23 Oct). Crawl stats: 2.42K requests in 90 days, 37% 5xx from the old site, and since 2 Nov Googlebot fetched only the home page and images. The sitemap index was last read on 2 Nov, when it still listed the legacy catalogue (655,332 URLs); the new child sitemaps had never been fetched, so event, team and most competition URLs were "unknown to Google". No manual actions or security issues. Bing had read the new index (4 Nov, 13.1K URLs) and indexed the home and competition pages, but event pages that never changed after the first collection were "not discovered": IndexNow only sent edits.
+
+Fixed in code:
+
+| Finding | Fix |
+|---|---|
+| The same fixture from two providers was published twice (TheSportsDB records without participant objects, or a competition naming variant), each copy self-canonical and in the sitemap; the second copy took a dated URL. 11 pairs live, e.g. `/uefa-nations-league/serbia-vs-germany` and `…-2026-11-13`. | `mergeOfficialMatches` matches on the title's sides when participants are missing; `International Friendlies` and `Major League Soccer - Cup Playoffs` reconcile with their canonical names. The merged identity's URLs become 301 aliases of the surviving page (`mergedIds` → route registry). |
+| Scheduled collection fired about 3 times a day instead of 8 (GitHub drops scheduled runs), so fixtures and channels were up to 13 h late. | Schedule at :17 and :47 every hour. |
+| IndexNow never announced pages that were unchanged since they were first seen, nor URLs that stopped being pages. | Seo state stores the fingerprint IndexNow accepted; every indexable version is sent once (first run after this change backfills), plus merged/retired paths. |
+| The post-deploy crawl audit sent a Googlebot user agent from GitHub runners; Cloudflare answered 403 and the audit failed every run without checking anything. | Honest audit user agent. |
+
 ## Event lifecycle (automatic)
 
 `lib/event-seo.ts` → `eventIndexing()` decides each state on every request and every collection:
@@ -39,7 +52,7 @@ How WHOPLAYSNOW gets fixtures discovered, indexed and ranked, and how to tell wh
 1. Keep `https://whoplaysnow.com/sitemap.xml` submitted. It is now an index, and Google discovers the child sitemaps from it.
 2. Remove the 60 legacy child sitemaps (`/sitemap/base.xml`, `/sitemap/catalog-000001…000060.xml`). They now return 410.
 3. Optional: use the Removals tool with the `https://whoplaysnow.com/movie/` and `/actor/` prefixes to hide legacy results quickly while the 410s are processed. Removals hide results for about 6 months; the 410s make the removal permanent.
-4. Do not request indexing URL by URL; the sitemap `lastmod` and internal links handle discovery. The Indexing API does not apply to this content.
+4. Resubmit `sitemap.xml` whenever Search Console's "Last read" is older than a few days. Request indexing only for a handful of imminent, high-demand fixtures; the sitemap `lastmod` and internal links handle the rest. The Indexing API does not apply to this content.
 
 ## What to measure (weekly)
 

@@ -11,7 +11,7 @@ import { preparePublication, sourceAliases } from '../lib/matches/publication';
 import { isCanonicalMatchId } from '../lib/matches/event-aliases';
 import { isUnsupportedFixture } from '../lib/matches/fixture-integrity';
 import { reconcileEvents, publicEvents } from '../lib/snapshot';
-import {updateSeoState} from '../lib/seo-state';
+import {updateSeoState,markSubmitted} from '../lib/seo-state';
 import {eventIndexing} from '../lib/event-seo';
 import {submitIndexNowUrls,INDEXNOW_MAX_URLS_PER_REQUEST} from '../lib/indexnow';
 import { fillMissingCompetitions } from '../lib/fixture-metadata';
@@ -79,13 +79,20 @@ const seo=updateSeoState(await readFile(dir+'/seo-state.json','utf8').then(JSON.
 await writeFile(dir+'/seo-state.json.tmp',JSON.stringify(seo.state));await rename(dir+'/seo-state.json.tmp',dir+'/seo-state.json');
 await writeFile(dir+'/schedule.json.tmp',JSON.stringify(snapshot)); await rename(dir+'/schedule.json.tmp',dir+'/schedule.json');
 // IndexNow reaches Bing, Yandex, Seznam and Naver within minutes; Google reads
-// the sitemap lastmod instead. The first run only seeds state, never a blast.
-const changedUrls=seo.seeded?[]:seo.changed.filter(e=>eventIndexing(e,now).sitemap).map(e=>e.canonicalPath);
+// the sitemap lastmod instead. Every indexable fixture is announced once per
+// visible version (new pages included, not only edits), plus URLs that stopped
+// being pages. The first run only seeds state, never a blast.
+const eligible=seo.seeded?[]:seo.pending.filter(e=>eventIndexing(e,now).sitemap);
+const changedUrls=[...eligible.map(e=>e.canonicalPath),...(seo.seeded?[]:seo.removed)];
+const acceptedIds=new Set<string>();
 for(let i=0;i<changedUrls.length;i+=INDEXNOW_MAX_URLS_PER_REQUEST){
- const result=await submitIndexNowUrls(changedUrls.slice(i,i+INDEXNOW_MAX_URLS_PER_REQUEST),{siteUrl:process.env.SITE_ORIGIN,fetchImpl:(url,init)=>fetch(url,{...init,signal:AbortSignal.timeout(30000)})}).catch((error:any)=>({accepted:false,status:null,submitted:0,error:String(error)}));
- console.log(JSON.stringify({event:'indexNow',...result,urls:undefined,responseText:undefined}));
+ const batch=changedUrls.slice(i,i+INDEXNOW_MAX_URLS_PER_REQUEST);
+ const result:any=await submitIndexNowUrls(batch,{siteUrl:process.env.SITE_ORIGIN,fetchImpl:(url,init)=>fetch(url,{...init,signal:AbortSignal.timeout(30000)})}).catch((error:any)=>({accepted:false,status:null,submitted:0,error:String(error)}));
+ console.log(JSON.stringify({event:'indexNow',...result,urls:undefined,responseText:result.accepted?undefined:String(result.responseText||'').slice(0,300)}));
+ if(result.accepted){const sent=new Set(batch);for(const e of eligible)if(sent.has(e.canonicalPath))acceptedIds.add(e.id);}
 }
-console.log(JSON.stringify({event:'seoState',events:visible.length,changed:seo.changed.length,seeded:seo.seeded,indexNowUrls:changedUrls.length}));
+if(acceptedIds.size){markSubmitted(seo.state,acceptedIds);await writeFile(dir+'/seo-state.json.tmp',JSON.stringify(seo.state));await rename(dir+'/seo-state.json.tmp',dir+'/seo-state.json');}
+console.log(JSON.stringify({event:'seoState',events:visible.length,changed:seo.changed.length,seeded:seo.seeded,indexNowUrls:changedUrls.length,indexNowAccepted:acceptedIds.size,removedUrls:seo.removed.length}));
 const quality=auditFutureSchedule(snapshot,Date.now(),e=>addGlobalServices(decorateEvent(e)));
 await writeFile(dir+'/schedule-quality.json.tmp',JSON.stringify(quality));await rename(dir+'/schedule-quality.json.tmp',dir+'/schedule-quality.json');
 console.log(JSON.stringify({event:'scheduleQuality',upcomingEvents:quality.upcomingEvents,staleFixtures:quality.staleFixtures,windows:quality.windows,issueCounts:quality.issueCounts}));

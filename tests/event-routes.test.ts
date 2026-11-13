@@ -39,3 +39,29 @@ test('rendered links and calendar details use the same clean canonical path',()=
  assert(html.includes('href="'+path+'"'));assert(!html.includes('/matches/'));
  assert(matchCalendar(e,'https://whoplaysnow.com'+path).replace(/\r\n /g,'').includes('URL:https://whoplaysnow.com'+path));
 });
+test('a provider duplicate without participants merges into one page and its URL redirects',async()=>{
+ const {reconcileEvents}=await import('../lib/snapshot');
+ const espn={id:'espn-401861162',title:'Moldova vs Kazakhstan',sport:'football',competition:'UEFA Nations League',startsAt:'2026-11-13T17:00:00.000Z',homeTeam:{name:'Moldova'},awayTeam:{name:'Kazakhstan'},broadcasts:[]};
+ const tsdb={id:'tsdb-2442832',title:'Moldova vs Kazakhstan',sport:'football',competition:'UEFA Nations League',startsAt:'2026-11-13T17:00:00.000Z',homeTeam:null,awayTeam:null,broadcasts:[{channel:'Sky Sport Calcio',territory:'IT'}]};
+ // Yesterday both were published separately; the bare record took a dated URL.
+ const before=assignEventPaths([espn,tsdb]);
+ assert.equal(before.events.find((e:any)=>e.id===tsdb.id).canonicalPath,'/uefa-nations-league/moldova-vs-kazakhstan-2026-11-13');
+ for(const order of [[tsdb,espn],[espn,tsdb]]){
+  const merged=reconcileEvents(order);
+  assert.equal(merged.length,1);
+  assert.equal(merged[0].id,espn.id);
+  assert.equal(merged[0].homeTeam.name,'Moldova');
+  assert.equal(merged[0].broadcasts.length,1);
+  const after=assignEventPaths(merged,before.registry).events[0];
+  assert.equal(after.canonicalPath,'/uefa-nations-league/moldova-vs-kazakhstan');
+  assert(after.publicPathAliases.includes('/uefa-nations-league/moldova-vs-kazakhstan-2026-11-13'));
+ }
+});
+test('competition naming variants of one fixture reconcile',async()=>{
+ const {reconcileEvents}=await import('../lib/snapshot');
+ const a={id:'espn-401919978',title:'Qatar vs Australia',sport:'football',competition:'International Friendly',startsAt:'2026-11-13T14:45:00.000Z',homeTeam:{name:'Qatar'},awayTeam:{name:'Australia'},broadcasts:[]};
+ const b={...a,id:'tsdb-2606353',competition:'International Friendlies',homeTeam:null,awayTeam:null};
+ assert.equal(reconcileEvents([a,b]).length,1);
+ // Different fixtures at the same time stay apart.
+ assert.equal(reconcileEvents([a,{...b,title:'Japan vs Ghana'}]).length,2);
+});
