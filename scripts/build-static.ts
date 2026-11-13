@@ -12,7 +12,7 @@ process.env.WPN_NO_LISTEN='1';process.env.WPN_SHARED_COUNTRY_VIEW='1';
 process.env.WPN_FREEZE_VIEW='1';
 const out=process.argv.includes('--out')?process.argv[process.argv.indexOf('--out')+1]:'dist/site';
 const {app,schedule,sitemaps,countryCodes,baseView}=await import('../server.ts');
-const {competitionDirectory}=await import('../lib/directory-pages');
+const {competitionDirectory,watchPagesFor}=await import('../lib/directory-pages');
 const {addGlobalServices}=await import('../lib/global-services');
 const {scheduleFeedEvent}=await import('../lib/broadcast-html');
 const {matchSourceIds}=await import('../lib/matches/routes');
@@ -54,7 +54,7 @@ const packs=new Map<string,Snapshot>(),assets=new Map<string,Snapshot>();
 const fileFor=(path:string)=>path==='/'?'index.html':/\.(xml|txt)$/.test(path)?path.slice(1):path.slice(1)+'.html';
 
 // 1. Site pages, sitemaps and crawler files.
-const pages=['/','/about','/privacy','/terms','/competitions','/channels',...sports.filter(([key]:any)=>key!=='football').map(([key]:any)=>'/sports/'+key),'/robots.txt','/sitemap.xml',...[...(await sitemaps()).keys()].map(name=>'/sitemap-'+name+'.xml'),'/'+getIndexNowKey()+'.txt',...competitionDirectory(data.events).map((row:any)=>competitionPath(row.name))];
+const pages=['/','/about','/privacy','/terms','/competitions','/channels',...sports.filter(([key]:any)=>key!=='football').map(([key]:any)=>'/sports/'+key),'/robots.txt','/sitemap.xml',...[...(await sitemaps()).keys()].map(name=>'/sitemap-'+name+'.xml'),'/'+getIndexNowKey()+'.txt',...competitionDirectory(data.events).map((row:any)=>competitionPath(row.name)),...watchPagesFor(data.events).map((p:any)=>p.path)];
 const teams=[...data.teams.values()].filter((t:any)=>t.events.some((e:any)=>Date.parse(e.startsAt)>now-3*3600000)).sort((a:any,b:any)=>Number(b.indexable)-Number(a.indexable)||b.upcoming-a.upcoming).map((t:any)=>t.path);
 // Soonest indexable fixtures first: if anything overflows into packs, it is the far future.
 const events=[...data.events].sort((a:any,b:any)=>Number(Boolean(b.seo?.sitemap))-Number(Boolean(a.seo?.sitemap))||a.startsAt.localeCompare(b.startsAt));

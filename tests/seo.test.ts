@@ -189,3 +189,30 @@ test('server: legacy 410s, expired fixture redirects, robots, sitemaps and event
   assert.equal((await get('/a3382bc18e63463a8bc0c2c2b24fb7a7.txt')).status,200);
  });
 });
+
+test('server: competition watch pages per country exist only with a real answer and are linked and listed',{timeout:60000},async()=>{
+ const t=Date.now(),at=(offset:number)=>new Date(t+offset).toISOString();
+ const live=(id:string,offset:number,home:string,away:string,extra:any[]=[])=>({...fixture({id,startsAt:at(offset),title:home+' vs '+away,homeTeam:{name:home},awayTeam:{name:away},fixtureSource:{name:'ESPN',url:'https://www.espn.com/',checkedAt:at(-3600000)},broadcasts:[broadcast('M+ Liga de Campeones 2','ES',{checkedAt:at(-3600000),validUntil:at(9*DAY)}),...extra]}),canonicalPath:undefined});
+ const us=[broadcast('Paramount+','US',{checkedAt:at(-3600000),validUntil:at(9*DAY)})];
+ const events=[live('espn-1',DAY,'Barcelona','Inter',us),live('espn-2',2*DAY,'Ajax','Celtic'),live('espn-3',3*DAY,'Porto','Lazio')];
+ await withServer({'schedule.json':{generatedAt:at(0),sources:[],events}},async base=>{
+  const get=(path:string)=>fetch(base+path,{redirect:'manual'});
+  const spain=await get('/competitions/uefa-champions-league/spain');assert.equal(spain.status,200);
+  const html=await spain.text();
+  assert.match(html,/<h1>Where to watch UEFA Champions League in Spain<\/h1>/);
+  assert.match(html,/<link rel="canonical" href="https:\/\/whoplaysnow.com\/competitions\/uefa-champions-league\/spain">/);
+  assert.match(html,/<meta name="robots" content="max-image-preview:large">/);
+  assert.match(html,/match listings in Spain name M\+ Liga de Campeones 2/);
+  assert.match(html,/Spain local time/);
+  assert.match(html,/href="\/uefa-champions-league\/ajax-vs-celtic"/);
+  // One listed fixture is not a viewing guide for a country.
+  assert.equal((await get('/competitions/uefa-champions-league/united-states')).status,404);
+  assert.equal((await get('/competitions/uefa-champions-league/Spain')).status,301);
+  const competition=await (await get('/competitions/uefa-champions-league')).text();
+  assert.match(competition,/<dt><a href="\/competitions\/uefa-champions-league\/spain">Spain<\/a><\/dt>/);
+  const event=await (await get('/uefa-champions-league/ajax-vs-celtic')).text();
+  assert.match(event,/<dt><a href="\/competitions\/uefa-champions-league\/spain">Spain<\/a><\/dt>/);
+  assert.match(await (await get('/sitemap.xml')).text(),/sitemap-watch.xml/);
+  assert.match(await (await get('/sitemap-watch.xml')).text(),/<loc>https:\/\/whoplaysnow.com\/competitions\/uefa-champions-league\/spain<\/loc>/);
+ });
+});

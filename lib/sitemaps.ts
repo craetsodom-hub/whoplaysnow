@@ -13,11 +13,12 @@ export function sitemapIndex(origin:string,files:Map<string,SitemapEntry[]>){
 // file: a falling ratio in one month or page type is visible immediately.
 // lastmod is the time an event's public content last changed (collector
 // fingerprint), never the collection heartbeat, so Google can trust it.
-export function buildSitemaps({pages,competitions,teams,events,state}:{pages:SitemapEntry[];competitions:{path:string;events:any[]}[];teams:{path:string;events:any[]}[];events:any[];state:Record<string,any>}){
+export function buildSitemaps({pages,competitions,teams,events,state,watch=[]}:{pages:SitemapEntry[];competitions:{path:string;events:any[]}[];teams:{path:string;events:any[]}[];events:any[];state:Record<string,any>;watch?:{path:string;events:any[]}[]}){
  const changed=(e:any)=>state[e.id]?.changedAt as string|undefined;
  const files=new Map<string,SitemapEntry[]>([['pages',pages]]);
  files.set('competitions',competitions.map(c=>({path:c.path,lastmod:latest(c.events.map(changed))})));
  if(teams.length)files.set('teams',teams.map(t=>({path:t.path,lastmod:latest(t.events.map(changed))})));
+ if(watch.length)files.set('watch',watch.map(w=>({path:w.path,lastmod:latest(w.events.map(changed))})));
  for(const e of [...events].sort((a,b)=>a.startsAt.localeCompare(b.startsAt))){
   const name='events-'+e.startsAt.slice(0,7);
   if(!files.has(name))files.set(name,[]);
