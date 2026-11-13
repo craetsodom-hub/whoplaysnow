@@ -223,3 +223,9 @@ test('server: competition watch pages per country exist only with a real answer 
   assert.match(await (await get('/sitemap-watch.xml')).text(),/<loc>https:\/\/whoplaysnow.com\/competitions\/uefa-champions-league\/spain<\/loc>/);
  });
 });
+
+test('country names read naturally in watch page prose and URLs',async()=>{
+ const {countryProse,watchPath}=await import('../lib/watch-pages');
+ assert.equal(countryProse('US'),'the United States');assert.equal(countryProse('NL'),'the Netherlands');assert.equal(countryProse('ES'),'Spain');
+ assert.equal(watchPath('Premier League','US'),'/competitions/premier-league/united-states');
+});

@@ -13,12 +13,16 @@ const MIN_LISTED=3;
 const viewing=new Set<string>(territories.territories);
 export const countryName=(code:string)=>(countries as any)[code]||code;
 export const countrySlug=(code:string)=>routeSlug(countryName(code));
+// Prose name: "in the United States", "in the Netherlands", "in Spain".
+const withArticle=/^(United |Netherlands|Philippines|Czech Republic|Dominican Republic|Central African|Democratic Republic|Republic of|Bahamas|Gambia|Maldives|Comoros|Seychelles|Solomon|Marshall|Cayman|Faroe|Falkland|British |Turks|Cook Islands|Northern Mariana|Vatican|Channel Islands)/;
+export const countryProse=(code:string)=>(withArticle.test(countryName(code))?'the ':'')+countryName(code);
 export const watchPath=(competition:string,code:string)=>competitionPath(competition)+'/'+countrySlug(code);
 
 // Main time zone per market; countries not listed show UK time.
 const zones:Record<string,string>={GB:'Europe/London',IE:'Europe/Dublin',US:'America/New_York',CA:'America/Toronto',ES:'Europe/Madrid',FR:'Europe/Paris',DE:'Europe/Berlin',IT:'Europe/Rome',PT:'Europe/Lisbon',NL:'Europe/Amsterdam',BE:'Europe/Brussels',CH:'Europe/Zurich',AT:'Europe/Vienna',LU:'Europe/Luxembourg',DK:'Europe/Copenhagen',SE:'Europe/Stockholm',NO:'Europe/Oslo',FI:'Europe/Helsinki',IS:'Atlantic/Reykjavik',PL:'Europe/Warsaw',CZ:'Europe/Prague',SK:'Europe/Bratislava',HU:'Europe/Budapest',RO:'Europe/Bucharest',BG:'Europe/Sofia',GR:'Europe/Athens',CY:'Asia/Nicosia',MT:'Europe/Malta',HR:'Europe/Zagreb',SI:'Europe/Ljubljana',RS:'Europe/Belgrade',BA:'Europe/Sarajevo',AL:'Europe/Tirane',MK:'Europe/Skopje',ME:'Europe/Podgorica',UA:'Europe/Kyiv',EE:'Europe/Tallinn',LV:'Europe/Riga',LT:'Europe/Vilnius',TR:'Europe/Istanbul',IL:'Asia/Jerusalem',MA:'Africa/Casablanca',DZ:'Africa/Algiers',TN:'Africa/Tunis',EG:'Africa/Cairo',SA:'Asia/Riyadh',AE:'Asia/Dubai',QA:'Asia/Qatar',KW:'Asia/Kuwait',BH:'Asia/Bahrain',OM:'Asia/Muscat',JO:'Asia/Amman',LB:'Asia/Beirut',IQ:'Asia/Baghdad',IN:'Asia/Kolkata',PK:'Asia/Karachi',BD:'Asia/Dhaka',LK:'Asia/Colombo',NP:'Asia/Kathmandu',SG:'Asia/Singapore',MY:'Asia/Kuala_Lumpur',ID:'Asia/Jakarta',TH:'Asia/Bangkok',VN:'Asia/Ho_Chi_Minh',PH:'Asia/Manila',HK:'Asia/Hong_Kong',TW:'Asia/Taipei',CN:'Asia/Shanghai',JP:'Asia/Tokyo',KR:'Asia/Seoul',AU:'Australia/Sydney',NZ:'Pacific/Auckland',ZA:'Africa/Johannesburg',NG:'Africa/Lagos',GH:'Africa/Accra',KE:'Africa/Nairobi',UG:'Africa/Kampala',TZ:'Africa/Dar_es_Salaam',ET:'Africa/Addis_Ababa',SN:'Africa/Dakar',CI:'Africa/Abidjan',CM:'Africa/Douala',MX:'America/Mexico_City',BR:'America/Sao_Paulo',AR:'America/Argentina/Buenos_Aires',CL:'America/Santiago',CO:'America/Bogota',PE:'America/Lima',EC:'America/Guayaquil',VE:'America/Caracas',UY:'America/Montevideo',PY:'America/Asuncion',BO:'America/La_Paz',CR:'America/Costa_Rica',PA:'America/Panama',GT:'America/Guatemala',SV:'America/El_Salvador',HN:'America/Tegucigalpa',DO:'America/Santo_Domingo',PR:'America/Puerto_Rico',JM:'America/Jamaica',TT:'America/Port_of_Spain'};
 const zoneFor=(code:string)=>zones[code]||'Europe/London';
-const when=(iso:string,zone:string)=>new Intl.DateTimeFormat('en-GB',{timeZone:zone,weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23',timeZoneName:'short'}).format(new Date(iso)).replace(/,/g,'');
+// Readers' own abbreviations: EST/PST in the Americas, AEDT in Australia, CET/GMT in Europe.
+const when=(iso:string,zone:string)=>new Intl.DateTimeFormat(zone.startsWith('America/')?'en-US':zone.startsWith('Australia/')?'en-AU':'en-GB',{timeZone:zone,weekday:'short',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit',hourCycle:'h23',timeZoneName:'short'}).format(new Date(iso)).replace(/,/g,'');
 const list=(items:string[])=>items.length<2?items.join(''):items.slice(0,-1).join(', ')+' and '+items.at(-1);
 const live=(e:any,now:number)=>Date.parse(e.startsAt)>now&&!/cancel|postpon|confirm/i.test(e.phase||'');
 
@@ -43,7 +47,7 @@ export function watchPages(events:any[],now=Date.now()):WatchPage[]{
 }
 
 export function watchPageHtml(page:WatchPage,localized:any[],siblings:WatchPage[],now=Date.now()){
- const {competition,code}=page,country=countryName(code),zone=zoneFor(code);
+ const {competition,code}=page,country=countryProse(code),zone=zoneFor(code),bare=countryName(code);
  const fixtures=localized.filter(e=>live(e,now)).sort((a,b)=>a.startsAt.localeCompare(b.startsAt));
  const channelsFor=(e:any)=>[...new Set((e.broadcasts||[]).filter((b:any)=>b.territory===code).map(channelName))] as string[];
  const allChannels=[...new Set(fixtures.flatMap(channelsFor))];
@@ -53,7 +57,7 @@ export function watchPageHtml(page:WatchPage,localized:any[],siblings:WatchPage[
   page.holders.length?competition+' rights in '+country+' are held by '+list(page.holders)+(page.season?' for the '+page.season+' season':'')+'.':'',
   allChannels.length?'Upcoming '+competition+' match listings in '+country+' name '+list(allChannels.slice(0,5))+(allChannels.length>5?' and '+(allChannels.length-5)+' more':'')+'.':'No match-by-match listings for '+country+' are published yet; they appear here as broadcasters confirm them.',
   next?'The next fixture is '+matchup(next)+' on '+when(next.startsAt,zone)+(nextChannels.length?', on '+list(nextChannels)+'.':'.'):'',
-  'Times below are in '+(zones[code]?country+' local time':'UK time')+'.'
+  'Times below are in '+(zones[code]?bare+' local time':'UK time')+'.'
  ].filter(Boolean).join(' ');
  const rows=fixtures.slice(0,60).map(e=>{const ch=channelsFor(e);return '<li><a href="'+eventPath(e)+'"><time datetime="'+esc(e.startsAt)+'">'+esc(when(e.startsAt,zone))+'</time><span>'+esc(matchup(e))+'</span></a><small>'+(ch.length?esc(ch.join(', ')):'Not listed yet in '+esc(country))+'</small></li>';}).join('');
  const others=siblings.filter(s=>s.competition===competition&&s.code!==code).sort((a,b)=>countryName(a.code).localeCompare(countryName(b.code)));
