@@ -195,6 +195,9 @@ test('server: competition watch pages per country exist only with a real answer 
  const live=(id:string,offset:number,home:string,away:string,extra:any[]=[])=>({...fixture({id,startsAt:at(offset),title:home+' vs '+away,homeTeam:{name:home},awayTeam:{name:away},fixtureSource:{name:'ESPN',url:'https://www.espn.com/',checkedAt:at(-3600000)},broadcasts:[broadcast('M+ Liga de Campeones 2','ES',{checkedAt:at(-3600000),validUntil:at(9*DAY)}),...extra]}),canonicalPath:undefined});
  const us=[broadcast('Paramount+','US',{checkedAt:at(-3600000),validUntil:at(9*DAY)})];
  const events=[live('espn-1',DAY,'Barcelona','Inter',us),live('espn-2',2*DAY,'Ajax','Celtic'),live('espn-3',3*DAY,'Porto','Lazio')];
+ // Season rights carried by a fixture from earlier this week still answer for Italy.
+ events.push(live('espn-0',-2*DAY,'Napoli','Benfica',[]) as any);
+ (events.at(-1) as any).broadcastRights=[{territory:'IT',sourceType:'official-rights',holders:[{name:'Sky Italia'}],season:'2026/27',validFrom:at(-90*DAY),validThrough:at(200*DAY),sourceUrl:'https://www.uefa.com/rights'}];
  await withServer({'schedule.json':{generatedAt:at(0),sources:[],events}},async base=>{
   const get=(path:string)=>fetch(base+path,{redirect:'manual'});
   const spain=await get('/competitions/uefa-champions-league/spain');assert.equal(spain.status,200);
@@ -207,6 +210,8 @@ test('server: competition watch pages per country exist only with a real answer 
   assert.match(html,/href="\/uefa-champions-league\/ajax-vs-celtic"/);
   // One listed fixture is not a viewing guide for a country.
   assert.equal((await get('/competitions/uefa-champions-league/united-states')).status,404);
+  const italy=await get('/competitions/uefa-champions-league/italy');assert.equal(italy.status,200);
+  const it=await italy.text();assert.match(it,/rights in Italy are held by Sky Italia for the 2026\/27 season/);assert.match(it,/Not listed yet in Italy/);assert.doesNotMatch(it,/napoli-vs-benfica/);
   assert.equal((await get('/competitions/uefa-champions-league/Spain')).status,301);
   const competition=await (await get('/competitions/uefa-champions-league')).text();
   assert.match(competition,/<dt><a href="\/competitions\/uefa-champions-league\/spain">Spain<\/a><\/dt>/);

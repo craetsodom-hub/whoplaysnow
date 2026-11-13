@@ -28,8 +28,10 @@ export type WatchPage={competition:string;code:string;path:string;events:any[];h
 // (official rights cover every country; listings cover the localised markets).
 export function watchPages(events:any[],now=Date.now()):WatchPage[]{
  const pages:WatchPage[]=[];
- for(const row of competitionDirectory(events.filter(e=>live(e,now)))){
-  const upcoming=row.events;if(!upcoming.length)continue;
+ // Season rights travel on whichever fixtures came from the rights feed, often
+ // recent ones, so read them across the competition (as its page does).
+ for(const row of competitionDirectory(events)){
+  const upcoming=row.events.filter((e:any)=>live(e,now)).sort((a:any,b:any)=>a.startsAt.localeCompare(b.startsAt));if(!upcoming.length)continue;
   for(const r of rightsByCountry(row.events,now)){
    if(!viewing.has(r.code))continue;
    const listed=upcoming.filter(e=>(e.broadcasts||[]).some((b:any)=>b.territory===r.code)).length;
