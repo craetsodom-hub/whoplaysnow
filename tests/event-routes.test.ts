@@ -46,7 +46,9 @@ test('a provider duplicate without participants merges into one page and its URL
  // Yesterday both were published separately; the bare record took a dated URL.
  const before=assignEventPaths([espn,tsdb]);
  assert.equal(before.events.find((e:any)=>e.id===tsdb.id).canonicalPath,'/uefa-nations-league/moldova-vs-kazakhstan-2026-11-13');
- for(const order of [[tsdb,espn],[espn,tsdb]]){
+ // In production the ESPN record carries a fixture source, so it merges last.
+ const sourced={...espn,fixtureSource:{name:'ESPN',url:'https://www.espn.com/',checkedAt:'2026-11-13T10:00:00Z'}};
+ for(const order of [[tsdb,espn],[espn,tsdb],[tsdb,sourced],[sourced,tsdb]]){
   const merged=reconcileEvents(order);
   assert.equal(merged.length,1);
   assert.equal(merged[0].id,espn.id);
@@ -64,4 +66,13 @@ test('competition naming variants of one fixture reconcile',async()=>{
  assert.equal(reconcileEvents([a,b]).length,1);
  // Different fixtures at the same time stay apart.
  assert.equal(reconcileEvents([a,{...b,title:'Japan vs Ghana'}]).length,2);
+});
+test('a fixture that inherited its clean path as an alias reclaims it',()=>{
+ const e={id:'espn-1',title:'Serbia vs Germany',sport:'football',competition:'UEFA Nations League',startsAt:'2026-11-13T19:45:00.000Z',homeTeam:{name:'Serbia'},awayTeam:{name:'Germany'},broadcasts:[],mergedIds:['tsdb-1']};
+ // Registry as saved by a run where the bare duplicate survived.
+ const registry={version:1,entries:{'tsdb-1':{base:'/uefa-nations-league/serbia-vs-germany',path:'/uefa-nations-league/serbia-vs-germany-2026-11-13',dated:true,day:'2026-11-13',aliases:['/uefa-nations-league/serbia-vs-germany']}}};
+ const out=assignEventPaths([e],registry);
+ assert.equal(out.events[0].canonicalPath,'/uefa-nations-league/serbia-vs-germany');
+ assert.deepEqual(out.events[0].publicPathAliases,['/uefa-nations-league/serbia-vs-germany-2026-11-13']);
+ assert.equal(assignEventPaths([e],out.registry).events[0].canonicalPath,'/uefa-nations-league/serbia-vs-germany');
 });

@@ -27,6 +27,9 @@ export function assignEventPaths(events,prior={}){
   const base=eventBasePath(e),old=entries[e.id],day=String(e.startsAt).slice(0,10);
   let path=old?.base===base&&(!old.dated||old.day===day)?old.path:base;
   let dated=old?.base===base&&old.dated||false;
+  // A fixture that already owns the undated path (inherited from a merged
+  // duplicate) publishes it again; the dated path becomes its alias.
+  if(dated&&old?.aliases?.includes(base)){path=base;dated=false;}
   if(occupied.has(path)&&occupied.get(path)!==e.id||dated&&old?.day!==day){path=base+'-'+day;dated=true;}
   const stem=path;let n=2;while(occupied.has(path)&&occupied.get(path)!==e.id)path=stem+'-'+n++;
   if(!safePath(path))throw Error('Invalid generated event path');

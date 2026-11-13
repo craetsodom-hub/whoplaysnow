@@ -134,7 +134,10 @@ export function mergeOfficialMatches(imported: Match[], official: Match[]): Matc
     const sourceIds = Object.assign({}, ...duplicates.map(matchSourceIds), matchSourceIds(event))
     const venue = event.venue ?? (prior?.startsAt === event.startsAt ? prior.venue : undefined)
     // Identities absorbed by this merge keep their published URLs as redirects.
-    const id = prior?.id ?? event.id
+    // The record that names its participants keeps its identity (and so its
+    // clean URL), whichever source tier is merged last.
+    const named = (e: Match) => Boolean(e.homeTeam && e.awayTeam)
+    const id = prior && (named(prior) || !named(event)) ? prior.id : event.id
     const mergedIds = [...new Set([...duplicates.flatMap(item => [item.id, ...(item.mergedIds ?? [])]), event.id, ...(event.mergedIds ?? [])])].filter(value => value !== id)
     add({ ...event, ...(venue ? { venue } : {}), id, ...(mergedIds.length ? { mergedIds } : {}), sourceIds, broadcasterEvidence: event.broadcasterEvidence ?? prior?.broadcasterEvidence, broadcastRights: rights, competitionKey: event.competitionKey ?? prior?.competitionKey, competitionCountry: event.competitionCountry ?? prior?.competitionCountry, competitionLogo: event.competitionLogo ?? prior?.competitionLogo, fixtureSource: event.fixtureSource ?? prior?.fixtureSource, homeTeam: mergedParticipant(event.homeTeam, prior?.homeTeam ?? null), awayTeam: mergedParticipant(event.awayTeam, prior?.awayTeam ?? null), broadcasts: [...new Map(broadcasts.map(b => [`${b.territory}:${b.channel}:${b.sourceUrl}:${b.evidenceLevel ?? ''}`, b])).values()] })
   }
