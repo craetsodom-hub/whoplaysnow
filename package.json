@@ -8,6 +8,8 @@
     "collect": "tsx scripts/run-collection.ts",
     "test": "tsx --test tests/*.test.ts worker/*.test.ts lib/matches/official.test.mjs lib/matches/publication.test.mjs lib/matches/evidence.test.mjs lib/matches/fixture-integrity.test.mjs lib/matches/routes.test.mjs lib/matches/europe.test.mjs lib/matches/laliga.test.mjs",
     "build:static": "tsx scripts/build-static.ts",
+    "gate": "tsx scripts/release-gate.ts",
+    "gate:live": "tsx scripts/release-gate.ts --live",
     "dev:cloudflare": "wrangler dev",
     "deploy:cloudflare": "wrangler deploy"
   },

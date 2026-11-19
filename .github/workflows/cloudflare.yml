@@ -80,4 +80,10 @@ jobs:
           PORT=3100 npx tsx server.ts > server.log 2>&1 &
           for i in $(seq 1 60); do curl -fs http://127.0.0.1:3100/healthz > /dev/null && break; sleep 2; done
           npx tsx scripts/seo-audit.ts --origin "$SITE_ORIGIN" --via http://127.0.0.1:3100 --sample 10
+      # Blocking: if this build would bring back any Search Console error
+      # (sitemap URL not 200 / noindex / wrong canonical, broken internal link,
+      # legacy URL not 410, old /matches/ link not redirecting), the deploy is
+      # skipped, the previous version stays live and GitHub emails the owner.
+      - name: Release gate
+        run: npm run gate
       - run: npx wrangler deploy

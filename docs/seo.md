@@ -48,6 +48,7 @@ Fixed in code:
 
 ## Monitoring
 
+- **Release gate (blocks deploys).** `npm run gate` runs in CI after the build and before `wrangler deploy`. It serves the exact build about to ship (dist/site through the Worker, with Cloudflare's asset rules) and checks every sitemap URL (200, no noindex, self-canonical, listed once), every internal link on directory pages and a spread of fixture pages (ends in 200 within one redirect), legacy film URLs (410), old `/matches/{title}--{id}` links to live fixtures (301 to the fixture), and honest 404s for unknown pages. Any failure skips the deploy, so the previous version stays live and GitHub emails the owner. `npm run gate:live` runs the same checks against whoplaysnow.com from your own machine (about 7 minutes; Cloudflare blocks GitHub runner IPs). On 19 Nov 2026 it passed: 12,183 sitemap URLs, 19,966 internal links, 409 old match links, 0 failures.
 - `npx tsx scripts/seo-audit.ts --origin https://whoplaysnow.com --sample 20 --output audit.json` crawls every sitemap with a Googlebot user agent and samples the soonest plus random URLs. It fails on non-200 responses, noindex pages in a sitemap, canonical mismatches, H1 count other than 1, invalid JSON-LD, event pages without `SportsEvent`, pages listed past `unavailable_after`, and legacy URLs that do not return 410. It warns on duplicate titles and missing `lastmod`. Run it after every deploy.
 - The collector logs `{"event":"seoState",...}` and `{"event":"indexNow",...}` on each run.
 
