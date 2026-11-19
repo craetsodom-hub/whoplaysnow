@@ -20,7 +20,8 @@ import territories from './lib/matches/viewing-territories.json' with { type:'js
 import { readFile, stat } from 'node:fs/promises';
 import { currentBroadcasts, distinctBroadcasts } from './lib/matches/guide';
 import { fixtureObservationIsFresh } from './lib/matches/publication';
-import { findMatchById, matchIdFromSlug } from './lib/matches/routes';
+import { findMatchById, matchIdFromSlug, isProviderMatchId, legacyMatchupSegment, legacyMatchupIndex } from './lib/matches/routes';
+import { canonicalMatchId } from './lib/matches/event-aliases';
 import { actionIcon, saveButtonContent, esc, sports, renderMatches, validDate, dateKey, prettyDate, timeLabel, badge, eventPath, competitionBadge, channelBadge, competitionPath, selectEvents, renderCompetitionFilters, viewingChannels, previewChannels, internationalChannels, renderChannelPreview, channelDisplayName, renderBroadcasterCard, sportKey } from './public/core.js';
 import countries from './lib/matches/country-labels.json' with { type:'json' };
 const app=express(); const port=Number(process.env.PORT||3100); const dir=process.env.DATA_DIR||'runtime'; const origin=process.env.SITE_ORIGIN||'https://whoplaysnow.com';
@@ -40,7 +41,7 @@ app.use('/utility-identity',express.static('public/utility-identity',{maxAge:'7d
 app.use('/assets',express.static('public',{maxAge:'1h',index:false}));
 let cached:any, modified=0, view:any, viewAt=0, sitemapCache:Map<string,any>|undefined, sharedView:any;
 const countryViews=new Map<string,any>();
-async function schedule(country="GB"){const stamp=(await stat(dir+'/schedule.json')).mtimeMs;if(!cached||stamp!==modified){const next=JSON.parse(await readFile(dir+'/schedule.json','utf8'));const registry=await readFile(dir+'/event-routes.json','utf8').then(JSON.parse).catch((e:any)=>{if(e.code!=='ENOENT')throw e;return {}});const routed=assignEventPaths(reconcileEvents(next.events),registry);next.events=routed.events.map(decorateEvent);next.routes=new Map<string,any>();for(const [id,entry] of Object.entries(routed.registry.entries) as any)for(const path of [entry.path,...entry.aliases||[]])next.routes.set(path,{id,base:entry.base});
+async function schedule(country="GB"){const stamp=(await stat(dir+'/schedule.json')).mtimeMs;if(!cached||stamp!==modified){const next=JSON.parse(await readFile(dir+'/schedule.json','utf8'));const registry=await readFile(dir+'/event-routes.json','utf8').then(JSON.parse).catch((e:any)=>{if(e.code!=='ENOENT')throw e;return {}});const routed=assignEventPaths(reconcileEvents(next.events),registry);next.events=routed.events.map(decorateEvent);next.routes=new Map<string,any>();next.routeIds=new Map<string,any>();for(const [id,entry] of Object.entries(routed.registry.entries) as any){next.routeIds.set(id,{id,path:entry.path,base:entry.base});for(const path of [entry.path,...entry.aliases||[]])next.routes.set(path,{id,base:entry.base});}
  // Optional: lastmod is omitted rather than invented when the collector has not written it.
  next.seoState=await readFile(dir+'/seo-state.json','utf8').then(text=>JSON.parse(text).entries||{}).catch(()=>({}));cached=next;modified=stamp;viewAt=0;}const now=Date.now();if(!viewAt||now-viewAt>15000&&!process.env.WPN_FREEZE_VIEW){const events=publicEvents(cached.events,now).map((e:any)=>({...e,seo:eventIndexing(e,now)}));view={...cached,events,teams:teamDirectory(events,now)};viewAt=now;countryViews.clear();sitemapCache=undefined;}// Static builds render every country's channel directory. Countries are added
  // independently, so one all-territory view gives each country exactly its rows.
@@ -68,7 +69,18 @@ app.get('/matches',(_req,res)=>res.redirect(301,'/'));
 // matchup in the same competition (301). Finished fixtures with no rematch are
 // 410 Gone; paths that were never published stay 404.
 function expiredEvent(req:any,res:any,data:any,requested:string){
- const known=data.routes?.get(requested),base=known?.base||requested.replace(/-\d{4}-\d{2}-\d{2}(?:-\d+)?$/,'');
+ let known=data.routes?.get(requested);
+ // Retired /matches/{title}--{id} URL (see lib/matches/routes.ts).
+ if(req.params.slug){
+  const id=matchIdFromSlug(req.params.slug),entry=id&&data.routeIds?.get(canonicalMatchId(id));
+  if(entry){known=entry;requested=entry.path;}
+  else{
+   const segment=legacyMatchupSegment(req.params.slug),next=segment&&legacyMatchupIndex(data.events,Date.now()).get(segment);
+   if(next){res.redirect(301,eventPath(next));return;}
+   if(isProviderMatchId(id))known={retired:true};
+  }
+ }
+ const base=known?.base||requested.replace(/-\d{4}-\d{2}-\d{2}(?:-\d+)?$/,'');
  const next=requested&&data.events.filter((e:any)=>eventBasePath(e)===base&&Date.parse(e.startsAt)>Date.now()-3*3600000).sort((a:any,b:any)=>a.startsAt.localeCompare(b.startsAt))[0];
  if(next){res.redirect(301,eventPath(next));return;}
  const segment=requested.split('/')[1],competition=segment&&data.events.find((e:any)=>routeSlug(e.competition)===segment)?.competition;

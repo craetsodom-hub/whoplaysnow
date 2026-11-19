@@ -10,6 +10,7 @@ import {addGlobalServices} from '../lib/global-services';
 import {renderBroadcasts} from '../lib/broadcast-html';
 import {matchCalendar} from '../lib/calendar-export';
 import {canonicalMatchId} from '../lib/matches/event-aliases';
+import {matchIdFromSlug,isProviderMatchId,legacyMatchupSegment} from '../lib/matches/routes';
 import {visitorCountry,pageCountry} from '../lib/visitor-country';
 import {publicEventPath} from '../public/event-routes.js';
 import {esc} from '../public/core.js';
@@ -87,11 +88,26 @@ export default {async fetch(request:Request,env:Env):Promise<Response>{
  }
  if(/[A-Z]/.test(path))return Response.redirect(origin+path.toLowerCase()+url.search,301);
  if(path.length>1&&path.endsWith('/'))return Response.redirect(origin+path.replace(/\/+$/,'')+url.search,301);
+ // Event redirects keep an explicit country choice, like the server.
+ const keepCountry=(location:string)=>{const country=url.searchParams.get('country')||'';if(!countryCodes.has(country))return location;const p=new URLSearchParams({country});if(url.searchParams.get('countryMode')==='manual')p.set('countryMode','manual');return location+'?'+p;};
+ const redirect=(location:string)=>reply({status:301,type:'text/plain',location:keepCountry(location),body:new Uint8Array()},head);
  const entry=await lookup(env,origin,path);
- if(entry){
-  // Event redirects keep an explicit country choice, like the server.
-  if(entry.status===301&&entry.location&&countryCodes.has(url.searchParams.get('country')||'')){const p=new URLSearchParams({country:url.searchParams.get('country')!});if(url.searchParams.get('countryMode')==='manual')p.set('countryMode','manual');return reply({...entry,location:entry.location+'?'+p},head);}
-  return reply(entry,head);
+ if(entry)return reply(entry.status===301&&entry.location?{...entry,location:keepCountry(entry.location)}:entry,head);
+ // Retired /matches/{title}--{id} URLs, in the server's order (lib/matches/routes.ts).
+ const legacyMatch=path.match(/^\/matches\/([^/]+)$/);
+ if(legacyMatch){
+  const finished=()=>special('special:410-match',410,'/matches/'+missing+'--tsdb-0');
+  const id=matchIdFromSlug(legacyMatch[1]);
+  if(id){
+   const live=await eventRecord(env,origin,id);
+   if(live)return redirect(publicEventPath(live));
+   const registered=await lookup(env,origin,'mid:'+canonicalMatchId(id));
+   if(registered?.status===301&&registered.location)return redirect(registered.location);
+   if(registered)return finished();
+  }
+  const segment=legacyMatchupSegment(legacyMatch[1]),next=segment?await lookup(env,origin,'matchup:'+segment):null;
+  if(next?.location)return redirect(next.location);
+  if(isProviderMatchId(id))return finished();
  }
  // An unseen dated variant of a matchup resolves to its next meeting.
  if(/^\/[a-z0-9-]+\/[a-z0-9-]+$/.test(path)){const next=await lookup(env,origin,'base:'+path.replace(/-\d{4}-\d{2}-\d{2}(?:-\d+)?$/,''));if(next?.location&&next.location!==path)return reply(next,head);}

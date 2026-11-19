@@ -15,7 +15,7 @@ const {app,schedule,sitemaps,countryCodes,baseView}=await import('../server.ts')
 const {competitionDirectory,watchPagesFor}=await import('../lib/directory-pages');
 const {addGlobalServices}=await import('../lib/global-services');
 const {scheduleFeedEvent}=await import('../lib/broadcast-html');
-const {matchSourceIds}=await import('../lib/matches/routes');
+const {matchSourceIds,legacyMatchupIndex}=await import('../lib/matches/routes');
 const {getIndexNowKey}=await import('../lib/indexnow');
 const {competitionPath,sports}=await import('../public/core.js');
 const {eventBasePath,routeSlug}=await import('../public/event-routes.js');
@@ -80,6 +80,14 @@ packs.set('special:410',await get('/movie/'+missing));
 // Unknown dated variants of a matchup resolve to its next meeting.
 const nextByBase=new Map<string,any>();for(const e of data.events)if(Date.parse(e.startsAt)>now-3*3600000){const b=eventBasePath(e),seen=nextByBase.get(b);if(!seen||e.startsAt<seen.startsAt)nextByBase.set(b,e);}
 for(const [b,e] of nextByBase)packs.set('base:'+b,{status:301,type:'text/plain',location:e.canonicalPath,body:Buffer.alloc(0)});
+// Retired /matches/{title}--{id} URLs (lib/matches/routes.ts). Live fixtures
+// resolve through their id: records; registered fixtures that left the schedule
+// get their answer here (next meeting or 410); older ones fall back to the
+// matchup named in the slug, then to the 410 page below.
+const liveIds=new Set(data.events.map((e:any)=>e.id));
+for(const [id,entry] of data.routeIds as Map<string,any>)if(!liveIds.has(id)){const next=nextByBase.get(entry.base);packs.set('mid:'+id,next?{status:301,type:'text/plain',location:next.canonicalPath,body:Buffer.alloc(0)}:{status:410,type:'text/plain',body:Buffer.alloc(0)});}
+for(const [segment,e] of legacyMatchupIndex(data.events,now))packs.set('matchup:'+segment,{status:301,type:'text/plain',location:(e as any).canonicalPath,body:Buffer.alloc(0)});
+packs.set('special:410-match',await get('/matches/'+missing+'--tsdb-0'));
 
 phase('redirects');
 // 3. The channel directory is entirely country-specific: one page per country and mode.

@@ -21,6 +21,11 @@ const env={SITE_ORIGIN:'https://whoplaysnow.com',ASSETS:assetsFor({
  'base:/uefa-champions-league/barcelona-vs-aston-villa':{status:301,type:'text/plain',location:'/uefa-champions-league/barcelona-vs-aston-villa',body:''},
  'channels:auto:ES':html('channels ES auto'),'channels:manual:FR':html('channels FR manual'),
  'id:espn-1':{status:200,type:'application/json',body:JSON.stringify(event)},'id:tsdb-9':{status:200,type:'application/json',body:JSON.stringify({ref:'espn-1'})},
+ // Retired /matches/{title}--{id} URLs, as scripts/build-static.ts writes them.
+ 'mid:espn-old':{status:301,type:'text/plain',location:'/premier-league/arsenal-vs-chelsea-2026-12-01',body:''},
+ 'mid:espn-gone':{status:410,type:'text/plain',body:''},
+ 'matchup:barcelona-vs-aston-villa':{status:301,type:'text/plain',location:'/uefa-champions-league/barcelona-vs-aston-villa',body:''},
+ 'special:410-match':html('<link rel="canonical" href="https://whoplaysnow.com/matches/__wpn_not_found__--tsdb-0"><h1>THIS FIXTURE HAS FINISHED.</h1>',410),
 })};
 const call=(path:string,headers:Record<string,string>={},method='GET')=>worker.fetch(new Request('https://whoplaysnow.com'+path,{method,headers,redirect:'manual'}),env as any);
 
@@ -41,6 +46,26 @@ test('worker serves packed pages, redirects and retired URLs with the server sta
  assert.equal((await call('/Premier-League/X')).headers.get('location'),'https://whoplaysnow.com/premier-league/x');
  const headOnly=await call('/ncaa/far-future-vs-game',{},'HEAD');assert.equal(headOnly.status,200);assert.equal(await headOnly.text(),'');
  assert.equal((await call('/x',{},'POST')).status,405);
+});
+
+test('worker resolves retired /matches/{title}--{id} URLs like the server: live fixture, registry, matchup, 410, 404',async()=>{
+ const to=async(path:string)=>{const r=await call(path);return [r.status,r.headers.get('location')];};
+ // Still on the schedule (directly or through a provider alias): its current URL, keeping a country choice.
+ assert.deepEqual(await to('/matches/barcelona-vs-aston-villa--espn-1'),[301,'/uefa-champions-league/barcelona-vs-aston-villa']);
+ assert.deepEqual(await to('/matches/anything--tsdb-9'),[301,'/uefa-champions-league/barcelona-vs-aston-villa']);
+ assert.deepEqual(await to('/matches/barcelona-vs-aston-villa--espn-1?country=ES&countryMode=manual'),[301,'/uefa-champions-league/barcelona-vs-aston-villa?country=ES&countryMode=manual']);
+ // Registered fixture that left the schedule: next meeting, or finished.
+ assert.deepEqual(await to('/matches/arsenal-vs-chelsea--espn-old'),[301,'/premier-league/arsenal-vs-chelsea-2026-12-01']);
+ assert.deepEqual(await to('/matches/ajax-vs-celtic--espn-gone'),[410,null]);
+ // Unregistered (published before the registry): the matchup named in the slug, else 410 for a real provider ID.
+ assert.deepEqual(await to('/matches/barcelona-vs-aston-villa--espn-401882832'),[301,'/uefa-champions-league/barcelona-vs-aston-villa']);
+ const gone=await call('/matches/real-madrid-vs-barcelona--espn-401882832');
+ assert.equal(gone.status,410);const body=await gone.text();
+ assert.match(body,/THIS FIXTURE HAS FINISHED/);assert.match(body,/href="https:\/\/whoplaysnow\.com\/matches\/real-madrid-vs-barcelona--espn-401882832"/);
+ // Not a URL this site ever published.
+ assert.equal((await call('/matches/real-madrid-vs-barcelona')).status,404);
+ assert.equal((await call('/matches/foo--bar')).status,404);
+ assert.equal((await call('/matches/x--espn-1',{},'HEAD')).status,301);
 });
 
 test('worker localises the channel directory, location and broadcaster panel per visitor',async()=>{

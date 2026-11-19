@@ -27,7 +27,9 @@ for(const e of events)for(const country of ['GB','ES','US','DE','MA','NZ','BR'])
 }
 for(const e of events.slice(0,10)){checks++;const [a,b]=await Promise.all([viaWorker('/calendar/'+encodeURIComponent(e.id)+'.ics'),viaReference('/calendar/'+encodeURIComponent(e.id)+'.ics')]);const strip=(t:string)=>t.replace(/DTSTAMP:\S+/,'');if(strip(await a.text())!==strip(await b.text()))mismatches.push({label:'calendar',id:e.id});}
 for(const country of ['GB','ES','US','MA','AU']){await same('channels auto','/channels',{'CF-IPCountry':country});await same('channels manual','/channels?country='+country+'&countryMode=manual',{'CF-IPCountry':'GB'});}
-for(const path of ['/movie/706857-bad-impulse','/sg/actor/7550-lina-bernardi','/gb/streaming/netflix','/sitemap/catalog-000014.xml','/sports/football','/matches','/nothing/here-at-all','/not-a-page'])await same('fixed route',path);
+for(const path of ['/movie/706857-bad-impulse','/sg/actor/7550-lina-bernardi','/gb/streaming/netflix','/sitemap/catalog-000014.xml','/sports/football','/matches','/nothing/here-at-all','/not-a-page','/matches/real-madrid-vs-barcelona--espn-401882832','/matches/foo--bar'])await same('fixed route',path);
+// Previous-scheme /matches/{title}--{id} URLs: by live id, and by matchup for an unknown id.
+for(const e of events.slice(0,10)){const segment=e.canonicalPath?.split('/')[2]?.replace(/-\d{4}-\d{2}-\d{2}(?:-\d+)?$/,'');await same('previous match URL','/matches/'+segment+'--'+encodeURIComponent(e.id),{},false);await same('previous match URL by matchup','/matches/'+segment+'--espn-1',{},false);}
 for(const e of events.slice(0,15)){if(e.canonicalSlug)await same('legacy match URL','/matches/'+e.canonicalSlug,{},false);await same('dated variant',e.canonicalPath+'-2020-01-01',{},false);}
 console.log(JSON.stringify({checks,mismatches:mismatches.length,examples:mismatches.slice(0,5)},null,1));
 process.exitCode=mismatches.length?1:0;

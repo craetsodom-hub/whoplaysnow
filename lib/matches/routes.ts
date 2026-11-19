@@ -1,6 +1,34 @@
 import type { Match } from './feed.ts'
 import { canonicalMatchId } from './event-aliases'
-import {publicEventPath} from '../../public/event-routes.js'
+import {publicEventPath,eventBasePath,routeSlug} from '../../public/event-routes.js'
+
+// Before competition/matchup URLs, every fixture lived at
+// /matches/{title}--{provider id}. Google still requests those URLs, so the
+// server and the Worker resolve them the same way: the live fixture (301), its
+// registered path (301 to the next meeting or 410), the next meeting of the
+// same matchup named in the slug (301), and otherwise 410 for a real provider
+// ID, because a URL of that shape was published, or 404 for anything else.
+const PROVIDER_MATCH_ID = /^(espn|sky|nba|laliga|tsdb)-\d{1,20}$/
+export const isProviderMatchId = (id: string | null | undefined) => !!id && PROVIDER_MATCH_ID.test(canonicalMatchId(id))
+
+export function legacyMatchupSegment(slug: string): string | null {
+  const separator = slug.lastIndexOf('--')
+  if (separator < 1) return null
+  const segment = routeSlug(slug.slice(0, separator))
+  return segment === 'sports-event' ? null : segment
+}
+
+// Matchup segment ("everton-vs-newcastle-united") -> soonest meeting still on
+// the schedule, using the same 3-hour window as retired competition paths.
+export function legacyMatchupIndex<T extends { startsAt: string }>(events: T[], now: number) {
+  const index = new Map<string, T>()
+  for (const e of events) {
+    if (!(Date.parse(e.startsAt) > now - 3 * 3600000)) continue
+    const segment = eventBasePath(e).split('/')[2], seen = index.get(segment)
+    if (!seen || e.startsAt < seen.startsAt) index.set(segment, e)
+  }
+  return index
+}
 
 export const MATCH_LOCALES = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ar'] as const
 export type MatchLocale = typeof MATCH_LOCALES[number]

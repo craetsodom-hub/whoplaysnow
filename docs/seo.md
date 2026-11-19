@@ -43,7 +43,7 @@ Fixed in code:
 2. **Indexable.** It has a verified listing, OR it is 10 days or less from kickoff, OR it is in a priority competition (`competitionPriority` in `public/core.js`). The fixture enters its month sitemap. Its `lastmod` moves whenever kickoff, status, venue, names or the set of channels per country changes, and IndexNow is notified.
 3. **Live.** The page stays in the sitemap until 12 hours after kickoff.
 4. **Finished.** `unavailable_after` (kickoff + 2 days) retires the page from results while it is still served for 7 days.
-5. **Removed.** The URL returns a 301 to the next meeting of the same matchup if one exists, otherwise 410.
+5. **Removed.** The URL returns a 301 to the next meeting of the same matchup if one exists, otherwise 410. Previous-scheme URLs (`/matches/{title}--{provider id}`) follow the same rule: a 301 to the live fixture, to its registered path's next meeting, or to the next meeting of the matchup named in the slug. Otherwise they return 410 when the ID is a real provider ID and 404 when it is not (`lib/matches/routes.ts`; the server and the Worker share it).
 6. **Postponed or cancelled.** Stays indexable with the correct `eventStatus` and an explicit description. A postponed fixture drops `unavailable_after` until a new date exists. **Schedule to be confirmed** (the observation is more than 48 hours old) means `noindex` and no start date in structured data.
 
 ## Monitoring

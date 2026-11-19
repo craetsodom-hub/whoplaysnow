@@ -169,6 +169,16 @@ test('server: legacy 410s, expired fixture redirects, robots, sitemaps and event
   assert.equal(expired.status,301);assert.equal(expired.headers.get('location'),nextPath);
   assert.equal((await get('/uefa-champions-league/ajax-vs-celtic')).status,410);
   assert.equal((await get('/uefa-champions-league/nobody-vs-nothing')).status,404);
+  // Retired /matches/{title}--{id} URLs: live fixture, registry, matchup in the slug, then 410 for a real provider ID.
+  const to=async(path:string)=>{const r=await get(path);return [r.status,r.headers.get('location')];};
+  assert.deepEqual(await to('/matches/barcelona-vs-inter--espn-8'),[301,'/uefa-champions-league/barcelona-vs-inter']);
+  assert.deepEqual(await to('/matches/barcelona-vs-aston-villa--espn-old'),[301,nextPath]);
+  assert.deepEqual(await to('/matches/ajax-vs-celtic--espn-gone'),[410,null]);
+  assert.deepEqual(await to('/matches/barcelona-vs-inter--espn-401882832'),[301,'/uefa-champions-league/barcelona-vs-inter']);
+  const finished=await get('/matches/real-madrid-vs-barcelona--espn-401882832');
+  assert.equal(finished.status,410);assert.match(await finished.text(),/THIS FIXTURE HAS FINISHED/);
+  assert.equal((await get('/matches/real-madrid-vs-barcelona')).status,404);
+  assert.equal((await get('/matches/foo--bar')).status,404);
   const page=await (await get('/uefa-champions-league/barcelona-vs-inter')).text();
   assert.match(page,/<title>Barcelona vs Inter — TV channel &amp; where to watch \(\d+ \w+ \d{4}\)<\/title>/);
   assert.match(page,/<meta name="robots" content="max-image-preview:large, unavailable_after: [^"]+">/);
